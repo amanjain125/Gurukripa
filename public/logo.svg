@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 820" fill="none" aria-label="Gurukripa Constructions">
+  <!-- House silhouette in steel grey -->
+  <g fill="#9AA0A6">
+    <!-- Main roof + body -->
+    <path d="M455 0 L120 305 L120 660 L640 660 L640 470 L850 470 L850 305 L455 0 Z" />
+    <!-- Right offset gable -->
+    <path d="M640 220 L640 470 L850 470 Z" fill="#8A9096"/>
+    <!-- Chimney suggestion via cut -->
+  </g>
+  <!-- Window panes (white) -->
+  <g fill="#FFFFFF">
+    <rect x="295" y="220" width="115" height="115" />
+    <rect x="349" y="220" width="7"  height="115" fill="#9AA0A6"/>
+    <rect x="295" y="274" width="115" height="7"   fill="#9AA0A6"/>
+  </g>
+  <!-- Bold red G -->
+  <g>
+    <text x="565" y="585"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="520"
+          font-weight="900"
+          fill="#C0322B"
+          letter-spacing="-12">G</text>
+  </g>
+  <!-- Red curved arc baseline -->
+  <path d="M40 695 Q512 770 984 695" stroke="#C0322B" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <!-- CONSTRUCTIONS wordmark -->
+  <text x="512" y="800"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="92"
+        font-weight="600"
+        fill="#9AA0A6"
+        text-anchor="middle"
+        letter-spacing="6">CONSTRUCTIONS</text>
+</svg>

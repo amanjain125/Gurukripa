@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gurukripaconstructions.com/sitemap.xml

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" aria-label="Gurukripa">
+  <!-- Compact icon: house + G -->
+  <path d="M50 6 L8 42 L8 86 L62 86 L62 64 L86 64 L86 42 L50 6 Z" fill="#9AA0A6"/>
+  <path d="M62 32 L62 64 L86 64 Z" fill="#8A9096"/>
+  <rect x="22" y="36" width="18" height="18" fill="#FFFFFF"/>
+  <rect x="30" y="36" width="2"  height="18" fill="#9AA0A6"/>
+  <rect x="22" y="44" width="18" height="2"  fill="#9AA0A6"/>
+  <text x="60" y="78" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="900" fill="#C0322B" letter-spacing="-2">G</text>
+  <path d="M6 92 Q50 100 94 92" stroke="#C0322B" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
