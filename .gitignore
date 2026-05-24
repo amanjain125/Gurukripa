@@ -6,4 +6,9 @@ out
 .DS_Store
 *.log
 .vercel
+.netlify
 next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Local-only tools (don't commit the 51MB tunnel binary)
+cloudflared.exe
