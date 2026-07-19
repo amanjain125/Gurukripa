@@ -41,7 +41,7 @@ export function ContactForm() {
           type="text"
           required
           placeholder="e.g. Rahul Sharma"
-          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4.5 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
+          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
         />
       </div>
 
@@ -55,7 +55,7 @@ export function ContactForm() {
           type="tel"
           required
           placeholder="10-digit mobile"
-          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4.5 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
+          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
         />
       </div>
 
@@ -67,7 +67,7 @@ export function ContactForm() {
           id="projectType"
           name="projectType"
           required
-          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4.5 py-3.5 text-[16px] text-ink outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition cursor-pointer appearance-none"
+          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition cursor-pointer appearance-none"
         >
           <option value="">Choose your project type</option>
           <option value="Independent Residence">Independent Residence / Villa</option>
@@ -87,7 +87,7 @@ export function ContactForm() {
           name="message"
           rows={3}
           placeholder="Share plot dimension, location, expected timeline or budget..."
-          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4.5 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition resize-none"
+          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition resize-none"
         />
       </div>
 
@@ -103,13 +103,13 @@ export function ContactForm() {
 
       <div className="flex flex-wrap items-center justify-center gap-6 text-[13px] font-medium text-ink/75 pt-1">
         <span className="flex items-center gap-1.5">
-          <svg className="w-4.5 h-4.5 text-brand-teal-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-4 h-4 text-brand-teal-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           Response within 24 hours
         </span>
         <span className="flex items-center gap-1.5">
-          <svg className="w-4.5 h-4.5 text-brand-teal-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-4 h-4 text-brand-teal-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
           No spam · No obligation

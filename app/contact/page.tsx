@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Header */}
             <div className="lg:col-span-8">
-              <div className="inline-flex items-center px-6.5 py-2.5 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[12px] font-extrabold tracking-[0.25em] uppercase mb-6 shadow-xs" data-reveal>
+              <div className="inline-flex items-center px-6 py-2.5 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[12px] font-extrabold tracking-[0.25em] uppercase mb-6 shadow-sm" data-reveal>
                 CONTACT GURUKRIPA
               </div>
               <h1 className="font-extrabold text-5xl sm:text-6xl lg:text-7xl text-ink tracking-tight leading-[1.05]" data-reveal data-reveal-delay="80">
@@ -43,7 +43,7 @@ export default function ContactPage() {
 
             {/* Right Widget: Reach Us Directly */}
             <div className="lg:col-span-4" data-reveal data-reveal-delay="200">
-              <div className="bg-white/95 backdrop-blur-md rounded-3xl p-7 border border-white shadow-lg">
+              <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-white shadow-lg">
                 <span className="block text-[12px] font-extrabold tracking-[0.2em] text-ink/60 uppercase mb-4">
                   REACH US DIRECTLY
                 </span>
@@ -58,9 +58,9 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <div className="text-left">
+                    <div className="text-left min-w-0">
                       <span className="block text-[11px] font-extrabold tracking-wider uppercase text-white/85">CALL</span>
-                      <span className="font-extrabold text-[18px] text-white tracking-tight leading-tight block">{primaryPhone}</span>
+                      <span className="font-extrabold text-[18px] text-white tracking-tight leading-tight block truncate">{primaryPhone}</span>
                     </div>
                   </a>
 
@@ -76,9 +76,9 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
                     </div>
-                    <div className="text-left">
+                    <div className="text-left min-w-0">
                       <span className="block text-[11px] font-extrabold tracking-wider uppercase text-ink/50">WHATSAPP</span>
-                      <span className="font-extrabold text-[18px] text-ink tracking-tight leading-tight block">WhatsApp Us</span>
+                      <span className="font-extrabold text-[18px] text-ink tracking-tight leading-tight block truncate">WhatsApp Us</span>
                     </div>
                   </a>
                 </div>
@@ -91,17 +91,17 @@ export default function ContactPage() {
             {/* Card 1: Call */}
             <a
               href={`tel:${primaryPhoneClean}`}
-              className="group bg-white/85 backdrop-blur-md rounded-3xl p-7.5 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block"
+              className="group bg-white/90 backdrop-blur-md rounded-3xl p-7 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block overflow-hidden"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-13 h-13 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 shadow-md transform group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-6.5 h-6.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 shadow-md transform group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[12px] font-extrabold tracking-widest text-brand-red uppercase block">CALL US</span>
-                  <p className="font-extrabold text-ink text-[19px] tracking-tight">{primaryPhone}</p>
+                  <p className="font-extrabold text-ink text-[18px] tracking-tight truncate">{primaryPhone}</p>
                 </div>
               </div>
               <p className="text-[15px] text-ink/80 mb-5 leading-relaxed">
@@ -117,17 +117,17 @@ export default function ContactPage() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/85 backdrop-blur-md rounded-3xl p-7.5 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block"
+              className="group bg-white/90 backdrop-blur-md rounded-3xl p-7 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block overflow-hidden"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-13 h-13 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 shadow-md transform group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-6.5 h-6.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 shadow-md transform group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[12px] font-extrabold tracking-widest text-brand-red uppercase block">WHATSAPP</span>
-                  <p className="font-extrabold text-ink text-[19px] tracking-tight">Chat with Gurukripa</p>
+                  <p className="font-extrabold text-ink text-[18px] tracking-tight truncate">Chat with Gurukripa</p>
                 </div>
               </div>
               <p className="text-[15px] text-ink/80 mb-5 leading-relaxed">
@@ -141,17 +141,17 @@ export default function ContactPage() {
             {/* Card 3: Email */}
             <a
               href={`mailto:${COMPANY.email}`}
-              className="group bg-white/85 backdrop-blur-md rounded-3xl p-7.5 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block"
+              className="group bg-white/90 backdrop-blur-md rounded-3xl p-7 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block overflow-hidden"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-13 h-13 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 shadow-md transform group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-6.5 h-6.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 shadow-md transform group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[12px] font-extrabold tracking-widest text-brand-red uppercase block">EMAIL</span>
-                  <p className="font-extrabold text-ink text-[16px] truncate max-w-[210px]" title={COMPANY.email}>
+                  <p className="font-extrabold text-ink text-[15px] truncate max-w-full" title={COMPANY.email}>
                     {COMPANY.email}
                   </p>
                 </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
 
         {/* SECTION 2: SPLIT CARD (PROCESS STEPPER + CONSULTATION FORM) */}
         <section className="container-wide relative z-10 mt-16 md:mt-24">
-          <div className="glass-strong rounded-3xl p-7 sm:p-11 md:p-14 border border-white/80 shadow-xl" data-reveal>
+          <div className="glass-strong rounded-3xl p-6 sm:p-10 md:p-14 border border-white/80 shadow-xl overflow-hidden" data-reveal>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
               
               {/* Left Column: Process & Stepper Flow */}
@@ -188,7 +188,7 @@ export default function ContactPage() {
                       href={`tel:${primaryPhoneClean}`}
                       className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-white/95 border border-ink/15 text-[14px] font-bold text-ink hover:border-brand-red hover:text-brand-red hover:shadow-sm transition-all"
                     >
-                      <svg className="w-4.5 h-4.5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       Call now
@@ -199,7 +199,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-white/95 border border-ink/15 text-[14px] font-bold text-ink hover:border-brand-red hover:text-brand-red hover:shadow-sm transition-all"
                     >
-                      <svg className="w-4.5 h-4.5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
                       WhatsApp
@@ -209,7 +209,7 @@ export default function ContactPage() {
                   {/* Stepper Title Header */}
                   <div className="flex items-start gap-4 mt-10 mb-7 p-4 rounded-2xl bg-brand-red/5 border border-brand-red/15">
                     <div className="w-11 h-11 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                      <svg className="w-5.5 h-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" />
                       </svg>
                     </div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
 
               {/* Right Column: Form */}
               <div className="lg:col-span-6 lg:pl-4">
-                <div className="bg-white/70 backdrop-blur-md rounded-3xl p-7 sm:p-9 border border-white/90 shadow-md">
+                <div className="bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/90 shadow-md overflow-hidden">
                   <span className="text-[12px] font-extrabold tracking-widest text-brand-red uppercase block mb-1.5">
                     FREE CONSULTATION
                   </span>
@@ -304,7 +304,7 @@ export default function ContactPage() {
                     'Cost-Plus & Lump-Sum guidance',
                     'Dedicated engineer supervision',
                   ].map((feature) => (
-                    <div key={feature} className="glass rounded-2xl p-4.5 flex items-center gap-3.5 border border-white/70 hover:border-brand-red/40 transition-colors">
+                    <div key={feature} className="glass rounded-2xl p-4 flex items-center gap-3.5 border border-white/70 hover:border-brand-red/40 transition-colors">
                       <div className="w-6 h-6 rounded-full bg-brand-teal/20 text-brand-teal-deep flex items-center justify-center shrink-0 font-bold text-[13px]">
                         ✓
                       </div>
@@ -315,7 +315,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map Container */}
-              <div className="glass-strong rounded-3xl p-3 border border-white/80 shadow-md hover:border-brand-red/30 transition-colors">
+              <div className="glass-strong rounded-3xl p-3 border border-white/80 shadow-md hover:border-brand-red/30 transition-colors overflow-hidden">
                 <div className="flex items-center justify-between px-3 py-2 text-[13px] text-ink/80">
                   <span className="font-bold text-ink flex items-center gap-2">
                     <svg className="w-4.5 h-4.5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -347,7 +347,7 @@ export default function ContactPage() {
 
             {/* Right Column: Head Office Card */}
             <div className="lg:col-span-5" data-reveal data-reveal-delay="160">
-              <div className="glass-strong rounded-3xl p-7.5 sm:p-9 border border-white/80 shadow-lg space-y-6">
+              <div className="glass-strong rounded-3xl p-6 sm:p-8 border border-white/80 shadow-lg space-y-6 overflow-hidden">
                 
                 {/* Office Header */}
                 <div>
@@ -365,7 +365,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Direct Contacts Row */}
-                <div className="glass rounded-2xl p-4.5 space-y-2.5 border border-white/60 text-[14px]">
+                <div className="glass rounded-2xl p-4 space-y-2.5 border border-white/60 text-[14px] overflow-hidden">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-ink/65 font-medium">Primary Phone:</span>
                     <a href={`tel:${primaryPhoneClean}`} className="font-extrabold text-ink hover:text-brand-red">
@@ -380,14 +380,14 @@ export default function ContactPage() {
                   </div>
                   <div className="flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-ink/10">
                     <span className="text-ink/65 font-medium">Email:</span>
-                    <a href={`mailto:${COMPANY.email}`} className="font-extrabold text-ink hover:text-brand-red truncate max-w-[210px]">
+                    <a href={`mailto:${COMPANY.email}`} className="font-extrabold text-ink hover:text-brand-red truncate max-w-full">
                       {COMPANY.email}
                     </a>
                   </div>
                 </div>
 
                 {/* Useful Tip Box */}
-                <div className="p-4.5 rounded-2xl bg-brand-red/10 border border-brand-red/20 text-[14.5px] text-ink/90 flex items-start gap-3.5 font-medium">
+                <div className="p-4 rounded-2xl bg-brand-red/10 border border-brand-red/20 text-[14.5px] text-ink/90 flex items-start gap-3.5 font-medium">
                   <span className="text-lg shrink-0 mt-0.5">✨</span>
                   <p className="leading-relaxed">
                     Share your plot dimensions, location and expected timeline for a faster, more useful consultation.
@@ -414,9 +414,9 @@ export default function ContactPage() {
                 </div>
 
                 {/* Office Hours */}
-                <div className="flex items-center gap-4 p-4.5 rounded-2xl bg-white/80 border border-white/90 shadow-sm">
-                  <div className="w-11 h-11 rounded-2xl bg-brand-teal/15 text-brand-teal-deep flex items-center justify-center shrink-0">
-                    <svg className="w-5.5 h-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/80 border border-white/90 shadow-sm">
+                  <div className="w-10 h-10 rounded-2xl bg-brand-teal/15 text-brand-teal-deep flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -432,14 +432,14 @@ export default function ContactPage() {
                     href={`tel:${primaryPhoneClean}`}
                     className="flex items-center gap-3.5 bg-brand-red hover:bg-brand-red-deep text-white p-3.5 rounded-2xl shadow-md transition transform hover:-translate-y-0.5"
                   >
-                    <div className="w-10.5 h-10.5 rounded-xl bg-white text-brand-red flex items-center justify-center shrink-0 shadow-sm">
-                      <svg className="w-4.5 h-4.5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-10 h-10 rounded-xl bg-white text-brand-red flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <div className="text-left">
+                    <div className="text-left min-w-0">
                       <span className="block text-[9.5px] font-extrabold tracking-wider uppercase text-white/80">CALL OFFICE</span>
-                      <span className="font-extrabold text-[15px] text-white block">Call Now</span>
+                      <span className="font-extrabold text-[15px] text-white block truncate">Call Now</span>
                     </div>
                   </a>
                   <a
@@ -448,14 +448,14 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3.5 bg-slate-50/90 hover:bg-white text-ink p-3.5 rounded-2xl border border-slate-200/80 shadow-sm transition transform hover:-translate-y-0.5"
                   >
-                    <div className="w-10.5 h-10.5 rounded-xl bg-white border border-slate-200/60 text-brand-red flex items-center justify-center shrink-0 shadow-sm">
-                      <svg className="w-4.5 h-4.5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/60 text-brand-red flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
                     </div>
-                    <div className="text-left">
+                    <div className="text-left min-w-0">
                       <span className="block text-[9.5px] font-extrabold tracking-wider uppercase text-ink/40">WHATSAPP</span>
-                      <span className="font-extrabold text-[15px] text-ink block">WhatsApp Us</span>
+                      <span className="font-extrabold text-[15px] text-ink block truncate">WhatsApp Us</span>
                     </div>
                   </a>
                 </div>
