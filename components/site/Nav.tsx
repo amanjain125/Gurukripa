@@ -18,7 +18,22 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => { setOpen(false); }, [pathname]);
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.includes('#')) {
+      const hashIndex = href.indexOf('#');
+      const hash = href.substring(hashIndex);
+      const targetPath = href.substring(0, hashIndex) || '/';
+
+      if (pathname === targetPath || (pathname === '/' && targetPath === '/')) {
+        e.preventDefault();
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+    setOpen(false);
+  };
 
   return (
     <header className="fixed top-4 inset-x-4 z-50 transition-all duration-500 ease-out">
@@ -34,11 +49,12 @@ export function Nav() {
 
           <nav className="hidden md:flex items-center gap-7">
             {NAV_ITEMS.map((item) => {
-              const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
+              const active = pathname === item.href || (item.href !== '/' && !item.href.includes('#') && pathname.startsWith(item.href));
               return (
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={`text-[12px] tracking-[0.06em] sweep ${active ? 'text-ink' : 'text-ink/65 hover:text-ink'}`}
                 >
                   {item.label}
@@ -75,7 +91,12 @@ export function Nav() {
       >
         <div className="glass-strong rounded-3xl p-7 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
-            <Link key={item.href} href={item.href} className="font-display text-2xl text-ink">
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+              className="font-display text-2xl text-ink"
+            >
               {item.label}
             </Link>
           ))}

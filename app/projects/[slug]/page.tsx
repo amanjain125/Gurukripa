@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PROJECTS } from '@/lib/projects';
+import { ProjectGallery } from '@/components/sections/ProjectGallery';
 import { RevealOnScroll } from '@/components/providers/RevealOnScroll';
 
 export function generateStaticParams() {
@@ -104,23 +105,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      <section className="section-tight bg-bone relative overflow-hidden">
-        <div className="container-wide relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {p.gallery.map((src, i) => (
-              <div
-                key={src}
-                className={`relative overflow-hidden rounded-2xl glass-strong ${i === 0 ? 'md:col-span-2' : ''}`}
-                style={{ aspectRatio: i === 0 ? '16/9' : '4/5' }}
-                data-reveal
-                data-reveal-delay={`${i * 60}`}
-              >
-                <Image src={src} alt={`${p.name} gallery ${i + 1}`} fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProjectGallery images={p.gallery} projectName={p.name} />
 
       <section className="section-tight bg-ink text-bone relative overflow-hidden">
         <div className="absolute -top-40 -left-20 w-[60vw] h-[60vw] rounded-full opacity-25 blur-3xl pointer-events-none"
