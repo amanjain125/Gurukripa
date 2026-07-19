@@ -44,7 +44,7 @@ export function HomeIntro() {
                 <span aria-hidden>→</span>
               </Link>
               <Link href="/contact" className="btn btn-ghost">
-                Talk to Anuj
+                Get Quote
                 <span aria-hidden>→</span>
               </Link>
             </div>

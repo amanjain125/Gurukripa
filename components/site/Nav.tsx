@@ -48,9 +48,11 @@ export function Nav() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/contact" className="btn btn-primary !py-2.5 !px-4 text-[12px]">
-              Talk to Anuj
-              <span aria-hidden>→</span>
+            <Link
+              href="/contact"
+              className="btn btn-primary !rounded-xl !py-2.5 !px-5 text-[14px] font-bold tracking-wide"
+            >
+              Get Quote
             </Link>
           </div>
 
@@ -77,8 +79,11 @@ export function Nav() {
               {item.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn btn-primary mt-4 self-start">
-            Talk to Anuj <span aria-hidden>→</span>
+          <Link
+            href="/contact"
+            className="btn btn-primary !rounded-xl mt-4 self-start font-bold"
+          >
+            Get Quote
           </Link>
         </div>
       </div>

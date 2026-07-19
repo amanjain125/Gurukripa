@@ -24,10 +24,9 @@ export const COMPANY = {
 export const ADDRESS_SINGLE_LINE = `${COMPANY.address.line1}, ${COMPANY.address.line2}, ${COMPANY.address.line3}, ${COMPANY.address.state} ${COMPANY.address.pincode}`;
 
 export const NAV_ITEMS = [
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Process', href: '/process' },
-  { label: 'Journal', href: '/journal' },
   { label: 'Contact', href: '/contact' },
 ];

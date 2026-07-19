@@ -284,7 +284,7 @@ export function VillaScrollHero() {
                 backdropFilter: 'blur(10px)',
               }}
             >
-              Talk to Anuj
+              Get Quote
               <span aria-hidden>→</span>
             </Link>
           </div>

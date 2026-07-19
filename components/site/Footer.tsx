@@ -49,7 +49,6 @@ export function Footer() {
             <div className="md:col-span-3">
               <div className="eyebrow text-bone/55 mb-4">Sitemap</div>
               <ul className="space-y-2 text-[14px]">
-                <li><Link className="sweep text-bone/85" href="/">Home</Link></li>
                 {NAV_ITEMS.map((n) => (
                   <li key={n.href}><Link className="sweep text-bone/85" href={n.href}>{n.label}</Link></li>
                 ))}
