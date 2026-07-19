@@ -29,8 +29,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Header */}
             <div className="lg:col-span-8">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/25 text-brand-red text-[11px] font-semibold tracking-wider uppercase mb-5" data-reveal>
-                Contact Gurukripa
+              <div className="inline-flex items-center px-6 py-2 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[11px] font-bold tracking-[0.25em] uppercase mb-5" data-reveal>
+                CONTACT GURUKRIPA
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ink font-light tracking-tight leading-[1.08]" data-reveal data-reveal-delay="80">
                 Contact us
@@ -174,7 +174,7 @@ export default function ContactPage() {
               {/* Left Column: Process & Stepper Flow */}
               <div className="lg:col-span-6 flex flex-col justify-between">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-[11px] font-semibold tracking-wider uppercase mb-4">
+                  <div className="inline-flex items-center px-6 py-2 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[11px] font-bold tracking-[0.25em] uppercase mb-4">
                     START HERE
                   </div>
                   <h2 className="font-display text-3xl sm:text-4xl text-ink font-light leading-snug">
@@ -284,7 +284,7 @@ export default function ContactPage() {
             {/* Left Column: Coverage & Map */}
             <div className="lg:col-span-7 space-y-8" data-reveal>
               <div>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/25 text-brand-red text-[11px] font-semibold tracking-wider uppercase mb-4">
+                <div className="inline-flex items-center px-6 py-2 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[11px] font-bold tracking-[0.25em] uppercase mb-4">
                   BENGALURU COVERAGE
                 </div>
                 <h2 className="font-display text-3xl sm:text-4xl text-ink font-light leading-tight">
