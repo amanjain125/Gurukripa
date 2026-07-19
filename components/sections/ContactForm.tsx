@@ -30,88 +30,102 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-8 max-w-xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Field label="Name" name="name" required placeholder="Your name" />
-        <Field label="Phone" name="phone" required type="tel" placeholder="+91 ..." />
+    <form onSubmit={onSubmit} className="space-y-5 w-full">
+      <div>
+        <label className="block text-[13px] font-medium text-ink/80 mb-1.5" htmlFor="name">
+          Your Name <span className="text-brand-red">*</span>
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          placeholder="e.g. Rahul Sharma"
+          className="w-full bg-white/80 border border-ink/15 rounded-xl px-4 py-3 text-[14px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
+        />
       </div>
-      <Field label="Email" name="email" required type="email" placeholder="you@domain.com" />
 
       <div>
-        <label className="field-label block mb-2">Project type</label>
-        <select name="projectType" required className="field appearance-none cursor-pointer">
-          <option value="">Select one</option>
-          <option>Independent residence</option>
-          <option>Commercial / mixed-use</option>
-          <option>Structural consulting only</option>
-          <option>Renovation / retrofit</option>
-          <option>Other</option>
+        <label className="block text-[13px] font-medium text-ink/80 mb-1.5" htmlFor="phone">
+          Mobile Number <span className="text-brand-red">*</span>
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          required
+          placeholder="10-digit mobile"
+          className="w-full bg-white/80 border border-ink/15 rounded-xl px-4 py-3 text-[14px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
+        />
+      </div>
+
+      <div>
+        <label className="block text-[13px] font-medium text-ink/80 mb-1.5" htmlFor="projectType">
+          Select Service <span className="text-brand-red">*</span>
+        </label>
+        <select
+          id="projectType"
+          name="projectType"
+          required
+          className="w-full bg-white/80 border border-ink/15 rounded-xl px-4 py-3 text-[14px] text-ink outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition cursor-pointer appearance-none"
+        >
+          <option value="">Choose your project type</option>
+          <option value="Independent Residence">Independent Residence / Villa</option>
+          <option value="Commercial / Mixed-use">Commercial / Mixed-use Building</option>
+          <option value="Structural Consulting">Structural Consulting & Design</option>
+          <option value="Renovation / Retrofit">Renovation & Structural Retrofit</option>
+          <option value="Cost-Plus Contract">Cost-Plus / Lump-Sum Contract</option>
         </select>
       </div>
 
       <div>
-        <label className="field-label block mb-2">Brief</label>
+        <label className="block text-[13px] font-medium text-ink/80 mb-1.5" htmlFor="message">
+          Project Brief / Plot Details <span className="text-ink/40">(Optional)</span>
+        </label>
         <textarea
+          id="message"
           name="message"
-          required
-          rows={5}
-          className="field resize-none"
-          placeholder="Site, scope, timeline. Anything we should know."
+          rows={3}
+          placeholder="Share plot dimension, location, expected timeline or budget..."
+          className="w-full bg-white/80 border border-ink/15 rounded-xl px-4 py-3 text-[14px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition resize-none"
         />
       </div>
 
-      <div className="flex items-center gap-6 pt-2">
+      <div className="pt-2">
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="btn btn-primary disabled:opacity-60 disabled:cursor-wait"
+          className="w-full bg-brand-red hover:bg-brand-red-deep text-white font-bold py-3.5 px-6 rounded-xl text-[15px] shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-wait"
         >
-          {status === 'loading' ? 'Sending…' : 'Send to Anuj'}
-          <span aria-hidden>→</span>
+          {status === 'loading' ? 'Submitting…' : 'Get Free Consultation'}
         </button>
-        <p className="text-[12px] text-steel max-w-xs">
-          We reply within two working days, on the same channel you wrote in on.
-        </p>
+      </div>
+
+      <div className="flex items-center justify-center gap-6 text-[12px] text-ink/65 pt-1">
+        <span className="flex items-center gap-1.5">
+          <svg className="w-4 h-4 text-brand-teal-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Response within 24 hours
+        </span>
+        <span className="flex items-center gap-1.5">
+          <svg className="w-4 h-4 text-brand-teal-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          No spam · No obligation
+        </span>
       </div>
 
       {status === 'success' && (
-        <p className="text-[14px] text-brand-teal-deep border-l-2 border-brand-teal pl-4 py-2">
-          Thank you. We&rsquo;ve received your note and will be in touch shortly.
+        <p className="text-[14px] text-brand-teal-deep bg-brand-teal/10 border border-brand-teal/30 rounded-xl p-3 text-center">
+          Thank you! Your request has been received. Our team will contact you within 24 hours.
         </p>
       )}
       {status === 'error' && (
-        <p className="text-[14px] text-brand-red-deep border-l-2 border-brand-red pl-4 py-2">
-          Couldn&rsquo;t send the message. {error}. Please email us directly.
+        <p className="text-[14px] text-brand-red bg-brand-red/10 border border-brand-red/30 rounded-xl p-3 text-center">
+          Couldn&rsquo;t submit: {error}. Please call or WhatsApp us directly.
         </p>
       )}
     </form>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = 'text',
-  required,
-  placeholder,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-  placeholder?: string;
-}) {
-  return (
-    <div>
-      <label className="field-label block mb-2" htmlFor={name}>{label}</label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        className="field"
-      />
-    </div>
   );
 }
