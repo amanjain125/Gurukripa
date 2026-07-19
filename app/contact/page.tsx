@@ -43,37 +43,43 @@ export default function ContactPage() {
 
             {/* Right Widget: Reach Us Directly */}
             <div className="lg:col-span-4" data-reveal data-reveal-delay="200">
-              <div className="glass-strong rounded-2xl p-5 border border-white/80 shadow-md">
-                <span className="block text-[11px] font-semibold tracking-widest text-ink/50 uppercase mb-3">
-                  Reach us directly
+              <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-white shadow-lg">
+                <span className="block text-[11px] font-bold tracking-[0.18em] text-ink/50 uppercase mb-4">
+                  REACH US DIRECTLY
                 </span>
-                <div className="space-y-2.5">
+                <div className="space-y-3">
+                  {/* Call Button */}
                   <a
                     href={`tel:${primaryPhoneClean}`}
-                    className="flex items-center justify-between w-full bg-brand-red hover:bg-brand-red-deep text-white font-bold px-4 py-3 rounded-xl text-[14px] shadow-sm transition-all transform hover:-translate-y-0.5"
+                    className="flex items-center gap-3.5 w-full bg-brand-red hover:bg-brand-red-deep text-white p-3.5 rounded-2xl shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
                   >
-                    <span className="flex items-center gap-2.5">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <div className="w-11 h-11 rounded-2xl bg-white text-brand-red flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span className="text-[10px] tracking-wider uppercase text-white/80 font-medium block">CALL</span>
-                    </span>
-                    <span className="font-semibold">{primaryPhone}</span>
+                    </div>
+                    <div className="text-left">
+                      <span className="block text-[10px] font-bold tracking-wider uppercase text-white/80">CALL</span>
+                      <span className="font-bold text-[16px] text-white tracking-tight leading-tight block">{primaryPhone}</span>
+                    </div>
                   </a>
 
+                  {/* WhatsApp Button */}
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between w-full bg-white/80 hover:bg-white text-ink font-semibold px-4 py-3 rounded-xl text-[14px] border border-ink/10 shadow-sm transition-all"
+                    className="flex items-center gap-3.5 w-full bg-slate-50/90 hover:bg-white text-ink p-3.5 rounded-2xl border border-slate-200/80 shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0"
                   >
-                    <span className="flex items-center gap-2.5">
-                      <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                    <div className="w-11 h-11 rounded-2xl bg-white border border-slate-200/60 text-brand-red flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
-                      <span className="text-[10px] tracking-wider uppercase text-ink/50 font-medium block">WHATSAPP</span>
-                    </span>
-                    <span className="text-ink/90 font-medium">WhatsApp Us</span>
+                    </div>
+                    <div className="text-left">
+                      <span className="block text-[10px] font-bold tracking-wider uppercase text-ink/40">WHATSAPP</span>
+                      <span className="font-bold text-[16px] text-ink tracking-tight leading-tight block">WhatsApp Us</span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -85,7 +91,7 @@ export default function ContactPage() {
             {/* Card 1: Call */}
             <div className="glass rounded-2xl p-6 border border-white/70 shadow-sm hover:shadow-md transition-all">
               <div className="flex items-center gap-3.5 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -109,7 +115,7 @@ export default function ContactPage() {
             {/* Card 2: WhatsApp */}
             <div className="glass rounded-2xl p-6 border border-white/70 shadow-sm hover:shadow-md transition-all">
               <div className="flex items-center gap-3.5 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
@@ -135,7 +141,7 @@ export default function ContactPage() {
             {/* Card 3: Email */}
             <div className="glass rounded-2xl p-6 border border-white/70 shadow-sm hover:shadow-md transition-all">
               <div className="flex items-center gap-3.5 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -180,7 +186,7 @@ export default function ContactPage() {
                   <div className="flex flex-wrap items-center gap-3 mt-5">
                     <a
                       href={`tel:${primaryPhoneClean}`}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 border border-ink/15 text-[13px] font-semibold text-ink hover:bg-white transition"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white/90 border border-ink/15 text-[13px] font-semibold text-ink hover:bg-white shadow-sm transition"
                     >
                       <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -191,10 +197,10 @@ export default function ContactPage() {
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 border border-ink/15 text-[13px] font-semibold text-ink hover:bg-white transition"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white/90 border border-ink/15 text-[13px] font-semibold text-ink hover:bg-white shadow-sm transition"
                     >
-                      <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
                       WhatsApp
                     </a>
@@ -202,7 +208,7 @@ export default function ContactPage() {
 
                   {/* Stepper Title Header */}
                   <div className="flex items-start gap-3 mt-10 mb-6 p-3.5 rounded-2xl bg-brand-red/5 border border-brand-red/15">
-                    <div className="w-9 h-9 rounded-xl bg-brand-red text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-2xl bg-brand-red text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" />
                       </svg>
@@ -298,7 +304,7 @@ export default function ContactPage() {
                     'Cost-Plus & Lump-Sum guidance',
                     'Dedicated engineer supervision',
                   ].map((feature) => (
-                    <div key={feature} className="glass rounded-xl p-3.5 flex items-center gap-3 border border-white/70">
+                    <div key={feature} className="glass rounded-2xl p-3.5 flex items-center gap-3 border border-white/70">
                       <div className="w-5 h-5 rounded-full bg-brand-teal/20 text-brand-teal-deep flex items-center justify-center shrink-0 font-bold text-[12px]">
                         ✓
                       </div>
@@ -309,7 +315,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map Container */}
-              <div className="glass-strong rounded-2xl p-2.5 border border-white/80 shadow-md">
+              <div className="glass-strong rounded-3xl p-2.5 border border-white/80 shadow-md">
                 <div className="flex items-center justify-between px-3 py-2 text-[12px] text-ink/70">
                   <span className="font-semibold text-ink flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -327,7 +333,7 @@ export default function ContactPage() {
                     Open in Maps <span>↗</span>
                   </a>
                 </div>
-                <div className="aspect-[16/9] rounded-xl overflow-hidden border border-ink/10">
+                <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-ink/10">
                   <iframe
                     src={mapsUrl}
                     title={`${COMPANY.name} location map`}
@@ -359,7 +365,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Direct Contacts Row */}
-                <div className="glass rounded-xl p-4 space-y-2 border border-white/60 text-[13px]">
+                <div className="glass rounded-2xl p-4 space-y-2 border border-white/60 text-[13px]">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-ink/60 font-medium">Primary Phone:</span>
                     <a href={`tel:${primaryPhoneClean}`} className="font-bold text-ink hover:text-brand-red">
@@ -381,7 +387,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Useful Tip Box */}
-                <div className="p-4 rounded-xl bg-brand-red/10 border border-brand-red/20 text-[13px] text-ink/85 flex items-start gap-3">
+                <div className="p-4 rounded-2xl bg-brand-red/10 border border-brand-red/20 text-[13px] text-ink/85 flex items-start gap-3">
                   <span className="text-base shrink-0 mt-0.5">✨</span>
                   <p className="leading-snug">
                     Share your plot dimensions, location and expected timeline for a faster, more useful consultation.
@@ -389,7 +395,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Before You Visit Box */}
-                <div className="glass rounded-xl p-5 border border-white/60 space-y-3">
+                <div className="glass rounded-2xl p-5 border border-white/60 space-y-3">
                   <h4 className="font-bold text-ink text-[14px]">Before you visit</h4>
                   <ul className="space-y-2 text-[13px] text-ink/80">
                     <li className="flex items-center gap-2">
@@ -408,8 +414,8 @@ export default function ContactPage() {
                 </div>
 
                 {/* Office Hours */}
-                <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white/70 border border-white/90">
-                  <div className="w-9 h-9 rounded-xl bg-brand-teal/15 text-brand-teal-deep flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-white/80 border border-white/90 shadow-sm">
+                  <div className="w-10 h-10 rounded-2xl bg-brand-teal/15 text-brand-teal-deep flex items-center justify-center shrink-0">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -420,27 +426,37 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Bottom Action Buttons */}
-                <div className="grid grid-cols-2 gap-3 pt-2">
+                {/* Bottom Action Buttons (Matching exact image shape) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <a
                     href={`tel:${primaryPhoneClean}`}
-                    className="flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-deep text-white font-bold py-3 px-4 rounded-xl text-[13px] shadow-sm transition transform hover:-translate-y-0.5"
+                    className="flex items-center gap-3 bg-brand-red hover:bg-brand-red-deep text-white p-3 rounded-2xl shadow-md transition transform hover:-translate-y-0.5"
                   >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    Call Office
+                    <div className="w-10 h-10 rounded-xl bg-white text-brand-red flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div className="text-left">
+                      <span className="block text-[9px] font-bold tracking-wider uppercase text-white/80">CALL OFFICE</span>
+                      <span className="font-bold text-[14px] text-white block">Call Now</span>
+                    </div>
                   </a>
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-white hover:bg-white/90 text-ink font-semibold py-3 px-4 rounded-xl text-[13px] border border-ink/15 shadow-sm transition"
+                    className="flex items-center gap-3 bg-slate-50/90 hover:bg-white text-ink p-3 rounded-2xl border border-slate-200/80 shadow-sm transition transform hover:-translate-y-0.5"
                   >
-                    <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
-                    </svg>
-                    WhatsApp
+                    <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/60 text-brand-red flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-4 h-4 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </div>
+                    <div className="text-left">
+                      <span className="block text-[9px] font-bold tracking-wider uppercase text-ink/40">WHATSAPP</span>
+                      <span className="font-bold text-[14px] text-ink block">WhatsApp Us</span>
+                    </div>
                   </a>
                 </div>
 
