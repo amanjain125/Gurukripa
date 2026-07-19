@@ -32,7 +32,7 @@ export default function ContactPage() {
               <div className="inline-flex items-center px-6 py-2 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[11px] font-bold tracking-[0.25em] uppercase mb-5" data-reveal>
                 CONTACT GURUKRIPA
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ink font-light tracking-tight leading-[1.08]" data-reveal data-reveal-delay="80">
+              <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.08]" data-reveal data-reveal-delay="80">
                 Contact us
               </h1>
               <p className="mt-5 text-ink/75 leading-relaxed text-[16px] sm:text-[17px] max-w-2xl" data-reveal data-reveal-delay="160">
@@ -177,9 +177,9 @@ export default function ContactPage() {
                   <div className="inline-flex items-center px-6 py-2 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[11px] font-bold tracking-[0.25em] uppercase mb-4">
                     START HERE
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl text-ink font-light leading-snug">
+                  <h2 className="font-bold text-3xl sm:text-4xl text-ink leading-tight">
                     Share your requirement.<br />
-                    <em className="font-display-italic text-brand-red">We&rsquo;ll guide the next step.</em>
+                    We&rsquo;ll guide the next step.
                   </h2>
 
                   {/* Quick CTAs */}
@@ -262,7 +262,7 @@ export default function ContactPage() {
                   <span className="text-[11px] font-bold tracking-widest text-brand-red uppercase block mb-1">
                     FREE CONSULTATION
                   </span>
-                  <h3 className="font-display text-2xl sm:text-3xl text-ink font-light mb-1">
+                  <h3 className="font-bold text-2xl sm:text-3xl text-ink mb-1">
                     Tell us about your project
                   </h3>
                   <p className="text-[13px] text-ink/70 mb-6">
@@ -287,7 +287,7 @@ export default function ContactPage() {
                 <div className="inline-flex items-center px-6 py-2 rounded-full bg-[#FCECE8] border border-brand-red/35 text-brand-red text-[11px] font-bold tracking-[0.25em] uppercase mb-4">
                   BENGALURU COVERAGE
                 </div>
-                <h2 className="font-display text-3xl sm:text-4xl text-ink font-light leading-tight">
+                <h2 className="font-bold text-3xl sm:text-4xl text-ink leading-tight">
                   We build across Bangalore and surrounding areas
                 </h2>
                 <p className="mt-4 text-ink/75 leading-relaxed text-[15px]">
@@ -354,7 +354,7 @@ export default function ContactPage() {
                   <span className="text-[11px] font-bold tracking-widest text-brand-red uppercase block mb-1">
                     HEAD OFFICE
                   </span>
-                  <h3 className="font-display text-2xl text-ink font-light">
+                  <h3 className="font-bold text-2xl text-ink">
                     {COMPANY.name}
                   </h3>
                   <address className="not-italic text-[14px] text-ink/80 leading-relaxed mt-2">
