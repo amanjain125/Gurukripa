@@ -1,343 +1,351 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
 import { COMPANY } from '@/lib/company';
 
 /**
- * Comprehensive About Section with id="about" for smooth scrolling.
- * Provides deep insight into Gurukripa Constructions' history, founder leadership,
- * structural engineering rigor, key statistics, and core operational principles.
+ * About Section combining both design mockups:
+ * 1. Top Section: Headline "Engineering Trust. Building Legacies.", text, villa photo, and metrics.
+ * 2. Bottom Section: Side-by-side Cards for Founder Bio, Core Values, and Engineering Process.
  */
 export function AboutSection() {
-  const [activeTab, setActiveTab] = useState<'philosophy' | 'founder' | 'standards' | 'stats'>('philosophy');
-
-  const pillars = [
+  const stats = [
     {
-      icon: '📐',
-      title: 'Evidence-Led Structural Engineering',
-      description:
-        'Every beam, column, and foundation load case is simulated using STAAD Pro & ETABS. We build based on empirical structural math, not guesswork or arbitrary margins.',
+      value: '14+',
+      title: 'Years of Engineering Excellence',
+      subtitle: 'ESTABLISHED 2010',
+      icon: (
+        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 00.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      ),
     },
     {
-      icon: '🛡️',
-      title: 'Founder-Led Site Verification',
-      description:
-        'Anuj Jain (M.Tech Structural) personally inspects every critical pour, soil-bearing test, and steel reinforcement rebar placement before concrete is cast.',
+      value: '120+',
+      title: 'Projects Delivered On-Time',
+      subtitle: 'VILLAS & COMMERCIAL',
+      icon: (
+        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4m-4 0H7" />
+        </svg>
+      ),
     },
     {
-      icon: '💎',
-      title: 'Transparent Bill of Quantities',
-      description:
-        'Zero hidden costs or speculative pricing. Detailed itemized estimates down to grade of steel (JSW/Tata Tiscon) and cement (Ultratech) with open-book contracting.',
+      value: '1.4M+',
+      title: 'Sq. Ft. Engineered & Built',
+      subtitle: 'ACROSS BENGALURU',
+      icon: (
+        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
     },
     {
-      icon: '🏛️',
-      title: 'Built to Last Generations',
-      description:
-        'Specializing in long-life residential villas, commercial structures, and heritage structural retrofits in Bengaluru with 100% compliance to BBMP/BDA standards.',
+      value: '100%',
+      title: 'Founder Site Oversight',
+      subtitle: 'SIGNED BY M.TECH ENG.',
+      icon: (
+        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      ),
     },
-  ];
-
-  const founderSpecs = [
-    { label: 'Founder & Principal', value: 'Anuj Jain' },
-    { label: 'Qualifications', value: 'B.E. Civil (VTU) · M.Tech Structural Engineering' },
-    { label: 'Experience', value: '14+ Years in Bengaluru & Pune' },
-    { label: 'Specialization', value: 'RCC Frames, Steel Structures, Retrofits, Soil Dynamics' },
-    { label: 'Software Suite', value: 'STAAD Pro · ETABS · SAFE · Revit Structure · AutoCAD' },
-    { label: 'Memberships', value: 'IStructE (India) · Institution of Engineers' },
-  ];
-
-  const companyMilestones = [
-    { year: '2010', title: 'Established in Basavanagudi', desc: 'Started with structural consulting & bespoke residential builds.' },
-    { year: '2015', title: '50+ Projects Milestone', desc: 'Expanded into multi-story commercial spaces & turnkey contracting.' },
-    { year: '2020', title: '1 Million Sq.Ft Built', desc: 'Crossed 1M sq.ft of precision-engineered built environment.' },
-    { year: 'Present', title: '120+ Completed Projects', desc: 'Full-service consultancy & luxury residential construction.' },
   ];
 
   return (
-    <section id="about" className="relative bg-bone overflow-hidden pt-28 pb-24 md:pt-36 md:pb-32 border-b border-ink/10">
-      {/* Background Aurora Elements */}
-      <div className="aurora aurora-soft opacity-60 pointer-events-none" />
-      <div
-        className="absolute top-1/3 -right-20 w-[45vw] h-[45vw] rounded-full opacity-15 blur-3xl pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(63,169,161,0.5), transparent 70%)' }}
-      />
-
-      <div className="container-wide relative z-10">
-        {/* HEADER BADGE & MAIN TITLE */}
-        <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal-deep text-[11px] font-bold tracking-[0.22em] uppercase mb-6" data-reveal>
-            <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
-            About Gurukripa Constructions
+    <section id="about" className="relative bg-[#FAF8F5] pt-20 pb-24 overflow-hidden border-b border-ink/5">
+      {/* ==================== PART 1: ABOUT US HEADER ROW (FULL VIEWPORT WIDTH) ==================== */}
+      <div className="relative flex flex-col lg:flex-row items-stretch w-full mb-16 lg:mb-20">
+        
+        {/* LEFT COLUMN: TEXT CONTENT (ALIGNS WITH CONTAINER-WIDE) */}
+        <div 
+          className="about-left-col w-full lg:w-[55%] flex flex-col justify-center pr-6 lg:pr-16 py-8 pb-12 lg:py-16 z-10"
+        >
+          {/* Red badge with trailing line */}
+          <div className="flex items-center gap-3 text-[11px] tracking-[0.24em] font-bold text-brand-red uppercase mb-5" data-reveal>
+            <span>About Us</span>
+            <span className="w-12 h-px bg-brand-red/60" />
           </div>
 
-          <h2
-            className="font-display text-h1 sm:text-display text-ink leading-[0.98] font-light"
+          {/* Serif Display Heading */}
+          <h2 
+            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold text-ink leading-[1.08] tracking-tight mb-5"
             data-reveal
             data-reveal-delay="80"
           >
-            We engineer <em className="font-display-italic text-brand-red font-normal">trust</em>—
-            one quiet, precision-built structure at a time.
+            Engineering<br />
+            <span className="font-display-italic text-brand-red not-italic italic font-semibold">Trust.</span><br />
+            Building Legacies.
           </h2>
 
-          <p
-            className="mt-6 text-ink/80 text-[17px] sm:text-[19px] leading-relaxed max-w-3xl"
-            data-reveal
-            data-reveal-delay="160"
-          >
-            Founded in <strong>2010</strong> by <strong>Anuj Jain</strong> (B.E. Civil, M.Tech Structural),{' '}
-            <span className="text-ink font-semibold">Gurukripa Constructions</span> is a premier Bengaluru-based civil engineering and structural consultancy firm. We bridge the gap between architectural vision and rock-solid structural longevity.
-          </p>
+          {/* Red horizontal divider line */}
+          <div className="w-16 h-[2px] bg-brand-red mb-8 mt-1" data-reveal data-reveal-delay="120" />
+
+          {/* Paragraph Description */}
+          <div className="space-y-6 text-ink/80 text-[16px] sm:text-[17px] leading-relaxed max-w-2xl font-light">
+            <p data-reveal data-reveal-delay="160">
+              Founded in 2010 by <strong className="font-semibold text-ink">Anuj Jain</strong> (B.E. Civil, M.Tech Structural),{' '}
+              <strong className="font-semibold text-ink">{COMPANY.name}</strong> is a premier Bengaluru-based civil engineering and structural consultancy firm.
+            </p>
+            <p data-reveal data-reveal-delay="200">
+              We bridge the gap between architectural vision and rock-solid structural longevity.
+            </p>
+          </div>
         </div>
 
-        {/* METRICS & HIGHLIGHT STRIP */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-14" data-reveal data-reveal-delay="200">
-          {[
-            { metric: '14+', label: 'Years of Engineering Excellence', sub: 'Established 2010' },
-            { metric: '120+', label: 'Projects Delivered On-Time', sub: 'Villas & Commercial' },
-            { metric: '1.4M+', label: 'Sq. Ft. Engineered & Built', sub: 'Across Bengaluru' },
-            { metric: '100%', label: 'Founder Site Oversight', sub: 'Signed by M.Tech Eng.' },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="glass rounded-3xl p-6 border border-ink/10 hover:border-brand-teal/40 transition-all duration-300 transform hover:-translate-y-1"
+        {/* DESKTOP RIGHT COLUMN: LUXURY VILLA IMAGE (ABSOLUTE FULL HEIGHT & BLEEDS TO RIGHT VIEWPORT EDGE) */}
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-[45%] overflow-hidden hidden lg:block z-0" 
+          data-reveal 
+          data-reveal-delay="240"
+        >
+          <img
+            src="/villa-hero.jpg"
+            alt="Gurukripa Luxury Villa"
+            className="w-full h-full object-cover animate-breath"
+          />
+          {/* Smooth edge transitions to dissolve boundaries */}
+          <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/60 via-[#FAF8F5]/20 to-transparent w-1/3 pointer-events-none z-10" />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#FAF8F5] via-[#FAF8F5]/40 to-transparent h-24 pointer-events-none z-10" />
+        </div>
+
+        {/* MOBILE RIGHT COLUMN: LUXURY VILLA IMAGE (INLINE & BLEEDS TO VIEWPORT SIDES) */}
+        <div 
+          className="w-full h-[350px] sm:h-[460px] md:h-[520px] relative overflow-hidden block lg:hidden z-0"
+          data-reveal 
+          data-reveal-delay="240"
+        >
+          <img
+            src="/villa-hero.jpg"
+            alt="Gurukripa Luxury Villa"
+            className="w-full h-full object-cover animate-breath"
+          />
+          {/* Smooth edge transitions for mobile */}
+          <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/50 to-transparent w-1/4 pointer-events-none z-10" />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#FAF8F5] via-[#FAF8F5]/40 to-transparent h-16 pointer-events-none z-10" />
+        </div>
+
+      </div>
+
+      {/* ==================== CONTAINER WRAPPER FOR STATS & CARDS ==================== */}
+      <div className="container-wide relative z-10">
+        
+        {/* ==================== PART 2: METRICS STRIP ==================== */}
+        <div 
+          className="bg-white rounded-3xl border border-ink/5 shadow-lg p-6 sm:p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 divide-y sm:divide-y-0 lg:divide-x divide-ink/10"
+          data-reveal
+          data-reveal-delay="300"
+        >
+          {stats.map((stat, idx) => (
+            <div 
+              key={idx} 
+              className={`flex items-start gap-4 pt-6 sm:pt-4 lg:pt-0 first:pt-0 lg:first:pl-0 ${idx % 2 === 0 ? 'sm:pl-0' : 'sm:pl-6 lg:pl-8'}`}
             >
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink font-bold tracking-tight">
-                {item.metric}
+              {/* Red circular outline icon */}
+              <div className="w-12 h-12 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
+                {stat.icon}
               </div>
-              <div className="font-semibold text-ink text-[14px] sm:text-[15px] mt-2 leading-snug">
-                {item.label}
-              </div>
-              <div className="text-[11px] tracking-wider uppercase text-brand-teal-deep font-mono mt-1 opacity-80">
-                {item.sub}
+              
+              {/* Stat Value & Labels */}
+              <div className="flex flex-col">
+                <span className="font-sans text-3xl md:text-4xl font-extrabold text-ink leading-none">
+                  {stat.value}
+                </span>
+                <span className="text-[13px] font-medium text-ink/75 mt-1.5 leading-snug">
+                  {stat.title}
+                </span>
+                <span className="text-[10px] tracking-wider text-brand-red font-mono uppercase mt-1.5 font-bold">
+                  {stat.subtitle}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* MAIN INTERACTIVE CONTENT GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-16 items-start">
-          {/* LEFT: INTERACTIVE TABS CONTENT */}
-          <div className="lg:col-span-7 space-y-8">
-            {/* Tab Selectors */}
-            <div className="flex flex-wrap gap-2 p-1.5 glass rounded-2xl border border-ink/10">
-              {[
-                { id: 'philosophy', label: 'Our Philosophy' },
-                { id: 'founder', label: 'Founder & Leadership' },
-                { id: 'standards', label: 'Engineering Standards' },
-                { id: 'stats', label: 'Milestones' },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
-                  className={`px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-ink text-bone shadow-md'
-                      : 'text-ink/70 hover:text-ink hover:bg-black/5'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+        {/* ==================== PART 3: THREE CARDS GRID ==================== */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mt-20 md:mt-24">
+          
+          {/* CARD 1: FOUNDER */}
+          <div 
+            className="bg-white rounded-[32px] p-6 sm:p-8 border border-ink/5 shadow-lg flex flex-col sm:flex-row justify-between gap-6 overflow-hidden col-span-1 lg:col-span-4 transition-all duration-300 hover:shadow-xl"
+            data-reveal
+            data-reveal-delay="100"
+          >
+            <div className="flex-1 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] tracking-wider text-brand-red font-mono font-bold uppercase">Founder</span>
+                <h3 className="font-display text-3xl text-ink font-bold mt-1 leading-none">Anuj Jain</h3>
+                <p className="text-[12px] font-bold text-brand-red mt-2 leading-snug">
+                  B.E. Civil,<br />M.Tech Structural Engineering
+                </p>
+                <p className="text-[13px] text-ink/75 leading-relaxed mt-5 font-light">
+                  With a passion for precision and a commitment to integrity, Anuj Jain leads every project with hands-on involvement from concept to completion.
+                </p>
+              </div>
+              {/* Signature */}
+              <div className="mt-8">
+                <svg className="w-28 h-10 text-ink/80" viewBox="0 0 100 40" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                  <path d="M10,25 C20,15 25,5 30,20 C35,28 32,32 38,18 C42,8 48,22 52,24 C56,26 60,14 64,16 C68,18 72,28 75,20 C78,12 85,25 90,22" />
+                </svg>
+              </div>
             </div>
-
-            {/* TAB 1: PHILOSOPHY */}
-            {activeTab === 'philosophy' && (
-              <div className="space-y-6 animate-fadeIn">
-                <div className="glass-strong rounded-3xl p-8 border border-ink/10">
-                  <h3 className="font-display text-2xl text-ink mb-4">
-                    Evidence-Led Construction, Zero Compromise.
-                  </h3>
-                  <p className="text-ink/80 text-[15.5px] leading-relaxed mb-6">
-                    At Gurukripa, construction is a profession of mathematical proof. We do not speculate on material quantities, nor do we delegate critical structural decisions to unverified vendors. From soil-bearing capacity assessments to non-destructive concrete testing, every step is backed by data.
-                  </p>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                    {pillars.map((p, idx) => (
-                      <div key={idx} className="bg-bone/80 rounded-2xl p-4 border border-ink/5">
-                        <div className="text-2xl mb-2">{p.icon}</div>
-                        <h4 className="font-bold text-ink text-[14.5px]">{p.title}</h4>
-                        <p className="text-ink/70 text-[13px] leading-relaxed mt-1">{p.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* TAB 2: FOUNDER */}
-            {activeTab === 'founder' && (
-              <div className="space-y-6 animate-fadeIn">
-                <div className="glass-strong rounded-3xl p-8 border border-ink/10">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-ink/10 pb-6 mb-6">
-                    <div>
-                      <span className="text-[10px] font-bold tracking-[0.25em] text-brand-red uppercase">
-                        Principal Consultant
-                      </span>
-                      <h3 className="font-display text-3xl text-ink">{COMPANY.founder.name}</h3>
-                      <p className="font-display-italic text-brand-teal-deep text-[16px]">
-                        {COMPANY.founder.credentials}
-                      </p>
-                    </div>
-                    <div className="px-4 py-2 rounded-xl bg-brand-gold/15 text-gold-dark font-mono text-[12px] font-bold border border-brand-gold/30">
-                      14+ Yrs Practice
-                    </div>
-                  </div>
-
-                  <p className="text-ink/80 text-[15px] leading-relaxed mb-6">
-                    Anuj Jain holds a Bachelor of Engineering in Civil Engineering from Visvesvaraya Technological University (VTU) and a Master of Technology in Structural Engineering. With over 14 years of hands-on experience designing and executing complex structural frames across Bengaluru and Maharashtra, he ensures every project meets stringent seismic and load-bearing parameters.
-                  </p>
-
-                  <div className="space-y-3 bg-bone/90 p-5 rounded-2xl border border-ink/5">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-ink/60 mb-2">
-                      Technical Credentials & Specs
-                    </div>
-                    {founderSpecs.map((spec, i) => (
-                      <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between text-[13.5px] py-1 border-b border-ink/5 last:border-0">
-                        <span className="text-ink/60 font-medium">{spec.label}</span>
-                        <span className="text-ink font-semibold">{spec.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* TAB 3: STANDARDS */}
-            {activeTab === 'standards' && (
-              <div className="space-y-6 animate-fadeIn">
-                <div className="glass-strong rounded-3xl p-8 border border-ink/10">
-                  <h3 className="font-display text-2xl text-ink mb-4">
-                    Our Quality & Material Benchmark
-                  </h3>
-                  <p className="text-ink/80 text-[15px] leading-relaxed mb-6">
-                    We maintain strict specification enforcement across all turnkey projects. We never substitute brands without written structural peer review.
-                  </p>
-
-                  <div className="space-y-4">
-                    {[
-                      { item: 'Structural Steel', details: 'Fe-550D TMT bars (JSW Steel / Tata Tiscon) with ultrasonic testing.' },
-                      { item: 'Cement & Concrete', details: 'Ultratech / ACC 53-grade OPC and M25/M30 ready-mix concrete formulations.' },
-                      { item: 'Waterproofing', details: 'Multi-layer crystalline & elastomeric membranes for basements & terraces.' },
-                      { item: 'Plumbing & Electrical', details: 'Ashirvad CPVC, Finolex / Havells heavy-duty concealed conduits.' },
-                    ].map((st, i) => (
-                      <div key={i} className="flex items-start gap-3 p-4 bg-bone/90 rounded-2xl border border-ink/5">
-                        <div className="w-6 h-6 rounded-full bg-brand-teal/20 text-brand-teal-deep flex items-center justify-center text-[12px] font-bold shrink-0 mt-0.5">
-                          ✓
-                        </div>
-                        <div>
-                          <div className="font-bold text-ink text-[14.5px]">{st.item}</div>
-                          <div className="text-ink/70 text-[13px] mt-0.5">{st.details}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* TAB 4: MILESTONES */}
-            {activeTab === 'stats' && (
-              <div className="space-y-6 animate-fadeIn">
-                <div className="glass-strong rounded-3xl p-8 border border-ink/10">
-                  <h3 className="font-display text-2xl text-ink mb-6">
-                    Journey of Quality (2010 — Present)
-                  </h3>
-                  <div className="relative border-l-2 border-brand-teal/40 ml-4 space-y-8">
-                    {companyMilestones.map((m, i) => (
-                      <div key={i} className="relative pl-6">
-                        <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-brand-teal border-2 border-bone" />
-                        <span className="text-[12px] font-mono font-bold text-brand-teal-deep bg-brand-teal/10 px-2.5 py-0.5 rounded-full">
-                          {m.year}
-                        </span>
-                        <h4 className="font-display text-lg text-ink font-bold mt-1">{m.title}</h4>
-                        <p className="text-ink/70 text-[13.5px] mt-1">{m.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* ACTION BUTTONS */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link href="/contact" className="btn btn-primary shadow-lg">
-                Speak with Founder Anuj Jain &rarr;
-              </Link>
-              <Link href="/#projects" className="btn btn-ghost">
-                View Completed Projects &darr;
-              </Link>
+            
+            {/* Portrait Image */}
+            <div className="relative w-36 h-48 sm:w-40 sm:h-52 mx-auto sm:mx-0 shrink-0 rounded-2xl overflow-hidden bg-gradient-to-b from-[#EAE6DF] to-[#FAF8F5] flex items-end">
+              <img
+                src="/founder_anuj_jain.png"
+                alt="Anuj Jain - Founder"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
 
-          {/* RIGHT: BLUEPRINT VISUALIZATION CARD */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="glass-strong rounded-3xl p-3 border border-ink/15 shadow-2xl bg-gradient-to-b from-bone via-white to-bone">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden relative bg-[#0F172A] p-6 text-white flex flex-col justify-between">
-                {/* SVG Blueprint Overlay */}
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
-                  <svg className="w-full h-full" viewBox="0 0 400 500" fill="none">
-                    <defs>
-                      <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#38BDF8" strokeWidth="0.5" />
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-                    {/* Beam grid lines */}
-                    <line x1="40" y1="100" x2="360" y2="100" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="4 4" />
-                    <line x1="40" y1="220" x2="360" y2="220" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="4 4" />
-                    <line x1="40" y1="340" x2="360" y2="340" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="4 4" />
-                    <line x1="100" y1="40" x2="100" y2="440" stroke="#38BDF8" strokeWidth="1.5" />
-                    <line x1="300" y1="40" x2="300" y2="440" stroke="#38BDF8" strokeWidth="1.5" />
+          {/* CARD 2: OUR CORE VALUES */}
+          <div 
+            className="bg-white rounded-[32px] p-6 sm:p-8 border border-ink/5 shadow-lg flex flex-col col-span-1 lg:col-span-4 transition-all duration-300 hover:shadow-xl"
+            data-reveal
+            data-reveal-delay="200"
+          >
+            <span className="text-[10px] tracking-wider text-brand-red font-mono font-bold uppercase mb-6">Our Core Values</span>
+            <div className="space-y-6 flex-1 flex flex-col justify-center">
+              {/* Value 1 */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10" strokeWidth={1.5} />
+                    <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
                   </svg>
                 </div>
-
-                {/* Top Blueprint Tag */}
-                <div className="relative z-10 flex items-center justify-between border-b border-white/20 pb-3">
-                  <span className="text-[10px] font-mono tracking-[0.2em] text-sky-400 uppercase">
-                    GURUKRIPA · STRUCTURAL SPEC
-                  </span>
-                  <span className="text-[10px] font-mono text-white/50">DRAWING # GK-2026-A</span>
+                <div>
+                  <h4 className="text-[15px] font-bold text-ink leading-tight">Precision Engineering</h4>
+                  <p className="text-[12px] text-ink/75 mt-1 leading-relaxed font-light">Every calculation, every detail matters.</p>
                 </div>
-
-                {/* Middle Content */}
-                <div className="relative z-10 space-y-4 my-auto">
-                  <div className="w-12 h-12 rounded-2xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-300">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4m-4 0H7" />
-                    </svg>
-                  </div>
-
-                  <h4 className="font-display text-2xl text-white font-light leading-snug">
-                    Bespoke Villa &amp; Structural Engineering Studio
-                  </h4>
-
-                  <p className="text-white/75 text-[13.5px] leading-relaxed">
-                    Based in Basavanagudi, Bengaluru. Every design is calculated for high durability, seismic factor compliance, and zero structural deflection over time.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-3 pt-2">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <div className="text-[10px] text-white/50 uppercase font-mono">Location</div>
-                      <div className="text-[13px] font-bold text-sky-300 mt-0.5">Basavanagudi</div>
-                    </div>
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <div className="text-[10px] text-white/50 uppercase font-mono">Scope</div>
-                      <div className="text-[13px] font-bold text-sky-300 mt-0.5">Turnkey + Consult</div>
-                    </div>
-                  </div>
+              </div>
+              
+              {/* Value 2 */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
+                <div>
+                  <h4 className="text-[15px] font-bold text-ink leading-tight">Uncompromised Quality</h4>
+                  <p className="text-[12px] text-ink/75 mt-1 leading-relaxed font-light">We never take shortcuts.</p>
+                </div>
+              </div>
 
-                {/* Bottom Footer Details */}
-                <div className="relative z-10 pt-3 border-t border-white/15 flex items-center justify-between text-[11px] font-mono text-white/60">
-                  <span>APPROVED BY: ANUJ JAIN</span>
-                  <span className="text-emerald-400 font-bold">● ACTIVE</span>
+              {/* Value 3 */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-[15px] font-bold text-ink leading-tight">Complete Transparency</h4>
+                  <p className="text-[12px] text-ink/75 mt-1 leading-relaxed font-light">Open communication, open books.</p>
+                </div>
+              </div>
+
+              {/* Value 4 */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-[15px] font-bold text-ink leading-tight">Safety First</h4>
+                  <p className="text-[12px] text-ink/75 mt-1 leading-relaxed font-light">People, structure, and environment.</p>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* CARD 3: OUR ENGINEERING PROCESS */}
+          <div 
+            className="bg-white rounded-[32px] p-6 sm:p-8 border border-ink/5 shadow-lg flex flex-col col-span-1 lg:col-span-4 transition-all duration-300 hover:shadow-xl"
+            data-reveal
+            data-reveal-delay="300"
+          >
+            <span className="text-[10px] tracking-wider text-brand-red font-mono font-bold uppercase mb-6">Our Engineering Process</span>
+            <div className="flex-1 flex flex-col justify-center gap-10 py-2">
+              {/* Row 1 */}
+              <div className="relative flex items-center justify-between">
+                {/* Connector Line Row 1 */}
+                <div className="absolute left-[15%] right-[15%] top-6 h-[2px] bg-brand-red/20 z-0" />
+                
+                {/* Step 1 */}
+                <div className="flex flex-col items-center text-center z-10 w-24">
+                  <div className="w-12 h-12 rounded-full border border-brand-red/20 bg-white flex items-center justify-center text-brand-red shadow-sm hover:scale-105 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                  </div>
+                  <span className="text-[11px] font-bold text-ink mt-3 leading-snug">Site Study</span>
+                </div>
+
+                {/* Step 2 */}
+                <div className="flex flex-col items-center text-center z-10 w-24">
+                  <div className="w-12 h-12 rounded-full border border-brand-red/20 bg-white flex items-center justify-center text-brand-red shadow-sm hover:scale-105 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                  </div>
+                  <span className="text-[11px] font-bold text-ink mt-3 leading-snug">Planning</span>
+                </div>
+
+                {/* Step 3 */}
+                <div className="flex flex-col items-center text-center z-10 w-24">
+                  <div className="w-12 h-12 rounded-full border border-brand-red/20 bg-white flex items-center justify-center text-brand-red shadow-sm hover:scale-105 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    </svg>
+                  </div>
+                  <span className="text-[11px] font-bold text-ink mt-3 leading-snug">Structural Design</span>
+                </div>
+              </div>
+
+              {/* Row 2 */}
+              <div className="relative flex items-center justify-between">
+                {/* Connector Line Row 2 */}
+                <div className="absolute left-[15%] right-[15%] top-6 h-[2px] bg-brand-red/20 z-0" />
+
+                {/* Step 4 */}
+                <div className="flex flex-col items-center text-center z-10 w-24">
+                  <div className="w-12 h-12 rounded-full border border-brand-red/20 bg-white flex items-center justify-center text-brand-red shadow-sm hover:scale-105 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                  </div>
+                  <span className="text-[11px] font-bold text-ink mt-3 leading-snug">Material Selection</span>
+                </div>
+
+                {/* Step 5 */}
+                <div className="flex flex-col items-center text-center z-10 w-24">
+                  <div className="w-12 h-12 rounded-full border border-brand-red/20 bg-white flex items-center justify-center text-brand-red shadow-sm hover:scale-105 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                    </svg>
+                  </div>
+                  <span className="text-[11px] font-bold text-ink mt-3 leading-snug">Execution</span>
+                </div>
+
+                {/* Step 6 */}
+                <div className="flex flex-col items-center text-center z-10 w-24">
+                  <div className="w-12 h-12 rounded-full border border-brand-red/20 bg-white flex items-center justify-center text-brand-red shadow-sm hover:scale-105 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <span className="text-[11px] font-bold text-ink mt-3 leading-snug">Quality Assurance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
   );

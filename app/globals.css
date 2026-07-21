@@ -18,10 +18,10 @@
 html, body {
   background: var(--bone);
   color: var(--ink);
-  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: -0.011em;
 }
 
 ::selection { background: var(--brand-red); color: var(--bone); }
@@ -37,7 +37,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Eyebrow */
 .eyebrow {
-  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -271,3 +271,22 @@ html.lenis, html.lenis body { height: auto; }
 }
 .marquee-track { animation: marquee 50s linear infinite; }
 .marquee-track:hover { animation-play-state: paused; }
+
+/* Breath animation for images to add life */
+@keyframes breath {
+  0%, 100% { transform: scale(1.0); }
+  50% { transform: scale(1.06); }
+}
+.animate-breath {
+  animation: breath 9s ease-in-out infinite;
+}
+
+/* Responsive padding class to align text with container-wide while letting image bleed to the right edge */
+.about-left-col {
+  padding-left: clamp(20px, 4vw, 48px);
+}
+@media (min-width: 1440px) {
+  .about-left-col {
+    padding-left: calc((100vw - 1440px) / 2 + 48px);
+  }
+}
