@@ -1,6 +1,48 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import { COMPANY } from '@/lib/company';
+
+function Counter({ value, suffix }: { value: number; suffix: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { setVal(value); return; }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const start = performance.now();
+          const dur = 1500;
+          const isFloat = !Number.isInteger(value);
+          const tick = (now: number) => {
+            const t = Math.min(1, (now - start) / dur);
+            const eased = 1 - Math.pow(1 - t, 3);
+            const v = value * eased;
+            setVal(isFloat ? Math.round(v * 10) / 10 : Math.round(v));
+            if (t < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [value]);
+
+  const formattedVal = Number.isInteger(value) ? val : val.toFixed(1);
+
+  return (
+    <span ref={ref} className="font-sans text-3xl md:text-4xl font-extrabold text-ink leading-none tabular-nums">
+      {formattedVal}
+      <span className="text-brand-red font-extrabold">{suffix}</span>
+    </span>
+  );
+}
 
 /**
  * About Section combining both design mockups:
@@ -10,7 +52,8 @@ import { COMPANY } from '@/lib/company';
 export function AboutSection() {
   const stats = [
     {
-      value: '14+',
+      targetValue: 14,
+      suffix: '+',
       title: 'Years of Engineering Excellence',
       subtitle: 'ESTABLISHED 2010',
       icon: (
@@ -20,7 +63,8 @@ export function AboutSection() {
       ),
     },
     {
-      value: '120+',
+      targetValue: 120,
+      suffix: '+',
       title: 'Projects Delivered On-Time',
       subtitle: 'VILLAS & COMMERCIAL',
       icon: (
@@ -30,7 +74,8 @@ export function AboutSection() {
       ),
     },
     {
-      value: '1.4M+',
+      targetValue: 1.4,
+      suffix: 'M+',
       title: 'Sq. Ft. Engineered & Built',
       subtitle: 'ACROSS BENGALURU',
       icon: (
@@ -40,7 +85,8 @@ export function AboutSection() {
       ),
     },
     {
-      value: '100%',
+      targetValue: 100,
+      suffix: '%',
       title: 'Founder Site Oversight',
       subtitle: 'SIGNED BY M.TECH ENG.',
       icon: (
@@ -94,7 +140,7 @@ export function AboutSection() {
 
         {/* DESKTOP RIGHT COLUMN: LUXURY VILLA IMAGE (ABSOLUTE FULL HEIGHT & BLEEDS TO RIGHT VIEWPORT EDGE) */}
         <div 
-          className="absolute right-0 top-0 bottom-0 w-[45%] overflow-hidden hidden lg:block z-0" 
+          className="absolute right-0 -top-20 bottom-0 w-[45%] overflow-hidden hidden lg:block z-0" 
           data-reveal 
           data-reveal-delay="240"
         >
@@ -147,9 +193,7 @@ export function AboutSection() {
               
               {/* Stat Value & Labels */}
               <div className="flex flex-col">
-                <span className="font-sans text-3xl md:text-4xl font-extrabold text-ink leading-none">
-                  {stat.value}
-                </span>
+                <Counter value={stat.targetValue} suffix={stat.suffix} />
                 <span className="text-[13px] font-medium text-ink/75 mt-1.5 leading-snug">
                   {stat.title}
                 </span>
