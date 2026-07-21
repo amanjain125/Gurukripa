@@ -86,7 +86,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 pb-6 border-b border-white/10">
           {/* Column 1: Profile & Credentials */}
           <div className="lg:col-span-4 space-y-2">
-            <BrandLogo invert className="h-14 sm:h-16 w-auto object-contain" />
+            <BrandLogo className="h-14 sm:h-16 w-auto object-contain" />
             <p className="text-bone/70 text-[13px] leading-relaxed max-w-sm">
               Bengaluru civil construction and structural consultancy firm led by{' '}
               <span className="text-bone font-semibold">{COMPANY.founder.name}</span>{' '}
