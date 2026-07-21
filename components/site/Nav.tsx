@@ -38,8 +38,8 @@ export function Nav() {
   return (
     <header className="fixed top-4 inset-x-4 z-50 transition-all duration-500 ease-out">
       <div
-        className={`mx-auto max-w-[1440px] transition-all duration-500 ${
-          scrolled ? 'glass-strong rounded-full' : 'glass rounded-full'
+        className={`mx-auto max-w-[1440px] transition-all duration-500 rounded-full ${
+          scrolled ? 'glass-navbar-scrolled' : 'glass-navbar'
         }`}
       >
         <div className="flex items-center justify-between h-[64px] px-5 md:px-7">
@@ -89,7 +89,7 @@ export function Nav() {
           open ? 'max-h-[80vh]' : 'max-h-0'
         }`}
       >
-        <div className="glass-strong rounded-3xl p-7 flex flex-col gap-4">
+        <div className="glass-navbar-scrolled rounded-3xl p-7 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
