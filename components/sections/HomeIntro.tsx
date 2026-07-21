@@ -23,7 +23,7 @@ export function HomeIntro() {
               data-reveal
               data-reveal-delay="80"
             >
-              We engineer <em className="font-display-italic text-brand-red">trust</em>—
+              We engineer <em className="font-display-italic text-brand-red">trust</em>,
               one quiet, well-detailed building at a time.
             </h2>
             <p
