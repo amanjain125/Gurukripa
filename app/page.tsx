@@ -1,5 +1,5 @@
 import { VillaScrollHero } from '@/components/sections/VillaScrollHero';
-import { HomeIntro } from '@/components/sections/HomeIntro';
+import { AboutSection } from '@/components/sections/AboutSection';
 import { TrustStrip } from '@/components/sections/TrustStrip';
 import { ServicesPreview } from '@/components/sections/ServicesPreview';
 import { FeaturedProjects } from '@/components/sections/FeaturedProjects';
@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       <RevealOnScroll />
       <VillaScrollHero />
-      <HomeIntro />
+      <AboutSection />
       <TrustStrip />
       <ServicesPreview />
       <FeaturedProjects />
