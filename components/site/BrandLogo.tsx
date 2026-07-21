@@ -11,9 +11,13 @@ export function BrandLogo({
   height?: number;
   invert?: boolean;
 }) {
+  const src = variant === 'mark'
+    ? (invert ? '/logo-mark-white.svg' : '/logo-mark.svg')
+    : (invert ? '/logo-white.svg' : '/logo.svg');
+
   return (
     <img
-      src={invert ? '/logo-white.svg' : '/logo.svg'}
+      src={src}
       alt="Gurukripa Constructions Logo"
       width={width ?? 180}
       height={height ?? 140}
