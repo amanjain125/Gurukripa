@@ -266,7 +266,7 @@ export default function ContactPage() {
                     Tell us about your project
                   </h3>
                   <p className="text-[15px] text-ink/75 mb-7">
-                    Share your name, mobile and project type &mdash; our team will call you back.
+                    Share your name, mobile number, email ID and project type &mdash; our team will call you back.
                   </p>
 
                   <ContactForm />

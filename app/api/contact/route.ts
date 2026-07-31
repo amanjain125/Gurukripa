@@ -7,6 +7,7 @@ type Payload = {
   phone?: string;
   email?: string;
   projectType?: string;
+  plotSize?: string;
   message?: string;
 };
 
@@ -18,15 +19,15 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const { name, phone, email, projectType, message } = body;
-  if (!name || !email || !message) {
+  const { name, phone, email, projectType, plotSize, message } = body;
+  if (!name || (!email && !phone)) {
     return NextResponse.json({ ok: false, error: 'Missing required fields.' }, { status: 422 });
   }
 
   // TODO: integrate Resend / Formspree / your CRM via CONTACT_FORM_ENDPOINT
   // For now, log + return 200 so the form behaves correctly in dev.
   // eslint-disable-next-line no-console
-  console.log('[contact]', { name, phone, email, projectType, message, t: new Date().toISOString() });
+  console.log('[contact]', { name, phone, email, projectType, plotSize, message, t: new Date().toISOString() });
 
   return NextResponse.json({ ok: true });
 }

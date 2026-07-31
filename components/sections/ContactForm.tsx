@@ -7,13 +7,52 @@ type Status = 'idle' | 'loading' | 'success' | 'error';
 export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<string>('');
+  const [selectedSubService, setSelectedSubService] = useState<string>('');
+
+  const subServiceMap: Record<string, { title: string; options: { label: string; value: string }[] }> = {
+    Consulting: {
+      title: 'Select Consulting Type',
+      options: [
+        { label: 'Architecture + Structural', value: 'Architecture + Structural' },
+        { label: 'Structural', value: 'Structural' },
+      ],
+    },
+    Construction: {
+      title: 'Select Construction Type',
+      options: [
+        { label: 'Commercial', value: 'Commercial' },
+        { label: 'Residential', value: 'Residential' },
+      ],
+    },
+    Renovation: {
+      title: 'Select Renovation Type',
+      options: [
+        { label: 'Commercial', value: 'Commercial' },
+        { label: 'Residential', value: 'Residential' },
+      ],
+    },
+  };
+
+  function handleServiceChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    setSelectedService(e.target.value);
+    setSelectedSubService('');
+  }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('loading');
     setError(null);
 
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    // Combine service and sub-service into projectType for backend compatibility
+    const combinedProjectType = selectedSubService
+      ? `${selectedService} — ${selectedSubService}`
+      : selectedService;
+    data.projectType = combinedProjectType;
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -23,14 +62,19 @@ export function ContactForm() {
       if (!res.ok) throw new Error(await res.text());
       setStatus('success');
       e.currentTarget.reset();
+      setSelectedService('');
+      setSelectedSubService('');
     } catch (err) {
       setStatus('error');
       setError(err instanceof Error ? err.message : 'Something went wrong.');
     }
   }
 
+  const currentSubServices = selectedService ? subServiceMap[selectedService] : null;
+
   return (
     <form onSubmit={onSubmit} className="space-y-6 w-full">
+      {/* Name */}
       <div>
         <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="name">
           Your Name <span className="text-brand-red">*</span>
@@ -45,6 +89,7 @@ export function ContactForm() {
         />
       </div>
 
+      {/* Phone */}
       <div>
         <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="phone">
           Mobile Number <span className="text-brand-red">*</span>
@@ -59,25 +104,94 @@ export function ContactForm() {
         />
       </div>
 
+      {/* Email */}
       <div>
-        <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="projectType">
-          Select Service <span className="text-brand-red">*</span>
+        <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="email">
+          Email ID <span className="text-brand-red">*</span>
         </label>
-        <select
-          id="projectType"
-          name="projectType"
+        <input
+          id="email"
+          name="email"
+          type="email"
           required
-          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition cursor-pointer appearance-none"
-        >
-          <option value="">Choose your project type</option>
-          <option value="Independent Residence">Independent Residence / Villa</option>
-          <option value="Commercial / Mixed-use">Commercial / Mixed-use Building</option>
-          <option value="Structural Consulting">Structural Consulting & Design</option>
-          <option value="Renovation / Retrofit">Renovation & Structural Retrofit</option>
-          <option value="Cost-Plus Contract">Cost-Plus / Lump-Sum Contract</option>
-        </select>
+          placeholder="e.g. rahul@example.com"
+          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
+        />
       </div>
 
+      {/* Primary Service Dropdown */}
+      <div>
+        <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="service">
+          Select Service <span className="text-brand-red">*</span>
+        </label>
+        <div className="relative">
+          <select
+            id="service"
+            name="service"
+            value={selectedService}
+            onChange={handleServiceChange}
+            required
+            className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 pr-10 text-[16px] text-ink outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition cursor-pointer appearance-none"
+          >
+            <option value="">Choose your project type</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Construction">Construction</option>
+            <option value="Renovation">Renovation</option>
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-ink/50">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      {/* Dynamic Sub-Service Dropdown */}
+      {currentSubServices && (
+        <div className="animate-fadeIn">
+          <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="subService">
+            {currentSubServices.title} <span className="text-brand-red">*</span>
+          </label>
+          <div className="relative">
+            <select
+              id="subService"
+              name="subService"
+              value={selectedSubService}
+              onChange={(e) => setSelectedSubService(e.target.value)}
+              required
+              className="w-full bg-white/90 border border-brand-red/40 rounded-xl px-4 py-3.5 pr-10 text-[16px] text-ink outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition cursor-pointer appearance-none"
+            >
+              <option value="">Choose an option</option>
+              {currentSubServices.options.map((opt) => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-brand-red">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Plot Size */}
+      <div>
+        <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="plotSize">
+          Plot Size / Dimensions <span className="text-ink/40">(Optional)</span>
+        </label>
+        <input
+          id="plotSize"
+          name="plotSize"
+          type="text"
+          placeholder="e.g. 30x40 ft, 1200 sq ft, 40x60 ft"
+          className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
+        />
+      </div>
+
+      {/* Message */}
       <div>
         <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="message">
           Project Brief / Plot Details <span className="text-ink/40">(Optional)</span>
@@ -91,6 +205,7 @@ export function ContactForm() {
         />
       </div>
 
+      {/* Submit Button */}
       <div className="pt-2">
         <button
           type="submit"
