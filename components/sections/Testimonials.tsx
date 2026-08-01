@@ -10,7 +10,6 @@ export function Testimonials() {
 
   // Form State
   const [author, setAuthor] = useState('');
-  const [role, setRole] = useState('');
   const [quote, setQuote] = useState('');
   const [rating, setRating] = useState(5);
   const [hoverRating, setHoverRating] = useState(0);
@@ -36,7 +35,6 @@ export function Testimonials() {
 
     const newReview: Testimonial = {
       author: author.trim(),
-      role: role.trim() || 'Client',
       quote: quote.trim(),
       rating: rating,
       date: 'Just now',
@@ -59,7 +57,6 @@ export function Testimonials() {
 
     // Reset form & show toast
     setAuthor('');
-    setRole('');
     setQuote('');
     setRating(5);
     setIsModalOpen(false);
@@ -75,7 +72,7 @@ export function Testimonials() {
       <div className="aurora aurora-soft" />
 
       {/* Header Container */}
-      <div className="container-wide relative z-10 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div className="container-wide relative z-10 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <p className="eyebrow" data-reveal>
             Client Endorsements & Real Reviews
@@ -128,14 +125,14 @@ export function Testimonials() {
           {marqueeItems.map((t, i) => (
             <article
               key={`${t.author}-${i}`}
-              className="w-[340px] md:w-[420px] shrink-0 glass-strong rounded-2xl p-7 transition-transform duration-300 hover:scale-[1.02] shadow-sm"
+              className="w-[360px] md:w-[460px] shrink-0 glass-strong rounded-2xl p-5 transition-transform duration-300 hover:scale-[1.02] shadow-sm flex flex-col"
             >
               {/* Star Rating */}
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-2.5">
                 {Array.from({ length: t.rating || 5 }).map((_, starIdx) => (
                   <svg
                     key={starIdx}
-                    className="w-4 h-4 text-gold fill-current"
+                    className="w-3.5 h-3.5 text-gold fill-current"
                     viewBox="0 0 20 20"
                   >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -144,24 +141,21 @@ export function Testimonials() {
               </div>
 
               {/* Quote Text */}
-              <p className="font-display text-lg leading-snug text-ink min-h-[72px]">
+              <p className="font-display text-[15px] leading-relaxed text-ink min-h-[48px] mb-4">
                 <em className="font-display-italic text-brand-red">&ldquo;</em>
                 {t.quote}
                 <em className="font-display-italic text-brand-red">&rdquo;</em>
               </p>
 
               {/* Author Footer */}
-              <div className="mt-6 flex items-center justify-between border-t border-ink/5 pt-4">
+              <div className="mt-auto flex items-center justify-between border-t border-ink/5 pt-2.5">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-teal to-brand-red text-bone font-bold text-xs flex items-center justify-center shadow-inner">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-teal to-brand-red text-bone font-bold text-[11px] flex items-center justify-center shadow-inner">
                     {t.author.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-[13px] font-semibold text-ink">
+                    <p className="text-xs font-semibold text-ink">
                       {t.author}
-                    </p>
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-steel">
-                      {t.role}
                     </p>
                   </div>
                 </div>
@@ -243,18 +237,6 @@ export function Testimonials() {
                 />
               </div>
 
-              <div>
-                <label className="field-label mb-1.5 block">
-                  Project or Title (Optional)
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Owner, Sadashivanagar Villa"
-                  value={role}
-                  onChange={(e) => setRole(e.target.value)}
-                  className="field"
-                />
-              </div>
 
               <div>
                 <label className="field-label mb-1.5 block">

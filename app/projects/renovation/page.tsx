@@ -127,24 +127,7 @@ export default function RenovationProjectsPage() {
             ))}
           </div>
 
-          {/* Banner Callout */}
-          <div className="mt-20 bg-ink border border-white/15 rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto shadow-2xl text-bone">
-            <span className="eyebrow text-gold mb-3 block font-bold">Custom Renovation Portfolio</span>
-            <h3 className="font-display text-2xl md:text-3xl text-white font-semibold">
-              Have renovation & retrofit projects to add?
-            </h3>
-            <p className="text-white/80 text-[14px] mt-3 max-w-xl mx-auto leading-relaxed">
-              We can update this page with your specific renovation case studies, before & after photos, structural solution specs, and locations.
-            </p>
-            <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
-              <Link href="/contact" className="btn btn-primary !rounded-full !px-7 !py-3 text-[14px] font-bold shadow-lg">
-                Consult With Founder
-              </Link>
-              <Link href="/projects/construction" className="btn btn-secondary !rounded-full !px-7 !py-3 text-[14px] font-bold">
-                Explore Construction Projects
-              </Link>
-            </div>
-          </div>
+
         </div>
       </section>
     </>

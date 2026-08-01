@@ -158,7 +158,7 @@ export function AboutSection() {
           data-reveal-delay="240"
         >
           <img
-            src="/villa-hero.jpg"
+            src="/frontpage.jpg"
             alt="Gurukripa Luxury Villa"
             className="w-full h-full object-cover animate-breath"
           />
@@ -174,7 +174,7 @@ export function AboutSection() {
           data-reveal-delay="240"
         >
           <img
-            src="/villa-hero.jpg"
+            src="/frontpage.jpg"
             alt="Gurukripa Luxury Villa"
             className="w-full h-full object-cover animate-breath"
           />
