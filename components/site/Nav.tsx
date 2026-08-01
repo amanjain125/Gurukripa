@@ -64,6 +64,18 @@ export function Nav() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
+            <a
+              href="/Gurukripa_Constructions_Portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Gurukripa_Constructions_Portfolio.pdf"
+              className="btn btn-secondary !rounded-xl !py-2.5 !px-4 text-[13px] font-semibold tracking-wide flex items-center gap-1.5"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Portfolio PDF
+            </a>
             <Link
               href="/contact"
               className="btn btn-primary !rounded-xl !py-2.5 !px-5 text-[14px] font-bold tracking-wide"
@@ -100,12 +112,26 @@ export function Nav() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="btn btn-primary !rounded-xl mt-4 self-start font-bold"
-          >
-            Get Quote
-          </Link>
+          <div className="flex flex-col gap-2.5 mt-4">
+            <a
+              href="/Gurukripa_Constructions_Portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Gurukripa_Constructions_Portfolio.pdf"
+              className="btn btn-secondary !rounded-xl text-center font-semibold text-sm flex items-center justify-center gap-2 py-3"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Portfolio PDF
+            </a>
+            <Link
+              href="/contact"
+              className="btn btn-primary !rounded-xl text-center font-bold py-3"
+            >
+              Get Quote
+            </Link>
+          </div>
         </div>
       </div>
     </header>

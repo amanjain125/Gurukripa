@@ -1,0 +1,1937 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gurukripa Constructions - Executive Portfolio</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #0F172A;
+      background-color: #FFFFFF;
+      font-size: 10pt;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      position: relative;
+      page-break-after: always;
+      overflow: hidden;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* COVER PAGE - LIGHT & PRESTIGIOUS */
+    .cover-page {
+      background: #FFFFFF;
+      color: #0F172A;
+      justify-content: space-between;
+      padding: 16mm 18mm 16mm 18mm;
+      border-top: 8px solid #C0322B;
+    }
+
+    .cover-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 14px;
+    }
+
+    .cover-logo {
+      height: 48px;
+      width: auto;
+    }
+
+    .cover-badge {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #C0322B;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .cover-hero-content {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .cover-subtitle {
+      color: #C0322B;
+      font-size: 11pt;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .cover-title {
+      font-size: 30pt;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 14px 0;
+      color: #0F172A;
+      letter-spacing: -0.5px;
+    }
+
+    .cover-desc {
+      font-size: 10.5pt;
+      color: #475569;
+      max-width: 580px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .cover-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 15px;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #C0322B;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 8pt;
+      color: #475569;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .cover-founder-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid #C0322B;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 18px;
+    }
+
+    .founder-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #C0322B;
+    }
+
+    .founder-name {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0F172A;
+    }
+
+    .founder-role {
+      font-size: 9pt;
+      color: #C0322B;
+      font-weight: 700;
+    }
+
+    .founder-creds {
+      font-size: 8pt;
+      color: #64748B;
+    }
+
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid #E2E8F0;
+      padding-top: 12px;
+      font-size: 8.5pt;
+      color: #64748B;
+    }
+
+    /* INNER PAGES COMMON LAYOUT */
+    .inner-page {
+      padding: 14mm 16mm 14mm 16mm;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #0F172A;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .page-header-title {
+      font-size: 14pt;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.3px;
+    }
+
+    .page-header-subtitle {
+      font-size: 8.5pt;
+      color: #C0322B;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .page-footer {
+      position: absolute;
+      bottom: 8mm;
+      left: 16mm;
+      right: 16mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #E2E8F0;
+      padding-top: 6px;
+      font-size: 7.5pt;
+      color: #64748B;
+    }
+
+    .page-content {
+      flex: 1;
+    }
+
+    /* ABOUT / EXECUTIVE OVERVIEW PAGE */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 16px;
+    }
+
+    .section-heading {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 8px;
+      border-left: 3px solid #C0322B;
+      padding-left: 8px;
+    }
+
+    .text-body {
+      font-size: 9pt;
+      line-height: 1.55;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+
+    .pillar-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+
+    .pillar-title {
+      font-weight: 700;
+      font-size: 9pt;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+
+    .pillar-desc {
+      font-size: 8pt;
+      color: #475569;
+      line-height: 1.4;
+    }
+
+    /* INDEX TABLE OF CONTENTS */
+    .toc-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 12px;
+    }
+
+    .toc-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5pt;
+      padding: 5px 0;
+      border-bottom: 1px dashed #CBD5E1;
+    }
+
+    .toc-item:last-child {
+      border-bottom: none;
+    }
+
+    .toc-label { font-weight: 600; color: #0F172A; }
+    .toc-page { font-weight: 700; color: #C0322B; }
+
+    /* SERVICES PAGE */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .service-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 12px 14px;
+      border-top: 3px solid #0F172A;
+    }
+
+    .service-card:nth-child(even) {
+      border-top-color: #C0322B;
+    }
+
+    .service-title {
+      font-size: 10.5pt;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+
+    .service-caption {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #C0322B;
+      margin-bottom: 6px;
+    }
+
+    .service-desc {
+      font-size: 8pt;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .service-bullets {
+      margin: 0;
+      padding-left: 14px;
+      font-size: 7.5pt;
+      color: #334155;
+    }
+
+    .service-bullets li {
+      margin-bottom: 2px;
+    }
+
+    /* PROCESS PAGE */
+    .process-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 12px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .step-num {
+      font-size: 18pt;
+      font-weight: 900;
+      color: #C0322B;
+      line-height: 1;
+      width: 35px;
+    }
+
+    .step-title {
+      font-size: 10pt;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+
+    .step-body {
+      font-size: 8.5pt;
+      color: #475569;
+    }
+
+    /* PROJECT CARDS - 3 PER PAGE OPTIMIZED */
+    .project-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      height: 77mm; /* Exact fit for 3 per A4 page */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #F1F5F9;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+    }
+
+    .project-name {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+    }
+
+    .project-location {
+      font-size: 8pt;
+      color: #64748B;
+      font-weight: 600;
+    }
+
+    .project-badges {
+      display: flex;
+      gap: 4px;
+    }
+
+    .badge {
+      font-size: 7pt;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .badge-residential { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .badge-commercial { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+    .badge-completed { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+    .badge-ongoing { background: #FFF7ED; color: #C2410C; border: 1px solid #FFEDD5; }
+
+    .project-main-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 10px;
+      flex: 1;
+      align-items: center;
+    }
+
+    .project-img-box {
+      width: 100%;
+      height: 52mm;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 52mm;
+    }
+
+    .project-meta-table {
+      width: 100%;
+      font-size: 7.5pt;
+      border-collapse: collapse;
+      margin-bottom: 4px;
+      background: #F8FAFC;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .project-meta-table td {
+      padding: 3px 6px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .project-meta-table td.meta-label {
+      font-weight: 700;
+      color: #475569;
+      width: 32%;
+    }
+
+    .project-meta-table td.meta-val {
+      color: #0F172A;
+      font-weight: 600;
+    }
+
+    .case-box {
+      font-size: 7.5pt;
+      line-height: 1.35;
+    }
+
+    .case-item {
+      margin-bottom: 3px;
+    }
+
+    .case-title {
+      font-weight: 800;
+      color: #0F172A;
+      display: inline;
+    }
+
+    .case-text {
+      color: #475569;
+      display: inline;
+    }
+
+    /* TESTIMONIALS PAGE */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .testimonial-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 14px;
+      position: relative;
+    }
+
+    .quote-mark {
+      font-size: 24pt;
+      font-family: Georgia, serif;
+      color: #C0322B;
+      line-height: 0;
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      opacity: 0.25;
+    }
+
+    .quote-text {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .author-name {
+      font-weight: 800;
+      font-size: 9pt;
+      color: #0F172A;
+    }
+
+    .author-role {
+      font-size: 7.5pt;
+      color: #64748B;
+    }
+
+    .stars {
+      color: #F59E0B;
+      font-size: 8.5pt;
+      margin-bottom: 4px;
+    }
+
+    /* CONTACT / BACK COVER PAGE */
+    .contact-page {
+      background-color: #FFFFFF;
+      color: #0F172A;
+      justify-content: space-between;
+      padding: 16mm 18mm 16mm 18mm;
+      border-bottom: 8px solid #C0322B;
+    }
+
+    .contact-card-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C0322B;
+      font-weight: bold;
+    }
+
+    .contact-label {
+      font-size: 8pt;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    .contact-val {
+      font-size: 10.5pt;
+      color: #0F172A;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER PAGE - LIGHT & PRESTIGIOUS -->
+  <div class="page cover-page">
+    <div class="cover-header">
+      <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/logo.svg" class="cover-logo" alt="Gurukripa Logo" />
+      <div class="cover-badge">Consultants & Builders</div>
+    </div>
+
+    <div class="cover-hero-content">
+      <div class="cover-subtitle">Engineering & Project Portfolio</div>
+      <h1 class="cover-title">Gurukripa Constructions</h1>
+      <p class="cover-desc">
+        Structural consulting, luxury residential villas, commercial developments, and structural retrofitting built on precision engineering, transparent line-item BOQs, and locked schedule discipline.
+      </p>
+
+      <div class="cover-stats-grid">
+        
+          <div class="stat-card">
+            <div class="stat-number">14+</div>
+            <div class="stat-label">Years building</div>
+          </div>
+        
+          <div class="stat-card">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Projects delivered</div>
+          </div>
+        
+          <div class="stat-card">
+            <div class="stat-number">1.4M</div>
+            <div class="stat-label">Sq.ft engineered</div>
+          </div>
+        
+          <div class="stat-card">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Cities served</div>
+          </div>
+        
+      </div>
+
+      <div class="cover-founder-box">
+        <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/founder_anuj_jain.png" class="founder-avatar" alt="Anuj Jain" />
+        <div>
+          <div class="founder-name">Anuj Jain</div>
+          <div class="founder-role">Founder & Principal Consultant</div>
+          <div class="founder-creds">B.E. Civil · M.Tech Structural</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <div>Headquarters: Bengaluru, Karnataka, India</div>
+      <div>Official Corporate Publication · Established 2010</div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: EXECUTIVE OVERVIEW & TABLE OF CONTENTS -->
+  <div class="page inner-page">
+    <div class="page-header">
+      <div>
+        <div class="page-header-subtitle">Executive Overview</div>
+        <div class="page-header-title">Company Profile & Track Record</div>
+      </div>
+      <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/logo.svg" style="height:32px;" />
+    </div>
+
+    <div class="page-content">
+      <div class="about-grid">
+        <div>
+          <div class="section-heading">Evidence-Led Structural Engineering</div>
+          <p class="text-body">
+            Gurukripa Constructions is a premier Bengaluru-based structural design and turnkey construction firm founded in 2010. We take a quiet, evidence-led approach to structural design. Every structural member is sized to a rigorous load case modeled in STAAD, ETABS, and SAFE, and put on site only after an independent peer review.
+          </p>
+          <p class="text-body">
+            Over 14+ years, we have engineered and delivered over 1.4 million square feet of bespoke residential villas, commercial complexes, and industrial sites across South India.
+          </p>
+
+          <div class="section-heading" style="margin-top:15px;">Founder's Guarantee</div>
+          <p class="text-body">
+            <em>"Buildings are built to endure for generations. Our responsibility as structural engineers is to ensure every foundation, beam, and slab is executed with complete technical clarity, zero guesswork, and absolute schedule integrity."</em>
+          </p>
+          <div style="font-weight:800; font-size:9.5pt; color:#0F172A;">
+            — Er. Anuj Jain <span style="font-weight:500; color:#64748B;">(B.E. Civil, M.Tech Structural)</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-heading">Our Core Operating Pillars</div>
+
+          <div class="pillar-card">
+            <div class="pillar-title">1. Independent Peer Review</div>
+            <div class="pillar-desc">Every structural calculation is independently verified prior to site execution.</div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-title">2. Transparent BOQ Pricing</div>
+            <div class="pillar-desc">Detailed line-item quantities priced at market rates with zero soft numbers.</div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-title">3. Weekly Progress Reports</div>
+            <div class="pillar-desc">Friday site reports with variance tracking delivered directly to client boards.</div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-title">4. Certified QA/QC Lab Checks</div>
+            <div class="pillar-desc">Cube strength and non-destructive ultrasonic testing at every concrete pour.</div>
+          </div>
+
+          <div class="toc-box">
+            <div style="font-weight:800; font-size:9pt; color:#0F172A; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Portfolio Index</div>
+            <div class="toc-item"><span class="toc-label">Executive Overview</span><span class="toc-page">Page 2</span></div>
+            <div class="toc-item"><span class="toc-label">Core Specialized Services</span><span class="toc-page">Page 3</span></div>
+            <div class="toc-item"><span class="toc-label">5-Step Project Execution Framework</span><span class="toc-page">Page 4</span></div>
+            <div class="toc-item"><span class="toc-label">Construction Projects Showcase (8 Projects)</span><span class="toc-page">Pages 5–7</span></div>
+            <div class="toc-item"><span class="toc-label">Renovation & Retrofitting Showcase (7 Projects)</span><span class="toc-page">Pages 8–10</span></div>
+            <div class="toc-item"><span class="toc-label">Client Endorsements & Testimonials</span><span class="toc-page">Page 11</span></div>
+            <div class="toc-item"><span class="toc-label">Corporate Contact Directory</span><span class="toc-page">Page 12</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Gurukripa Constructions · Corporate Portfolio</div>
+      <div>Page 2</div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: CORE SERVICES -->
+  <div class="page inner-page">
+    <div class="page-header">
+      <div>
+        <div class="page-header-subtitle">Capabilities</div>
+        <div class="page-header-title">Core Specialized Services</div>
+      </div>
+      <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/logo.svg" style="height:32px;" />
+    </div>
+
+    <div class="page-content">
+      <div class="services-grid">
+        
+          <div class="service-card">
+            <div class="service-title">Structural Consulting</div>
+            <div class="service-caption">Analysis, modelling, peer review.</div>
+            <div class="service-desc">We take a quiet, evidence-led approach to structural design. Every member is sized to a load case we can defend on a board. We work in STAAD, ETABS and SAFE, and we put our drawings on site only after a second engineer has reviewed them.</div>
+            <ul class="service-bullets">
+              <li>Load analysis and structural modelling</li><li>Foundation design for difficult soils</li><li>Seismic and wind certification</li><li>Independent peer review for other firms</li>
+            </ul>
+          </div>
+        
+          <div class="service-card">
+            <div class="service-title">Residential Construction</div>
+            <div class="service-caption">Villas, row houses, custom homes.</div>
+            <div class="service-desc">Homes are the work we are most known for. We build for owners who plan to live in the house for decades. That means honest materials, generous tolerances, and a finishes schedule signed off before the slab is poured.</div>
+            <ul class="service-bullets">
+              <li>Independent villas (G+1 to G+3)</li><li>Row-house and small-cluster developments</li><li>Apartment and duplex interiors</li><li>Vaastu-aligned planning, on request</li>
+            </ul>
+          </div>
+        
+          <div class="service-card">
+            <div class="service-title">Commercial Builds</div>
+            <div class="service-caption">Offices, retail, mixed-use towers.</div>
+            <div class="service-desc">Commercial projects live and die by their schedule. We plan critical-path activity at the modelling stage, not on site, and we share weekly cost-and-schedule reports our clients can take straight to a board meeting.</div>
+            <ul class="service-bullets">
+              <li>Office and IT-park blocks</li><li>Retail and showroom fit-outs</li><li>Mixed-use towers up to G+8</li><li>BMS and façade coordination</li>
+            </ul>
+          </div>
+        
+          <div class="service-card">
+            <div class="service-title">Turnkey Project Management</div>
+            <div class="service-caption">One contract. One accountable team.</div>
+            <div class="service-desc">When a client wants a single point of accountability, we hold the entire scope: design, statutory, procurement, construction, finishes, handover. We bring our own QS, MEP and interiors leads, and we report against a single locked schedule.</div>
+            <ul class="service-bullets">
+              <li>Single-point-responsibility contracts</li><li>In-house QS, MEP and interiors</li><li>Statutory liaison (BBMP, BWSSB, BESCOM)</li><li>Locked schedules with weekly variance reports</li>
+            </ul>
+          </div>
+        
+          <div class="service-card">
+            <div class="service-title">Renovation & Retrofitting</div>
+            <div class="service-caption">Heritage repair, structural strengthening.</div>
+            <div class="service-desc">Old buildings deserve careful hands. We diagnose with non-destructive testing, design a retrofit that respects the original fabric, and execute with crews who have spent years on heritage work.</div>
+            <ul class="service-bullets">
+              <li>Non-destructive condition assessment</li><li>FRP wrapping and section enlargement</li><li>Micro-piling and underpinning</li><li>Heritage roof and façade restoration</li>
+            </ul>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Gurukripa Constructions · Corporate Portfolio</div>
+      <div>Page 3</div>
+    </div>
+  </div>
+
+  <!-- PAGE 4: PROCESS & METHODOLOGY -->
+  <div class="page inner-page">
+    <div class="page-header">
+      <div>
+        <div class="page-header-subtitle">Execution Framework</div>
+        <div class="page-header-title">Our 5-Step Engineering Process</div>
+      </div>
+      <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/logo.svg" style="height:32px;" />
+    </div>
+
+    <div class="page-content">
+      <div class="process-timeline">
+        
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div>
+              <div class="step-title">Consult</div>
+              <div class="step-body">A site visit, an honest conversation, and a one-page brief that captures what you actually want to build.</div>
+            </div>
+          </div>
+        
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div>
+              <div class="step-title">Design</div>
+              <div class="step-body">Architectural intent meets structural reality. We model every member, run every load case, share every assumption.</div>
+            </div>
+          </div>
+        
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div>
+              <div class="step-title">Estimate</div>
+              <div class="step-body">A line-item BOQ priced against current market rates. No allowances, no soft numbers, no surprises later.</div>
+            </div>
+          </div>
+        
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <div>
+              <div class="step-title">Build</div>
+              <div class="step-body">A locked schedule, a single site engineer, weekly reports, and quality checks signed at every pour.</div>
+            </div>
+          </div>
+        
+          <div class="process-step">
+            <div class="step-num">05</div>
+            <div>
+              <div class="step-title">Handover</div>
+              <div class="step-body">A documented handover pack, every test certificate, and a structural warranty that means something.</div>
+            </div>
+          </div>
+        
+      </div>
+
+      <div style="margin-top: 16px; background:#F8FAFC; border:1px solid #E2E8F0; border-left:4px solid #C0322B; padding:16px; border-radius:0 8px 8px 0; display:flex; gap:16px; align-items:center;">
+        <div style="font-size:22pt; color:#C0322B; font-weight:900;">100%</div>
+        <div style="font-size:8.5pt; color:#334155; line-height:1.45;">
+          <strong style="color:#0F172A;">Structural Warranty & Handover Quality Pack:</strong> Every project delivered comes with an official handover pack containing concrete cube test reports, steel mill certificates, as-built CAD drawings, and a formal structural warranty.
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Gurukripa Constructions · Corporate Portfolio</div>
+      <div>Page 4</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS PAGES (EXACTLY 3 PROJECTS PER PAGE) -->
+  
+    <div class="page inner-page">
+      <div class="page-header">
+        <div>
+          <div class="page-header-subtitle">Engineering Case Studies (1–3 of 16)</div>
+          <div class="page-header-title">Project Portfolio Showcase</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">EKA Residence, Anekal</div>
+          <div class="project-location">📍 Anekal, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Anekal/EKA/WhatsApp Image 2026-03-17 at 14.03.34.jpeg" class="project-img" alt="EKA Residence, Anekal" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">5,800 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Framed Structure · Raft Foundation</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Designing a multi-tiered residential structure in Anekal with optimized natural ventilation while maintaining structural integrity for long spans.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Engineered an RCC framed skeleton tied into deep raft foundations with custom slab cantilevers.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Delivered turnkey ahead of schedule with full structural safety certification.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Exotica Villa & Enclave, Anekal</div>
+          <div class="project-location">📍 Anekal, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-ongoing">Ongoing</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Anekal/EXOTICA/WhatsApp Image 2026-02-10 at 13.42.20.jpeg" class="project-img" alt="Exotica Villa & Enclave, Anekal" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">7,200 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2025</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Frame · Isolated Footings</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Expansive villa layout requiring high-strength RCC column alignment and weather-resistant external masonry.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Utilized high-grade concrete mix design and continuous curing monitoring throughout footing and beam casting.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Currently on schedule for completion with structural framing 100% inspected and verified.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Channsandra Mixed-Use Complex</div>
+          <div class="project-location">📍 Channsandra, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-commercial">Commercial</span>
+          <span class="badge badge-ongoing">Ongoing</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Channsandra/render 1.png" class="project-img" alt="Channsandra Mixed-Use Complex" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">18,500 sq.ft · G+4</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Composite RCC & Steel Frame</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Creating column-free retail display spaces on lower levels while carrying multi-story residential floors above.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Implemented transfer girders at level two to transfer heavy upper loads cleanly to perimeter columns.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Structural frame completed, meeting all BBMP commercial safety compliance standards.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      </div>
+
+      <div class="page-footer">
+        <div>Gurukripa Constructions · Corporate Portfolio</div>
+        <div>Page 5</div>
+      </div>
+    </div>
+    
+    <div class="page inner-page">
+      <div class="page-header">
+        <div>
+          <div class="page-header-subtitle">Engineering Case Studies (4–6 of 16)</div>
+          <div class="page-header-title">Project Portfolio Showcase</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Hennur Villa Development</div>
+          <div class="project-location">📍 Hennur Road, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Hennur/Anuj 03.jpg" class="project-img" alt="Hennur Villa Development" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">4,600 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2023</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Frame · AAC Block Masonry</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">High water-table site condition requiring deep waterproofed footings and moisture barrier protection.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Integrated crystalline waterproofing system into foundation footings and soil retaining walls.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Handed over turnkey with zero dampness or structural settlement.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Hoskote Commercial & Industrial Site</div>
+          <div class="project-location">📍 Hoskote, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-commercial">Commercial</span>
+          <span class="badge badge-ongoing">Ongoing</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Hoskote/IMG20250607101445.jpg" class="project-img" alt="Hoskote Commercial & Industrial Site" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">24,000 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2025</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Heavy RCC Footings · Industrial Steel Trusses</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Heavy machinery movement required high load-bearing industrial floor slabs and heavy-duty RCC foundations.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Designed fiber-reinforced concrete industrial flooring over compacted aggregate sub-base.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Phase 1 structural slab and columns completed with zero deflection under load tests.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Koramangala Executive Villa</div>
+          <div class="project-location">📍 Koramangala 3rd Block, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Koramanagala/IMG_20210831_194201.jpg" class="project-img" alt="Koramangala Executive Villa" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">6,100 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2022</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Framed Skeleton · Post-Tensioned Slabs</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Dense urban site in Koramangala with tight boundaries requiring strict sound & dust isolation during construction.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Pre-assembled shuttering and acoustic partition walls were installed with quiet night pouring schedules.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Delivered turnkey including premium joinery and facade illumination.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      </div>
+
+      <div class="page-footer">
+        <div>Gurukripa Constructions · Corporate Portfolio</div>
+        <div>Page 6</div>
+      </div>
+    </div>
+    
+    <div class="page inner-page">
+      <div class="page-header">
+        <div>
+          <div class="page-header-subtitle">Engineering Case Studies (7–9 of 16)</div>
+          <div class="page-header-title">Project Portfolio Showcase</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Kumbalgodu Commercial Facility</div>
+          <div class="project-location">📍 Kumbalgodu, Mysuru Rd, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-commercial">Commercial</span>
+          <span class="badge badge-ongoing">Ongoing</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Kumbalgodu/IMG20250908124403.jpg" class="project-img" alt="Kumbalgodu Commercial Facility" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">16,200 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2025</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Columns · Pre-Stressed Beams</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Sloped terrain demanding stepped retainment walls and high axial capacity column grid.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Engineered stepped retaining walls with sub-drainage channels to handle seasonal rainwater run-off.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Foundation and ground tier handed over, proceeding with upper structural floor casting.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Suresh Mutha Residence</div>
+          <div class="project-location">📍 Bengaluru South</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/Suresh mutha/Mr Suresh Mutha 03.jpg" class="project-img" alt="Suresh Mutha Residence" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">5,000 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2022</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Frame · Isolated Footings</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Multigenerational home brief requiring private family suites on each floor connected by a central atrium.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Designed a central light-well atrium around a stiff RCC core for maximum interior illumination.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Handed over on time with complete structural clearance and custom interior finishes.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">VV Puram Structural Project</div>
+          <div class="project-location">📍 VV Puram, Basavanagudi, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-commercial">Commercial</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/construction/VVpuram/WhatsApp Image 2026-04-13 at 17.57.21.jpeg" class="project-img" alt="VV Puram Structural Project" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">8,400 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Micro-piled Footings · RCC Beam Grid</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Tight infill property flanked by historical commercial buildings in VV Puram.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Used low-vibration bored piling and continuous digital displacement monitoring during foundation work.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Completed zero-damage infill structure with 100% compliance with local heritage guidelines.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      </div>
+
+      <div class="page-footer">
+        <div>Gurukripa Constructions · Corporate Portfolio</div>
+        <div>Page 7</div>
+      </div>
+    </div>
+    
+    <div class="page inner-page">
+      <div class="page-header">
+        <div>
+          <div class="page-header-subtitle">Engineering Case Studies (10–12 of 16)</div>
+          <div class="page-header-title">Project Portfolio Showcase</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Arham Residency Renovation</div>
+          <div class="project-location">📍 Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/Arham Residency/IMG-20230828-WA0054.jpg" class="project-img" alt="Arham Residency Renovation" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">4,800 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2023</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Structural Interior Overhaul · Tile & Masonry Retrofit</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Older apartment layout requiring structural wall opening and complete modern interior refurbishment.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Engineered hidden steel lintel support beams to remove load-bearing interior partition walls cleanly.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Created open-plan living areas with zero floor deflection or plaster settlement.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Arun Bhansali Residence</div>
+          <div class="project-location">📍 Chamrajpet, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/Arun Bhansali-Chamrajpet/IMG-20231214-WA0036.jpg" class="project-img" alt="Arun Bhansali Residence" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">3,900 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Structural Retrofit · Foundation Waterproofing</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Traditional Chamrajpet home requiring structural elevation modernization and moisture barrier reinforcement.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Stitched column bases with FRP wraps and replaced aging exterior plaster with polymer-modified weather coats.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Extended building lifecycle by 35+ years without disturbing core structure.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Ashwin Jain Residence</div>
+          <div class="project-location">📍 Vani Vilas Rd, Basavanagudi, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/Ashwin Jain- Vani Vilas rd/IMG-20240417-WA0033.jpeg" class="project-img" alt="Ashwin Jain Residence" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">5,200 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">RCC Column Jacketing · Custom Elevation Upgrade</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Structural reconfiguration of a multi-tier family home along Vani Vilas Road.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Reinforced core RCC columns using high-tensile steel jacketing and modern architectural joinery.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Handed over with structural safety certification and contemporary glass elevation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      </div>
+
+      <div class="page-footer">
+        <div>Gurukripa Constructions · Corporate Portfolio</div>
+        <div>Page 8</div>
+      </div>
+    </div>
+    
+    <div class="page inner-page">
+      <div class="page-header">
+        <div>
+          <div class="page-header-subtitle">Engineering Case Studies (13–15 of 16)</div>
+          <div class="page-header-title">Project Portfolio Showcase</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Deepak Reddy Residence</div>
+          <div class="project-location">📍 Koramangala, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/Deepak Reddy- Koramangala/IMG_20210831_194222.jpg" class="project-img" alt="Deepak Reddy Residence" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">6,500 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2021</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Facade Retrofit · Structural Slab Extension</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Comprehensive exterior elevation overhaul and floor slab extension in prime Koramangala.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Constructed cantilevered structural extensions tied into existing column grid using chemical anchor bolts.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Expanded total usable floor area by 25% with zero foundation settlement.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Kunal Residence Renovation</div>
+          <div class="project-location">📍 Seshadripuram, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/Kunal- Seshadripuram/IMG-20240308-WA0126.jpeg" class="project-img" alt="Kunal Residence Renovation" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">4,100 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Interior Remodeling · Lintel Support Beam Installation</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Urban residence in Seshadripuram requiring wall removal and open-plan kitchen-living integration.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Switched load paths to ceiling steel channels and completed turnkey interior finishes.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Delivered ahead of schedule with full interior and electrical rewiring completed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Mrs. Lakshmi Residence</div>
+          <div class="project-location">📍 Electronic City, Bengaluru</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/Mrs Lakshmi- Ecity/IMG-20220909-WA0022.jpeg" class="project-img" alt="Mrs. Lakshmi Residence" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">3,400 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2022</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Interior Refurbishment · Damp Proof Membrane Installation</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Ground water dampness seepage on ground floor walls and outdated room partitions.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Applied chemical damp-proof membrane and installed moisture-resistant interior wall panels.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Eliminated seepage completely with certified 10-year waterproofing warranty.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      </div>
+
+      <div class="page-footer">
+        <div>Gurukripa Constructions · Corporate Portfolio</div>
+        <div>Page 9</div>
+      </div>
+    </div>
+    
+    <div class="page inner-page">
+      <div class="page-header">
+        <div>
+          <div class="page-header-subtitle">Engineering Case Studies (16–16 of 16)</div>
+          <div class="page-header-title">Project Portfolio Showcase</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Mrs. Shoma Villa & Estate</div>
+          <div class="project-location">📍 Nandi Hills, Bengaluru Foothills</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-residential">Residential</span>
+          <span class="badge badge-completed">Completed</span>
+        </div>
+      </div>
+
+      <div class="project-main-layout">
+        <div>
+          <div class="project-img-box">
+            <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/renovation/mrs - Shoma Nandi Hills/IMG20240320123631.jpg" class="project-img" alt="Mrs. Shoma Villa & Estate" />
+          </div>
+        </div>
+
+        <div class="project-details">
+          <table class="project-meta-table">
+            <tr>
+              <td class="meta-label">Area:</td>
+              <td class="meta-val">7,800 sq.ft</td>
+              <td class="meta-label">Year:</td>
+              <td class="meta-val">2024</td>
+            </tr>
+            <tr>
+              <td class="meta-label">System:</td>
+              <td class="meta-val" colspan="3">Hillside Retaining Support · Luxury Villa Restoration</td>
+            </tr>
+          </table>
+
+          <div class="case-box">
+            <div class="case-item">
+              <div class="case-title">Challenge: </div>
+              <div class="case-text">Hillside villa estate requiring structural retaining wall stabilization and luxury deck expansion.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-title">Solution: </div>
+              <div class="case-text">Built stepped stone-gabion retaining walls and cantilevered steel deck overlooking Nandi Hills valley.</div>
+            </div>
+            <div class="case-item" style="margin-bottom:0;">
+              <div class="case-title">Outcome: </div>
+              <div class="case-text">Delivered breathtaking hillside villa restoration certified for high-wind and slope stability.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      </div>
+
+      <div class="page-footer">
+        <div>Gurukripa Constructions · Corporate Portfolio</div>
+        <div>Page 10</div>
+      </div>
+    </div>
+    
+
+  <!-- TESTIMONIALS PAGE -->
+  <div class="page inner-page">
+    <div class="page-header">
+      <div>
+        <div class="page-header-subtitle">Endorsements</div>
+        <div class="page-header-title">Client & Industry Testimonials</div>
+      </div>
+      <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/logo.svg" style="height:32px;" />
+    </div>
+
+    <div class="page-content">
+      <div class="testimonials-grid">
+        
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <div class="stars">★★★★★</div>
+            <div class="quote-text">"Anuj walked us through every load path before we approved the slab. That alone changed how we trust a contractor."</div>
+            <div class="author-name">Sridhar M.</div>
+            <div class="author-role">Owner, Lakeview Villa</div>
+          </div>
+        
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <div class="stars">★★★★★</div>
+            <div class="quote-text">"The site report arrived every Friday for fourteen months without exception. That kind of discipline is rare."</div>
+            <div class="author-name">Ananya R.</div>
+            <div class="author-role">Director, Sampurna Holdings</div>
+          </div>
+        
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <div class="stars">★★★★★</div>
+            <div class="quote-text">"We came to Gurukripa for a peer review. We stayed for the full structural design. Calm, careful, technically sharp."</div>
+            <div class="author-name">Rohan K.</div>
+            <div class="author-role">Partner, Studio K Architects</div>
+          </div>
+        
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <div class="stars">★★★★★</div>
+            <div class="quote-text">"Our heritage home now has another fifty years in it. Not a single original tile was disturbed."</div>
+            <div class="author-name">Mrs. Latha B.</div>
+            <div class="author-role">Owner, Malleshwaram Retrofit</div>
+          </div>
+        
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <div class="stars">★★★★★</div>
+            <div class="quote-text">"They handed over Block C on the date they quoted six months earlier. Nobody else would commit to that."</div>
+            <div class="author-name">Vikram S.</div>
+            <div class="author-role">COO, Whitefield Campus</div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div>Gurukripa Constructions · Corporate Portfolio</div>
+      <div>Page 11</div>
+    </div>
+  </div>
+
+  <!-- CONTACT & BACK COVER PAGE -->
+  <div class="page contact-page">
+    <div class="cover-header">
+      <img src="file:///C:/Users/kalya/Desktop/gurukripa/Gurukripa/public/logo.svg" class="cover-logo" alt="Gurukripa Logo" />
+      <div class="cover-badge">Get In Touch</div>
+    </div>
+
+    <div>
+      <div class="cover-subtitle">Corporate Headquarters</div>
+      <h1 class="cover-title" style="font-size: 24pt;">Partner With Us</h1>
+      <p class="cover-desc">
+        Whether you are planning a luxury private residence, a commercial complex, or require expert structural consultancy and retrofitting, our engineering team is ready to deliver.
+      </p>
+
+      <div class="contact-card-box">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Office Address</div>
+            <div class="contact-val">
+              D7A, 3rd Floor, Sampurna Chambers, Vasavi Temple St, Vishweshwarapura<br/>
+              Basavanagudi, Bengaluru, Karnataka 560004
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Direct Phone Lines</div>
+            <div class="contact-val">+91 98860 96523  ·  +91 95909 82854</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email Communications</div>
+            <div class="contact-val">gurukripaconstructions3@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-item" style="margin-bottom:0;">
+          <div class="contact-icon">🕒</div>
+          <div>
+            <div class="contact-label">Working Hours</div>
+            <div class="contact-val">Mon–Sat · 10:00 — 19:00 IST</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <div>Gurukripa Constructions · Consultants & Builders</div>
+      <div>Bengaluru, Karnataka · Page 12</div>
+    </div>
+  </div>
+
+</body>
+</html>
+  

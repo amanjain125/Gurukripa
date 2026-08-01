@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
       'Old buildings deserve careful hands. We diagnose with non-destructive testing, design a retrofit that respects the original fabric, and execute with crews who have spent years on heritage work.',
     bullets: [
       'Non-destructive condition assessment',
-      'FRP wrapping and section enlargement',
+      'Structural wrapping and section enlargement',
       'Micro-piling and underpinning',
       'Heritage roof and façade restoration',
     ],

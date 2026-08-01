@@ -16,7 +16,7 @@ interface ServiceDiscipline {
 }
 
 interface DivisionData {
-  id: 'construction' | 'renovation';
+  id: 'construction' | 'renovation' | 'consulting';
   title: string;
   subtitle: string;
   divisionCode: string;
@@ -39,81 +39,49 @@ const CONSTRUCTION_DIVISION: DivisionData = {
     'End-to-end structural engineering and turnkey building construction across Bengaluru. Guided by Founder Anuj Jain (B.E. Civil, M.Tech Structural), every villa, commercial tower, and RCC frame is built with STAAD/ETABS load modeling and zero-compromise engineering.',
   disciplines: [
     {
-      id: 'villas',
+      id: 'residential-construction',
       code: '01',
-      title: 'Residential Villas & Custom Homes',
-      caption: 'G+1 to G+4 Turnkey Residences',
+      title: 'Residential Construction',
+      caption: 'Villas, row houses, custom homes.',
       description:
-        'Bespoke luxury villa construction featuring post-tensioned slabs, high-grade TMT steel, custom elevations, and Vaastu-aligned spatial planning.',
+        'Homes are the work we are most known for. We build for owners who plan to live in the house for decades. That means honest materials, generous tolerances, and a finishes schedule signed off before the slab is poured.',
       motif: '⌂',
       bullets: [
-        'RCC frame skeleton with post-tensioned beam grid',
-        'Infill brickwork with damp-proof acoustic barriers',
-        'Custom facade glazing & illumination integration',
-        'Turnkey handover with finishes signed off before pour',
+        'Independent villas (G+1 to G+3)',
+        'Row-house and small-cluster developments',
+        'Apartment and duplex buildings',
+        'Vaastu-aligned planning, on request',
       ],
-      specs: ['Post-Tension Slabs', 'Fe550D TMT Steel', 'Acoustic Insulation'],
+      specs: ['Independent Villas', 'Row Houses', 'Apartment Buildings'],
     },
     {
-      id: 'commercial',
+      id: 'commercial-construction',
       code: '02',
-      title: 'Commercial Towers & Mixed-Use Complexes',
-      caption: 'Offices, Showrooms & IT Blocks',
+      title: 'Commercial Building Construction',
+      caption: 'Offices, retail, mixed-use towers.',
       description:
-        'Multi-tier commercial office blocks and retail towers planned with critical-path modeling for zero schedule variance.',
+        'Commercial projects live and die by their schedule. We plan critical-path activity at the modelling stage, not on site, and we share weekly cost-and-schedule reports our clients can take straight to a board meeting.',
       motif: '▤',
       bullets: [
-        'High axial capacity column grids & raft footings',
-        'Structural steel & curtain wall facade integration',
-        'MEP & BMS coordination with board-level progress reports',
-        'Heavy-duty floor loading capacity design',
+        'Warehouse buildings',
+        'Retail and showroom fit-outs',
+        'Mixed-use towers',
+        'BMS and façade coordination',
       ],
-      specs: ['Raft Footings', 'Structural Glazing', 'BMS Integration'],
-    },
-    {
-      id: 'consulting',
-      code: '03',
-      title: 'Structural Consulting & Peer Review',
-      caption: 'Analysis, Modeling & Certification',
-      description:
-        'Independent structural design, foundation analysis, and peer review for developers, architects, and institutions.',
-      motif: '⌗',
-      bullets: [
-        'STAAD.Pro, ETABS, and SAFE 3D structural modeling',
-        'Seismic Zone III & wind load certification',
-        'Foundation design for difficult soils & sloped sites',
-        'Independent second-engineer drawing verification',
-      ],
-      specs: ['STAAD.Pro V8i', 'ETABS 2024', 'Seismic Cert.'],
-    },
-    {
-      id: 'turnkey',
-      code: '04',
-      title: 'Turnkey Project Management',
-      caption: 'Single Contract, Single Accountable Team',
-      description:
-        'Full EPC responsibility holding design, procurement, statutory approvals, construction execution, and final handover.',
-      motif: '▦',
-      bullets: [
-        'Single accountable point of contact',
-        'In-house QS, MEP, and structural leads',
-        'BBMP, BWSSB, and BESCOM statutory clearance liaison',
-        'Locked cost schedules with weekly variance tracking',
-      ],
-      specs: ['Statutory Liaison', 'In-House QS/MEP', 'Locked Budget'],
+      specs: ['Warehouse Buildings', 'Retail Fit-Outs', 'Mixed-Use Towers'],
     },
   ],
   process: [
     '01. Soil Testing & Sub-surface Geotechnical Analysis',
-    '02. 3D STAAD/ETABS Structural Load Modeling & Peer Verification',
+    '02. ETABS Structural Load Modeling',
     '03. Foundation Excavation, Micro-piling & RCC Footing Cast',
-    '04. Frame Construction with Laser-Guided Shuttering & Quality Checks',
+    '04. Frame Construction with Shuttering & Quality Checks',
     '05. MEP & Utility Integration with Acoustic/Waterproof Barriers',
-    '06. Facade Finishing, Interior Handover & Structural Certification',
+    '06. Facade Finishing, Interior Handover',
   ],
   deliverables: [
     'Turnkey RCC Skeleton & Foundation',
-    'As-Built Structural Drawings & STAAD Reports',
+    'As-Built Structural Drawings',
     'Statutory BBMP / BESCOM / BWSSB Approvals',
     '10-Year Structural Integrity & Waterproofing Warranty',
   ],
@@ -122,91 +90,104 @@ const CONSTRUCTION_DIVISION: DivisionData = {
 const RENOVATION_DIVISION: DivisionData = {
   id: 'renovation',
   title: 'Renovation & Structural Retrofitting',
-  subtitle: 'FRP Wrapping, Column Strengthening, Floor Additions & Villa Restorations',
+  subtitle: 'Column Wrapping, Column Strengthening, Floor Additions & Villa Restorations, House Remodeling & Facade Overhaul.',
   divisionCode: 'DIVISION 02',
   badge: 'Retrofit & Modernization Scope',
   image: '/renovation/mrs%20-%20Shoma%20Nandi%20Hills/IMG20240320123631.jpg',
   overview:
-    'Diagnosing and strengthening existing buildings with carbon fiber (FRP) wrapping, steel jacketing, load-bearing wall removals, and floor extensions. We extend building lifecycles by 30+ years while maintaining structural integrity.',
+    'Diagnosing and strengthening existing buildings with structural wrapping, steel jacketing, load-bearing wall removals, and floor extensions. We extend building lifecycles by 20+ years while maintaining structural integrity.',
   disciplines: [
     {
-      id: 'retrofitting',
+      id: 'renovation-retrofitting',
       code: '01',
-      title: 'Structural Retrofitting & Column Strengthening',
-      caption: 'FRP Wrapping & Steel Jacketing',
+      title: 'Renovation & Retrofitting',
+      caption: 'Structural repair, structural strengthening.',
       description:
-        'Strengthening aged or under-reinforced RCC members using high-tensile carbon fiber laminates, FRP wraps, and steel jacket encasement.',
+        'Old buildings deserve careful hands. We diagnose with non-destructive testing, design a retrofit that respects the original fabric & execute with crew who have spent years on retrofitting work.',
       motif: '◫',
       bullets: [
-        'Non-destructive rebar scanning & ultrasonic testing',
-        'FRP wrapping on tension faces of beams & slabs',
-        'Steel jacketing for column load capacity augmentation',
-        'Micro-piling & underpinning for foundation settlement repair',
+        'Structural retrofitting',
+        'Cantilever slab extension',
+        'Steel Jacketing / FRP column wrapping',
+        'Home / Villa / Apartment Remodelling or renovation',
+        'Facade Remodelling',
       ],
-      specs: ['Carbon Fiber FRP', 'Steel Jacketing', 'Ultrasonic Scan'],
+      specs: ['Structural Retrofitting', 'Cantilever Slabs', 'Steel Jacketing / FRP'],
     },
     {
-      id: 'remodeling',
+      id: 'turnkey-project-management',
       code: '02',
-      title: 'Villa Modernization & Open-Plan Remodeling',
-      caption: 'Wall Removals & Cantilever Extensions',
+      title: 'Turnkey Project Management',
+      caption: 'One contract. One accountable team.',
       description:
-        'Converting traditional multi-room floor plans into modern open-concept layouts by replacing load-bearing walls with hidden steel lintels.',
-      motif: '⌂',
+        'When a client wants a single point of accountability, we hold the entire scope: design, statutory, procurement, construction, finishes, handover. We bring our own QS, MEP and interiors leads, and we report against a single locked schedule.',
+      motif: '▦',
       bullets: [
-        'Load transfer calculation & temporary prop framing',
-        'Steel ISMB lintel beam insertion for wide open spans',
-        'Full interior wall, lighting, and joinery modernization',
-        'Cantilever floor slab & balcony additions',
+        'Single-point-responsibility contracts',
+        'In-house QS, MEP and interiors',
+        'Statutory liaison (BBMP, BWSSB, BESCOM)',
+        'Locked schedules with weekly variance reports',
       ],
-      specs: ['ISMB Steel Lintels', 'Cantilever Slabs', 'Open Layouts'],
-    },
-    {
-      id: 'heritage',
-      code: '03',
-      title: 'Heritage & Estate Villa Restoration',
-      caption: 'Historic Fabric Repair & Timber Strengthening',
-      description:
-        'Preserving historical architecture while retrofitting structural strength beneath original roofs, facades, and timber frameworks.',
-      motif: '◆',
-      bullets: [
-        'Madras-tile and heritage timber roof preservation',
-        'Stitching foundation settlement with micro-piles',
-        'Polymer-modified structural plastering & mortar injection',
-        'Original facade restoration & weather-proof sealing',
-      ],
-      specs: ['Micro-piles', 'Madras Roof Presv.', 'Polymer Mortar'],
-    },
-    {
-      id: 'waterproofing',
-      code: '04',
-      title: 'Waterproofing & Facade Overhaul',
-      caption: 'Damp Remediation & Exterior Cladding',
-      description:
-        'Comprehensive damp-proof membrane injection, basement waterproofing, and exterior curtain wall upgrades.',
-      motif: '⚡',
-      bullets: [
-        'Chemical pressure injection for damp wall remediation',
-        'Multi-layer elastomeric roof waterproofing membranes',
-        'Modern exterior facade redesign & cladding installation',
-        '10-Year leak-proof performance warranty',
-      ],
-      specs: ['Pressure Injection', 'Elastomeric Seal', 'Cladding Retrofit'],
+      specs: ['Single Point Contact', 'In-House QS/MEP', 'Locked Schedule'],
     },
   ],
   process: [
     '01. Non-Destructive Structural Health Audit & Core Sampling',
-    '02. Retrofit Load Calculation & Carbon Fiber / Steel Design',
+    '02. Retrofit Load Calculation & Steel Design',
     '03. Temporary Propping & Shoring Installation on Site',
-    '04. Member Surface Preparation, FRP Wrapping & Jacketing',
+    '04. Member Surface Preparation, Wrapping & Jacketing',
     '05. Structural Load Transfer Testing & Wall Integration',
     '06. Final Waterproofing, Facade Finishing & Safety Sign-off',
   ],
   deliverables: [
     'Structural Audit & Load Assessment Certificate',
-    'FRP Wrapping & Steel Strengthening Warranty',
+    'Wrapping & Steel Strengthening Warranty',
     'Complete Architectural & Facade Upgrade',
-    'Extended 30+ Year Building Lifecycle Guarantee',
+    'Extended 20+ Year Building Lifecycle Guarantee',
+  ],
+};
+
+const CONSULTING_DIVISION: DivisionData = {
+  id: 'consulting',
+  title: 'Architectural & Structural Consulting',
+  subtitle: 'Analysis, modelling, peer review.',
+  divisionCode: 'DIVISION 03',
+  badge: 'Design & Structural Scope',
+  image: '/construction/Hennur/Anuj%2003.jpg',
+  overview:
+    'We take a quiet, evidence-led approach to structural design. Every member is sized to a load case we can defend on a board. We work in ETABS and SAFE.',
+  disciplines: [
+    {
+      id: 'structural-consulting',
+      code: '01',
+      title: 'Architectural & Structural Consulting',
+      caption: 'Analysis, modelling, peer review.',
+      description:
+        'We take a quiet, evidence-led approach to structural design. Every member is sized to a load case we can defend on a board. We work in ETABS and SAFE.',
+      motif: '⌗',
+      bullets: [
+        'Load analysis & structural modelling',
+        'Foundation design for difficult soils',
+        'Seismic & wind load calculation',
+        'Independent peer review for other firms',
+        'Architectural planning design',
+      ],
+      specs: ['Load Analysis', 'ETABS & SAFE', 'Peer Review'],
+    },
+  ],
+  process: [
+    '01. Soil Data Review & Architectural Layout Analysis',
+    '02. 3D STAAD.Pro / ETABS Structural Frame Modeling',
+    '03. Load Combination & Seismic/Wind Force Simulation',
+    '04. Rebar Schedule Optimization & Peer Review Audit',
+    '05. GFC Drawing Release (Foundation, Columns, Beams & Slabs)',
+    '06. On-Site Reinforcement Inspection & Site Sign-Off',
+  ],
+  deliverables: [
+    'Complete GFC Structural Drawing Sets',
+    'STAAD / ETABS Structural Load & Stability Report',
+    'Statutory Structural Stability Certificate',
+    'Value-Engineered Rebar & Quantity Schedules',
   ],
 };
 
@@ -246,7 +227,7 @@ export function ServicesSection() {
             <div className="flex items-center gap-3 text-[11px] font-mono uppercase tracking-[0.22em] text-brand-red font-bold mb-3" data-reveal>
               <span>Gurukripa Capabilities</span>
               <span>·</span>
-              <span>Two Specialized Divisions</span>
+              <span>Three Specialized Divisions</span>
             </div>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-ink font-semibold leading-tight" data-reveal data-reveal-delay="80">
               Our Services.<br />
@@ -260,7 +241,7 @@ export function ServicesSection() {
         </div>
 
         {/* SIDE-BY-SIDE DIVISION CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-reveal data-reveal-delay="140">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-reveal data-reveal-delay="140">
           {/* Construction Services Card */}
           <div
             onClick={() => setActiveModal(CONSTRUCTION_DIVISION)}
@@ -283,12 +264,12 @@ export function ServicesSection() {
                 Construction Services
               </h3>
               <p className="text-white/90 text-sm mt-3 leading-relaxed font-normal">
-                Residential Villas, Multi-Story Commercial Towers, RCC Frame Skeleton & STAAD Structural Load Modeling.
+                Residential Villas, Multi-Story Commercial Towers, Warehouses.
               </p>
             </div>
 
             <div className="relative z-10 mt-8 flex items-center justify-between border-t border-white/15 pt-6">
-              <span className="text-xs font-mono text-white/70">4 Specialized Disciplines</span>
+              <span className="text-xs font-mono text-white/70">{CONSTRUCTION_DIVISION.disciplines.length} Specialized Disciplines</span>
               <div className="inline-flex items-center gap-2 bg-gold text-ink font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg group-hover:bg-white transition-colors">
                 <span>View Construction Details</span>
                 <span className="text-sm font-bold">→</span>
@@ -315,14 +296,48 @@ export function ServicesSection() {
                 Renovation Services
               </h3>
               <p className="text-ink/80 text-sm mt-3 leading-relaxed font-normal">
-                Structural Retrofitting, FRP Column Wrapping, Steel Jacketing, Cantilever Slab Extensions & Facades.
+                Column Wrapping, Column Strengthening, Floor Additions & Villa Restorations, House Remodeling & Facade Overhaul.
               </p>
             </div>
 
             <div className="relative z-10 mt-8 flex items-center justify-between border-t border-steel/15 pt-6">
-              <span className="text-xs font-mono text-steel">4 Specialized Disciplines</span>
+              <span className="text-xs font-mono text-steel">{RENOVATION_DIVISION.disciplines.length} Specialized Disciplines</span>
               <div className="inline-flex items-center gap-2 bg-ink text-white font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg group-hover:bg-brand-red transition-colors">
                 <span>View Renovation Details</span>
+                <span className="text-sm font-bold">→</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Architectural & Structural Consulting Card */}
+          <div
+            onClick={() => setActiveModal(CONSULTING_DIVISION)}
+            className="group relative p-8 sm:p-10 rounded-3xl border border-white/20 bg-ink text-white shadow-xl transition-all duration-500 cursor-pointer flex flex-col justify-between hover:scale-[1.015] hover:border-gold hover:shadow-2xl min-h-[320px]"
+          >
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e63946_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none rounded-3xl" />
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-between gap-4 mb-4">
+                <span className="bg-brand-red text-white font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
+                  Division 03
+                </span>
+                <span className="text-gold font-mono text-xs font-semibold">
+                  Design & Structural Scope
+                </span>
+              </div>
+
+              <h3 className="font-display text-3xl sm:text-4xl font-semibold group-hover:text-gold transition-colors">
+                Architectural & Structural Consulting
+              </h3>
+              <p className="text-white/90 text-sm mt-3 leading-relaxed font-normal">
+                STAAD.Pro Load Modeling, Seismic Certification, Foundation Engineering, Peer Review & Vaastu Planning.
+              </p>
+            </div>
+
+            <div className="relative z-10 mt-8 flex items-center justify-between border-t border-white/15 pt-6">
+              <span className="text-xs font-mono text-white/70">{CONSULTING_DIVISION.disciplines.length} Specialized Discipline</span>
+              <div className="inline-flex items-center gap-2 bg-brand-red text-white font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg group-hover:bg-gold group-hover:text-ink transition-colors">
+                <span>View Consulting Details</span>
                 <span className="text-sm font-bold">→</span>
               </div>
             </div>
@@ -457,12 +472,14 @@ export function ServicesSection() {
 
             {/* Bottom Actions */}
             <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-white/15">
-              <Link
-                href="/contact"
-                className="bg-gold text-ink font-extrabold px-8 py-3.5 rounded-full text-sm hover:bg-white transition-colors shadow-xl"
-              >
-                Schedule Technical Consultation with Founder Anuj Jain →
-              </Link>
+              {activeModal.id !== 'renovation' && (
+                <Link
+                  href="/contact"
+                  className="bg-gold text-ink font-extrabold px-8 py-3.5 rounded-full text-sm hover:bg-white transition-colors shadow-xl"
+                >
+                  Schedule Technical Consultation with Founder Anuj Jain →
+                </Link>
+              )}
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}

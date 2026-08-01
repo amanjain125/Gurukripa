@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Engineering & Construction Services — Gurukripa Constructions',
   description:
-    'Turnkey residential villas, commercial structures, structural retrofitting, FRP column strengthening, and turnkey project management across Bengaluru.',
+    'Turnkey residential villas, commercial structures, structural retrofitting, column strengthening, and turnkey project management across Bengaluru.',
 };
 
 export default function ServicesPage() {
