@@ -78,7 +78,7 @@ export function HomeIntro() {
         <div className="hairline mt-16" />
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-6 text-[11px] tracking-[0.22em] uppercase text-steel">
-          <span>14+ years · 120+ projects · 1.4M sq.ft engineered</span>
+          <span>7+ years · 10+ projects · 92,000+ sq.ft engineered · 30+ design projects</span>
           <span>{COMPANY.city} · IN</span>
         </div>
       </div>

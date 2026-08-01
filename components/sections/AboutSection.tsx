@@ -34,10 +34,12 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     return () => io.disconnect();
   }, [value]);
 
-  const formattedVal = Number.isInteger(value) ? val : val.toFixed(1);
+  const formattedVal = Number.isInteger(value)
+    ? val.toLocaleString('en-US')
+    : val.toFixed(1);
 
   return (
-    <span ref={ref} className="font-sans text-3xl md:text-4xl font-extrabold text-ink leading-none tabular-nums">
+    <span ref={ref} className="font-sans text-2xl sm:text-3xl md:text-[32px] font-extrabold text-ink leading-none tabular-nums">
       {formattedVal}
       <span className="text-brand-red font-extrabold">{suffix}</span>
     </span>
@@ -52,46 +54,57 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export function AboutSection() {
   const stats = [
     {
-      targetValue: 14,
+      targetValue: 7,
       suffix: '+',
       title: 'Years of Engineering Excellence',
-      subtitle: 'ESTABLISHED 2010',
+      subtitle: 'ESTABLISHED 2019',
       icon: (
-        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 00.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       ),
     },
     {
-      targetValue: 120,
+      targetValue: 10,
       suffix: '+',
       title: 'Projects Delivered On-Time',
-      subtitle: 'VILLAS & COMMERCIAL',
+      subtitle: 'RESIDENTIAL & COMMERCIAL',
       icon: (
-        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4m-4 0H7" />
         </svg>
       ),
     },
     {
-      targetValue: 1.4,
-      suffix: 'M+',
+      targetValue: 92000,
+      suffix: '+',
       title: 'Sq. Ft. Engineered & Built',
       subtitle: 'ACROSS BENGALURU',
       icon: (
-        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
     },
     {
-      targetValue: 100,
-      suffix: '%',
-      title: 'Founder Site Oversight',
-      subtitle: 'SIGNED BY M.TECH ENG.',
+      targetValue: 30,
+      suffix: '+',
+      title: 'Renovation Projects',
+      subtitle: 'RENOVATION & RETROFIT',
       icon: (
-        <svg className="w-6 h-6 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      ),
+    },
+    {
+      targetValue: 30,
+      suffix: '+',
+      title: 'Design Projects',
+      subtitle: 'ARCHITECTURAL & STRUCTURAL',
+      icon: (
+        <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
         </svg>
       ),
     },
@@ -129,7 +142,7 @@ export function AboutSection() {
           {/* Paragraph Description */}
           <div className="space-y-6 text-ink/80 text-[16px] sm:text-[17px] leading-relaxed max-w-2xl font-light">
             <p data-reveal data-reveal-delay="160">
-              Founded in 2010 by <strong className="font-semibold text-ink">Anuj Jain</strong> (B.E. Civil, M.Tech Structural),{' '}
+              Led by <strong className="font-semibold text-ink">Anuj Jain</strong> (B.E. Civil, M.Tech Structural),{' '}
               <strong className="font-semibold text-ink">{COMPANY.name}</strong> is a premier Bengaluru-based civil engineering and structural consultancy firm.
             </p>
             <p data-reveal data-reveal-delay="200">
@@ -177,27 +190,27 @@ export function AboutSection() {
         
         {/* ==================== PART 2: METRICS STRIP ==================== */}
         <div 
-          className="bg-white rounded-3xl border border-ink/5 shadow-lg p-6 sm:p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 divide-y sm:divide-y-0 lg:divide-x divide-ink/10"
+          className="bg-white rounded-3xl border border-ink/5 shadow-lg p-6 sm:p-8 md:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-3 divide-y sm:divide-y-0 lg:divide-x divide-ink/10"
           data-reveal
           data-reveal-delay="300"
         >
           {stats.map((stat, idx) => (
             <div 
               key={idx} 
-              className={`flex items-start gap-4 pt-6 sm:pt-4 lg:pt-0 first:pt-0 lg:first:pl-0 ${idx % 2 === 0 ? 'sm:pl-0' : 'sm:pl-6 lg:pl-8'}`}
+              className={`flex items-start gap-3 pt-5 sm:pt-3 lg:pt-0 first:pt-0 lg:first:pl-0 ${idx % 2 === 0 ? 'sm:pl-0' : 'sm:pl-4'} lg:pl-3 xl:pl-4`}
             >
               {/* Red circular outline icon */}
-              <div className="w-12 h-12 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
+              <div className="w-10 h-10 rounded-full border border-brand-red/20 flex items-center justify-center text-brand-red bg-brand-red/5 shrink-0">
                 {stat.icon}
               </div>
               
               {/* Stat Value & Labels */}
               <div className="flex flex-col">
                 <Counter value={stat.targetValue} suffix={stat.suffix} />
-                <span className="text-[13px] font-medium text-ink/75 mt-1.5 leading-snug">
+                <span className="text-[12px] font-semibold text-ink/80 mt-1 leading-snug">
                   {stat.title}
                 </span>
-                <span className="text-[10px] tracking-wider text-brand-red font-mono uppercase mt-1.5 font-bold">
+                <span className="text-[9px] tracking-wider text-brand-red font-mono uppercase mt-1 font-bold">
                   {stat.subtitle}
                 </span>
               </div>

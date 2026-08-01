@@ -5,7 +5,7 @@ import { RevealOnScroll } from '@/components/providers/RevealOnScroll';
 export const metadata: Metadata = {
   title: 'About — A quiet, evidence-led practice',
   description:
-    'Gurukripa Constructions is a Bengaluru civil construction and structural consultancy firm, led by Anuj Jain (B.E. Civil, M.Tech Structural). Founded 2010.',
+    'Gurukripa Constructions is a Bengaluru civil construction and structural consultancy firm, led by Anuj Jain (B.E. Civil, M.Tech Structural). Founded 2019.',
 };
 
 export default function AboutPage() {
@@ -158,7 +158,7 @@ export default function AboutPage() {
               <ul className="divide-y divide-bone/10">
                 {[
                   ['Education', 'B.E. Civil — VTU · M.Tech Structural'],
-                  ['Years of practice', '14+ years'],
+                  ['Years of practice', '7+ years'],
                   ['Expertise', 'RCC, composite frames, retrofits'],
                   ['Software', 'STAAD Pro · ETABS · SAFE · Revit'],
                   ['Memberships', 'IStructE (India) · Institution of Engineers'],

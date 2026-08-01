@@ -94,7 +94,7 @@ export function Footer() {
             </p>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-[11.5px] text-gold font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
-              14+ Years &middot; 120+ Projects Delivered
+              7+ Years &middot; 10+ Projects &middot; 30+ Design Projects
             </div>
           </div>
 

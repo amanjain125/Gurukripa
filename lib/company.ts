@@ -18,7 +18,7 @@ export const COMPANY = {
     country: 'India',
   },
   hours: 'Mon–Sat · 10:00 — 19:00 IST',
-  established: 2010,
+  established: 2019,
 };
 
 export const ADDRESS_SINGLE_LINE = `${COMPANY.address.line1}, ${COMPANY.address.line2}, ${COMPANY.address.line3}, ${COMPANY.address.state} ${COMPANY.address.pincode}`;
