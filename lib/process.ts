@@ -27,8 +27,8 @@ export const PROCESS_STEPS = [
 ];
 
 export const STATS = [
-  { value: 14, suffix: '+', label: 'Years building' },
-  { value: 120, suffix: '+', label: 'Projects delivered' },
-  { value: 1.4, suffix: 'M', label: 'Sq.ft engineered' },
-  { value: 6, suffix: '', label: 'Cities served' },
+  { value: '7', suffix: '+', label: 'Years Experience' },
+  { value: '10', suffix: '+', label: 'Construction Projects Delivered' },
+  { value: '92k', suffix: '+', label: 'Sq.Ft Engineered' },
+  { value: '30', suffix: '+', label: 'Renovation & Design' },
 ];

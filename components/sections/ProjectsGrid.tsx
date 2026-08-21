@@ -57,7 +57,7 @@ export function ProjectsGrid() {
                 Construction Projects
               </h3>
               <p className="mt-2 text-white/90 text-[13px] leading-relaxed font-normal">
-                Turnkey residential villas, commercial structures, steel frames & foundation engineering.
+                Turnkey residential villas and apartment buildings, multi-story commercial towers, structural foundations, and RCC frame buildings. Built with uncompromised engineering discipline.
               </p>
               <div className="mt-4 inline-flex items-center gap-2 text-[12px] uppercase tracking-wider bg-white text-ink font-bold px-4 py-2 rounded-full shadow-md group-hover:bg-gold transition-colors">
                 <span>Open Construction Section</span>
@@ -165,7 +165,7 @@ function ProjectCard({ p, mt }: { p: Project; mt: number }) {
 
         <div className="absolute inset-x-4 bottom-4 translate-y-3 group-hover:translate-y-0 transition-transform duration-500 ease-out">
           <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.16em] uppercase text-bone bg-brand-red px-3.5 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-            View case study <span aria-hidden>→</span>
+            View project <span aria-hidden>→</span>
           </span>
         </div>
       </div>

@@ -55,7 +55,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             <span className="h-px w-5 bg-gold" />
             <span>{p.status}</span>
             <span className="h-px w-5 bg-gold" />
-            <span>{p.year}</span>
+            <span>{p.completionYear || p.year}</span>
           </div>
           <h1
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1]"
@@ -87,7 +87,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
       )}
 
 
-      <ProjectGallery images={p.gallery} projectName={p.name} />
+      <ProjectGallery images={Array.from(new Set([p.hero, ...(p.gallery || [])]))} projectName={p.name} />
 
     </>
   );

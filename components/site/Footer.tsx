@@ -65,7 +65,6 @@ export function Footer() {
                 href="/Gurukripa_Constructions_Portfolio.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Gurukripa_Constructions_Portfolio.pdf"
                 className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-bone font-semibold px-3.5 py-2.5 rounded-lg text-[13px] border border-white/15 backdrop-blur-md transition-all text-center flex items-center justify-center gap-1.5"
               >
                 <svg className="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -182,14 +181,16 @@ export function Footer() {
                   </a>
                 </div>
               ))}
-              <div>
-                <a
-                  href={`mailto:${COMPANY.email}`}
-                  className="text-bone/80 hover:text-gold transition-colors block truncate"
-                >
-                  {COMPANY.email}
-                </a>
-              </div>
+              {COMPANY.emails.map((email) => (
+                <div key={email}>
+                  <a
+                    href={`mailto:${email}`}
+                    className="text-bone/80 hover:text-gold transition-colors block truncate"
+                  >
+                    {email}
+                  </a>
+                </div>
+              ))}
             </div>
 
             <a

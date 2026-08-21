@@ -68,7 +68,6 @@ export function Nav() {
               href="/Gurukripa_Constructions_Portfolio.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="Gurukripa_Constructions_Portfolio.pdf"
               className="btn btn-secondary !rounded-xl !py-2.5 !px-4 text-[13px] font-semibold tracking-wide flex items-center gap-1.5"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -117,7 +116,6 @@ export function Nav() {
               href="/Gurukripa_Constructions_Portfolio.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="Gurukripa_Constructions_Portfolio.pdf"
               className="btn btn-secondary !rounded-xl text-center font-semibold text-sm flex items-center justify-center gap-2 py-3"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -41,10 +41,11 @@ export function ContactForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus('loading');
     setError(null);
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
     // Combine service and sub-service into projectType for backend compatibility
@@ -59,9 +60,18 @@ export function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error(await res.text());
+      if (!res.ok) {
+        let errorMsg = 'Failed to send message.';
+        try {
+          const errData = await res.json();
+          errorMsg = errData.error || errorMsg;
+        } catch {
+          // fallback if response isn't JSON
+        }
+        throw new Error(errorMsg);
+      }
       setStatus('success');
-      e.currentTarget.reset();
+      form.reset();
       setSelectedService('');
       setSelectedSubService('');
     } catch (err) {
@@ -212,7 +222,7 @@ export function ContactForm() {
           disabled={status === 'loading'}
           className="w-full bg-brand-red hover:bg-brand-red-deep text-white font-extrabold py-4 px-6 rounded-xl text-[17px] tracking-wide shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-wait"
         >
-          {status === 'loading' ? 'Submitting…' : 'Get Free Consultation'}
+          {status === 'loading' ? 'Submitting…' : 'Submit'}
         </button>
       </div>
 

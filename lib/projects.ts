@@ -30,15 +30,16 @@ export const PROJECTS: Project[] = [
     slug: 'koramangala-apartment-building',
     name: 'Koramangala Apartment Building',
     location: 'Koramangala 3rd Block, Bengaluru',
-    year: '2022',
+    year: '2021',
     area: '8,194 sq.ft',
-    system: 'RCC framed structure along with cantilever deck and terrace deck slabs; LOPC elevation system',
+    system: 'RCC framed structure along with cantilever deck and terrace deck slabs; WPC elevation system',
     category: 'Residential',
     projectType: 'construction',
     status: 'Completed',
-    hero: '/construction/Koramanagala/1.jpg',
-    thumb: '/construction/Koramanagala/1.jpg',
+    hero: '/construction/Koramanagala/1_upright.jpg',
+    thumb: '/construction/Koramanagala/1_upright.jpg',
     gallery: [
+      '/construction/Koramanagala/1_upright.jpg',
       '/construction/Koramanagala/IMG_20210830_162924.jpg',
       '/construction/Koramanagala/IMG_20210830_163016.jpg',
       '/construction/Koramanagala/IMG_20210830_163050.jpg',
@@ -60,44 +61,45 @@ export const PROJECTS: Project[] = [
     outcome:
       'Delivered turnkey including premium joinery and facade illumination.',
     summary:
-      'High-end urban villa in Koramangala featuring spacious open-plan living and custom architectural elevation.',
+      'High-end urban apartment building in Koramangala featuring spacious open-plan living and custom architectural elevation.',
     floorCount: 'G+3 floors',
     commencementYear: '2020',
     completionYear: '2021',
   },
   {
     slug: 'sports-stall-and-warehouse-building',
-    name: 'Sports Stall and Warehouse Building',
-    location: 'Bengaluru South',
-    year: '2022',
+    name: 'Sports Store and Warehouse Building',
+    location: 'BVK Iyengar Road, Bengaluru',
+    year: '2021',
     area: '5,500 sq.ft',
     system: 'RCC frame structure; isolated and combined footings',
     category: 'Commercial',
     projectType: 'construction',
     status: 'Completed',
-    hero: '/construction/Suresh%20mutha/1.jpg',
-    thumb: '/construction/Suresh%20mutha/1.jpg',
+    hero: '/construction/Suresh mutha/1.jpg',
+    thumb: '/construction/Suresh mutha/1.jpg',
     gallery: [
-      '/construction/Suresh%20mutha/IMG-20211013-WA0008.jpg',
-      '/construction/Suresh%20mutha/IMG_20210914_171055.jpg',
+      '/construction/Suresh mutha/1.jpg',
+      '/construction/Suresh mutha/IMG-20211013-WA0008.jpg',
+      '/construction/Suresh mutha/IMG_20210914_171055.jpg',
     ],
     problem:
-      'Multigenerational home brief requiring private family suites on each floor connected by a central atrium.',
+      'Constructing a multi-tier commercial showroom with high floor load ratings for warehouse storage.',
     solution:
-      'Designed a central light-well atrium around a stiff RCC core for maximum interior illumination.',
+      'Engineered heavy-duty RCC frame with reinforced floor slabs to accommodate retail display and heavy storage.',
     outcome:
       'Handed over on time with complete structural clearance and custom interior finishes.',
     summary:
-      'Bespoke multi-story family residence delivered turnkey in Bengaluru.',
+      'Multi story sports showroom and warehouse building in the heart of bengaluru',
     floorCount: 'G+4 floors + Terrace',
     commencementYear: '2020',
     completionYear: '2021',
   },
   {
     slug: 'residential-building-of-hennur-road',
-    name: 'Residential Building of Hennur Road',
+    name: 'Residential Building off Hennur Main Road',
     location: 'Hennur Road, Bengaluru',
-    year: '2023',
+    year: '2022',
     area: '5,020 sq.ft',
     system: 'RCC frame structure; solid block masonry',
     category: 'Residential',
@@ -106,6 +108,7 @@ export const PROJECTS: Project[] = [
     hero: '/construction/Hennur/1.jpg',
     thumb: '/construction/Hennur/1.jpg',
     gallery: [
+      '/construction/Hennur/1.jpg',
       '/construction/Hennur/IMG-20230908-WA0031.jpg',
       '/construction/Hennur/IMG-20230908-WA0032.jpg',
     ],
@@ -128,24 +131,25 @@ export const PROJECTS: Project[] = [
     year: '2024',
     area: '4,062 sq.ft',
     system: 'RCC frame structure; shallow isolated foundation',
-    category: 'Commercial',
+    category: 'Residential',
     projectType: 'construction',
     status: 'Completed',
     hero: '/construction/Channsandra/1.png',
     thumb: '/construction/Channsandra/1.png',
     gallery: [
+      '/construction/Channsandra/1.png',
       '/construction/Channsandra/IMG20251108123048.jpg',
       '/construction/Channsandra/IMG20251108123101.jpg',
       '/construction/Channsandra/IMG20251108123210.jpg',
     ],
     problem:
-      'Creating column-free retail display spaces on lower levels while carrying multi-story residential floors above.',
+      'Designing a modern multi-story residential triplex structure in Channsandra with optimal interior layout and space utilization.',
     solution:
-      'Implemented transfer girders at level two to transfer heavy upper loads cleanly to perimeter columns.',
+      'Implemented robust RCC structural frame with cantilever slab projections for maximum living area.',
     outcome:
-      'Structural frame completed, meeting all BBMP commercial safety compliance standards.',
+      'Completed structure handed over with full structural clearance and premium finishes.',
     summary:
-      'Contemporary commercial-cum-residential tower in Channsandra with column-free ground floors.',
+      'Contemporary residential tower in Channsandra.',
     floorCount: 'G+3 floors',
     commencementYear: '2022',
     completionYear: '2024',
@@ -163,6 +167,7 @@ export const PROJECTS: Project[] = [
     hero: '/construction/Kumbalgodu/1.jpeg',
     thumb: '/construction/Kumbalgodu/1.jpeg',
     gallery: [
+      '/construction/Kumbalgodu/1.jpeg',
       '/construction/Kumbalgodu/22.jpg.jpeg',
       '/construction/Kumbalgodu/IMG20250731120845.jpg',
       '/construction/Kumbalgodu/IMG20250908124357.jpg',
@@ -175,14 +180,14 @@ export const PROJECTS: Project[] = [
     outcome:
       'Foundation and ground tier handed over, proceeding with upper structural floor casting.',
     summary:
-      'Commercial facility along Mysuru Road, Kumbalgodu, built with reinforced structural framing.',
+      'RCC warehouse building off Mysuru Road, Kumbalgodu, built with reinforced structural framing.',
     floorCount: 'G+M+3 floors + Terrace',
     commencementYear: '2023',
     completionYear: '2025',
   },
   {
     slug: 'villa-gurupunvaanii-exa-anekal',
-    name: 'Villa @ Gurupunvaanii, Exa, Anekal',
+    name: 'Villa @ Guru Punvaanii, Eka, Anekal',
     location: 'Anekal, Bengaluru',
     year: '2024',
     area: '2,078 sq.ft',
@@ -193,10 +198,11 @@ export const PROJECTS: Project[] = [
     hero: '/construction/Anekal/EKA/1.jpg',
     thumb: '/construction/Anekal/EKA/1.jpg',
     gallery: [
+      '/construction/Anekal/EKA/1.jpg',
       '/construction/Anekal/EKA/IMG20250822123014.jpg',
-      '/construction/Anekal/EKA/WhatsApp%20Image%202026-03-17%20at%2014.03.35%20(1).jpeg',
-      '/construction/Anekal/EKA/WhatsApp%20Image%202026-03-17%20at%2014.03.35.jpeg',
-      '/construction/Anekal/EKA/WhatsApp%20Image%202026-03-17%20at%2014.03.51.jpeg',
+      '/construction/Anekal/EKA/WhatsApp Image 2026-03-17 at 14.03.35 (1).jpeg',
+      '/construction/Anekal/EKA/WhatsApp Image 2026-03-17 at 14.03.35.jpeg',
+      '/construction/Anekal/EKA/WhatsApp Image 2026-03-17 at 14.03.51.jpeg',
     ],
     problem:
       'Designing a multi-tiered residential structure in Anekal with optimized natural ventilation while maintaining structural integrity for long spans.',
@@ -212,9 +218,9 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: 'villa-gurupunvaanii-exotic-anekal',
-    name: 'Villa @ Gurupunvaanii, Exotic, Anekal',
+    name: 'Villa @ Guru Punvaanii, Exotica, Anekal',
     location: 'Anekal, Bengaluru',
-    year: '2025',
+    year: '2024',
     area: '2,594 sq.ft',
     system: 'RCC frame structure; isolated footings',
     category: 'Residential',
@@ -223,9 +229,10 @@ export const PROJECTS: Project[] = [
     hero: '/construction/Anekal/EXOTICA/1.jpg',
     thumb: '/construction/Anekal/EXOTICA/1.jpg',
     gallery: [
-      '/construction/Anekal/EXOTICA/WhatsApp%20Image%202026-02-10%20at%2013.42.20.jpeg',
-      '/construction/Anekal/EXOTICA/WhatsApp%20Image%202026-02-10%20at%2013.42.21.jpeg',
-      '/construction/Anekal/EXOTICA/WhatsApp%20Image%202026-03-13%20at%2017.47.07%20(1).jpeg',
+      '/construction/Anekal/EXOTICA/1.jpg',
+      '/construction/Anekal/EXOTICA/WhatsApp Image 2026-02-10 at 13.42.20.jpeg',
+      '/construction/Anekal/EXOTICA/WhatsApp Image 2026-02-10 at 13.42.21.jpeg',
+      '/construction/Anekal/EXOTICA/WhatsApp Image 2026-03-13 at 17.47.07 (1).jpeg',
     ],
     problem:
       'Expansive villa layout requiring high-strength RCC column alignment and weather-resistant external masonry.',
@@ -245,13 +252,14 @@ export const PROJECTS: Project[] = [
     location: 'Hoskote, Bengaluru',
     year: '2025',
     area: '6,911 sq.ft',
-    system: 'RCC frame structure; wire cut brick masonry',
+    system: 'RCC frame structure; wide cut red brick masonry',
     category: 'Residential',
     projectType: 'construction',
     status: 'Completed',
     hero: '/construction/Hoskote/1.jpg',
     thumb: '/construction/Hoskote/1.jpg',
     gallery: [
+      '/construction/Hoskote/1.jpg',
       '/construction/Hoskote/IMG-20240528-WA0011.jpg',
       '/construction/Hoskote/IMG-20240528-WA0012.jpg',
       '/construction/Hoskote/IMG20250304123548.jpg',
@@ -259,13 +267,13 @@ export const PROJECTS: Project[] = [
       '/construction/Hoskote/IMG20250607101527.jpg',
     ],
     problem:
-      'Heavy machinery movement required high load-bearing industrial floor slabs and heavy-duty RCC foundations.',
+      'Constructing a spacious multi-story residential building in Hoskote utilizing high-quality wide cut red brick masonry.',
     solution:
-      'Designed fiber-reinforced concrete industrial flooring over compacted aggregate sub-base.',
+      'Engineered a robust RCC framed skeleton integrated with precision wide cut red brick masonry for enhanced thermal performance and visual elevation.',
     outcome:
-      'Phase 1 structural slab and columns completed with zero deflection under load tests.',
+      'Successfully delivered turnkey residential structure with exposed red brick aesthetic and full structural clearance.',
     summary:
-      'Industrial and commercial complex in Hoskote built for heavy-duty commercial operations.',
+      'Residential building @ Hoskote built with wide cut red brick masonry.',
     floorCount: 'G+3 floors',
     commencementYear: '2023',
     completionYear: '2025',
@@ -283,7 +291,8 @@ export const PROJECTS: Project[] = [
     hero: '/construction/VVpuram/1.jpeg',
     thumb: '/construction/VVpuram/1.jpeg',
     gallery: [
-      '/construction/VVpuram/WhatsApp%20Image%202026-04-13%20at%2017.58.33.jpeg',
+      '/construction/VVpuram/1.jpeg',
+      '/construction/VVpuram/WhatsApp Image 2026-04-13 at 17.58.33.jpeg',
     ],
     problem:
       'Tight infill property flanked by historical commercial buildings in VV Puram.',
@@ -292,7 +301,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Completed zero-damage infill structure with 100% compliance with local heritage guidelines.',
     summary:
-      'Commercial building construction in the heart of VV Puram, Basavanagudi.',
+      '4 storey residential building construction in the heart of VV Puram, Basavanagudi.',
     floorCount: 'G+4 floors + Terrace',
     commencementYear: '2025',
     completionYear: 'Ongoing',
@@ -307,10 +316,10 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     projectType: 'construction',
     status: 'Ongoing',
-    hero: '/construction/VVpuram%2010/Residential%20Building%20for%20Tyche%20Corp%20-%20%20ELEVATION.png',
-    thumb: '/construction/VVpuram%2010/Residential%20Building%20for%20Tyche%20Corp%20-%20%20ELEVATION.png',
+    hero: '/construction/VVpuram 10/Residential Building for Tyche Corp -  ELEVATION.png',
+    thumb: '/construction/VVpuram 10/Residential Building for Tyche Corp -  ELEVATION.png',
     gallery: [
-      '/construction/VVpuram%2010/Residential%20Building%20for%20Tyche%20Corp%20-%20%20ELEVATION.png',
+      '/construction/VVpuram 10/Residential Building for Tyche Corp -  ELEVATION.png',
     ],
     problem:
       'Constructing a multi-family residential building in a highly congested heritage zone of VV Puram.',
@@ -331,16 +340,18 @@ export const PROJECTS: Project[] = [
     name: '3BHK @ ETA Apartments',
     location: 'ETA Apartments, Bengaluru',
     year: '2023',
-    area: '4,800 sq.ft',
-    system: 'Structural Interior Overhaul · Tile & Masonry Retrofit',
+    completionYear: '2023',
+    area: '1,850 sq.ft',
+    system: 'Structural Retrofit & Modern Interior Renovation',
     category: 'Residential',
     projectType: 'renovation',
     status: 'Completed',
-    hero: '/renovation/3BHK@%20ETA%20Apartments/1.jpg',
-    thumb: '/renovation/3BHK@%20ETA%20Apartments/1.jpg',
+    hero: '/renovation/3BHK@ ETA Apartments/1.jpg',
+    thumb: '/renovation/3BHK@ ETA Apartments/1.jpg',
     gallery: [
-      '/renovation/3BHK@%20ETA%20Apartments/IMG_20211218_120327.jpg',
-      '/renovation/3BHK@%20ETA%20Apartments/IMG_20220529_181602.jpg',
+      '/renovation/3BHK@ ETA Apartments/1.jpg',
+      '/renovation/3BHK@ ETA Apartments/IMG_20211218_120327.jpg',
+      '/renovation/3BHK@ ETA Apartments/IMG_20220529_181602.jpg',
     ],
     problem:
       'Older apartment layout requiring structural wall opening and complete modern interior refurbishment.',
@@ -349,7 +360,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Created open-plan living areas with zero floor deflection or plaster settlement.',
     summary:
-      'Turnkey luxury apartment renovation and structural interior upgrade for Arham Residency.',
+      'Turnkey luxury apartment renovation and structural interior upgrade @ ETA Apartments.',
   },
   {
     slug: 'chamrajpet-3bhk-renovation',
@@ -361,14 +372,15 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     projectType: 'renovation',
     status: 'Completed',
-    hero: '/renovation/Chamrajpet%20-%203BHK%20renovation/1.jpg',
-    thumb: '/renovation/Chamrajpet%20-%203BHK%20renovation/1.jpg',
+    hero: '/renovation/Chamrajpet - 3BHK renovation/1.jpg',
+    thumb: '/renovation/Chamrajpet - 3BHK renovation/1.jpg',
     gallery: [
-      '/renovation/Chamrajpet%20-%203BHK%20renovation/IMG-20231206-WA0029.jpg',
-      '/renovation/Chamrajpet%20-%203BHK%20renovation/IMG-20231209-WA0056.jpg',
-      '/renovation/Chamrajpet%20-%203BHK%20renovation/IMG-20231214-WA0046.jpg',
-      '/renovation/Chamrajpet%20-%203BHK%20renovation/IMG-20231215-WA0046.jpg',
-      '/renovation/Chamrajpet%20-%203BHK%20renovation/IMG-20231220-WA0056.jpg',
+      '/renovation/Chamrajpet - 3BHK renovation/1.jpg',
+      '/renovation/Chamrajpet - 3BHK renovation/IMG-20231206-WA0029.jpg',
+      '/renovation/Chamrajpet - 3BHK renovation/IMG-20231209-WA0056.jpg',
+      '/renovation/Chamrajpet - 3BHK renovation/IMG-20231214-WA0046.jpg',
+      '/renovation/Chamrajpet - 3BHK renovation/IMG-20231215-WA0046.jpg',
+      '/renovation/Chamrajpet - 3BHK renovation/IMG-20231220-WA0056.jpg',
     ],
     problem:
       'Traditional Chamrajpet home requiring structural elevation modernization and moisture barrier reinforcement.',
@@ -377,7 +389,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Extended building lifecycle by 35+ years without disturbing core structure.',
     summary:
-      'Full structural renovation and facade modernization for classic home in Chamrajpet.',
+      'Full home renovation and remodelling in Chamrajpet.',
   },
   {
     slug: 'vani-vilas-road-3bhk-civil-renovation',
@@ -389,15 +401,16 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     projectType: 'renovation',
     status: 'Completed',
-    hero: '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/1.jpeg',
-    thumb: '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/1.jpeg',
+    hero: '/renovation/Vani Vilas road - 3BHK civil renovation/1.jpeg',
+    thumb: '/renovation/Vani Vilas road - 3BHK civil renovation/1.jpeg',
     gallery: [
-      '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/IMG-20231202-WA0058.jpg',
-      '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/IMG-20240304-WA0037.jpeg',
-      '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/IMG-20240304-WA0046.jpeg',
-      '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/IMG-20240308-WA0055.jpg',
-      '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/IMG-20240328-WA0016.jpg',
-      '/renovation/Vani%20Vilas%20road%20-%203BHK%20civil%20renovation/IMG-20240508-WA0031.jpg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/1.jpeg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/IMG-20231202-WA0058.jpg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/IMG-20240304-WA0037.jpeg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/IMG-20240304-WA0046.jpeg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/IMG-20240308-WA0055.jpg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/IMG-20240328-WA0016.jpg',
+      '/renovation/Vani Vilas road - 3BHK civil renovation/IMG-20240508-WA0031.jpg',
     ],
     problem:
       'Structural reconfiguration of a multi-tier family home along Vani Vilas Road.',
@@ -406,7 +419,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Handed over with structural safety certification and contemporary glass elevation.',
     summary:
-      'Executive villa renovation and structural column strengthening along Vani Vilas Road.',
+      'Executive apartment renovation along Vani Vilas Road.',
   },
   {
     slug: 'railway-parallel-road-seshadripuram-3bhk-and-terrace-renovation',
@@ -418,15 +431,16 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     projectType: 'renovation',
     status: 'Completed',
-    hero: '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/1.jpg',
-    thumb: '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/1.jpg',
+    hero: '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/1.jpg',
+    thumb: '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/1.jpg',
     gallery: [
-      '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/aaa.jpeg',
-      '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/IMG-20231019-WA0049.jpg',
-      '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/IMG-20231209-WA0057.jpg',
-      '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/IMG-20240308-WA0126.jpeg',
-      '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/IMG-20240309-WA0052.jpg',
-      '/renovation/Railway%20parallel%20road%2C%20seshadripuram%20-%203BHK%20and%20terrace%20renovation/IMG-20240329-WA0057.jpg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/1.jpg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/aaa.jpeg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/IMG-20231019-WA0049.jpg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/IMG-20231209-WA0057.jpg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/IMG-20240308-WA0126.jpeg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/IMG-20240309-WA0052.jpg',
+      '/renovation/Railway parallel road, seshadripuram - 3BHK and terrace renovation/IMG-20240329-WA0057.jpg',
     ],
     problem:
       'Urban residence in Seshadripuram requiring wall removal and open-plan kitchen-living integration.',
@@ -435,7 +449,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Delivered ahead of schedule with full interior and electrical rewiring completed.',
     summary:
-      'Modern home renovation and structural interior redesign in Seshadripuram.',
+      'Modern home renovation and terrace uplift project @ Railway Parallel Road, Seshadripuram.',
   },
   {
     slug: 'puff-sheet-roof-and-blinds-electronics-city',
@@ -447,14 +461,15 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     projectType: 'renovation',
     status: 'Completed',
-    hero: '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/1.jpeg',
-    thumb: '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/1.jpeg',
+    hero: '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
+    thumb: '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
     gallery: [
-      '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/IMG-20220908-WA0030.jpg',
-      '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/IMG-20220909-WA0010.jpg',
-      '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/IMG-20221015-WA0047.jpg',
-      '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/IMG-20221015-WA0048.jpg',
-      '/renovation/PUFF%20sheet%20roof%20and%20blinds%20%40%20Electronics%20city/IMG-20221015-WA0049.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20220908-WA0030.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20220909-WA0010.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0047.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0048.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0049.jpg',
     ],
     problem:
       'Ground water dampness seepage on ground floor walls and outdated room partitions.',
@@ -463,7 +478,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Eliminated seepage completely with certified 10-year waterproofing warranty.',
     summary:
-      'Turnkey residence renovation and waterproofing solution in Electronic City.',
+      'Fabrication of PUFF sheet for a penthouse apartment @ Electronic City.',
   },
   {
     slug: 'mrs-shoma-mangalore-tile-roof-nandi-hills',
@@ -475,15 +490,16 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     projectType: 'renovation',
     status: 'Completed',
-    hero: '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/1.jpg',
-    thumb: '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/1.jpg',
+    hero: '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg',
+    thumb: '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg',
     gallery: [
-      '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/IMG-20240118-WA0024.jpeg',
-      '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/IMG-20240309-WA0027.jpg',
-      '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/IMG20240320120953.jpg',
-      '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/IMG20240320121002.jpg',
-      '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/IMG20240320121013.jpg',
-      '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20%40%20Nandi%20Hills/IMG20240320121022.jpg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/IMG-20240118-WA0024.jpeg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/IMG-20240309-WA0027.jpg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/IMG20240320120953.jpg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/IMG20240320121002.jpg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/IMG20240320121013.jpg',
+      '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/IMG20240320121022.jpg',
     ],
     problem:
       'Hillside villa estate requiring structural retaining wall stabilization and luxury deck expansion.',
@@ -492,7 +508,113 @@ export const PROJECTS: Project[] = [
     outcome:
       'Delivered breathtaking hillside villa restoration certified for high-wind and slope stability.',
     summary:
-      'Luxury villa restoration and hillside terrace expansion at Nandi Hills foothills.',
+      'Fabrication of Mangalore tiles roof for a farmhouse project @ Nandi Hills.',
+  },
+  {
+    slug: 'bathroom-civil-renovation-kumarapark',
+    name: 'Bathroom and Civil Renovation @ Kumarapark',
+    location: 'Kumarapark, Bengaluru',
+    year: '2024',
+    area: '2,500 sq.ft',
+    system: 'Bathroom Overhaul · Civil & Waterproofing Membrane',
+    category: 'Residential',
+    projectType: 'renovation',
+    status: 'Completed',
+    hero: '/renovation/Bathroom and civil renovation @ Kumarapark.    D- Complete bathroom renovation along with civil and waterproofing work/1.jpeg',
+    thumb: '/renovation/Bathroom and civil renovation @ Kumarapark.    D- Complete bathroom renovation along with civil and waterproofing work/1.jpeg',
+    gallery: [
+      '/renovation/Bathroom and civil renovation @ Kumarapark.    D- Complete bathroom renovation along with civil and waterproofing work/1.jpeg',
+    ],
+    problem:
+      'Outdated bathroom layout requiring complete civil strip-down, plumbing overhaul, and high-performance waterproofing.',
+    solution:
+      'Executed end-to-end civil demolition, multi-coat elastomeric waterproofing, premium tiling, and sanitaryware fitting.',
+    outcome:
+      'Delivered leak-proof, high-end modern bathroom upgrade certified with complete waterproofing warranty.',
+    summary:
+      'Complete bathroom renovation along with civil and waterproofing work.',
+  },
+  {
+    slug: 'industrial-property-renovation-kiadb-doddaballapur',
+    name: 'Industrial Property Renovation @ KIADB, Doddaballapur',
+    location: 'KIADB, Doddaballapur, Bengaluru',
+    year: '2026',
+    area: '12,500 sq.ft',
+    system: 'Industrial Structural Retrofit · Heavy Flooring & Roof Refurbishment',
+    category: 'Commercial',
+    projectType: 'renovation',
+    status: 'Completed',
+    hero: '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
+    thumb: '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
+    gallery: [
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/2.jpeg',
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/3.jpeg',
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/4.jpeg',
+    ],
+    problem:
+      'Aging industrial shed requiring floor load strengthening, structural roof repairs, and wall refurbishment.',
+    solution:
+      'Reinforced concrete floor slab for heavy equipment loads and restored industrial roof cladding and wall masonry.',
+    outcome:
+      'Fully modernized industrial plant space meeting factory safety compliance and heavy-duty operational standards.',
+    summary:
+      'Complete industrial property renovation at an industrial property.',
+  },
+  {
+    slug: 'strong-room-civil-renovation-thippasandra',
+    name: 'Strong Room & Civil Renovation @ Thippasandra, Bengaluru',
+    location: 'Thippasandra, Bengaluru',
+    year: '2025',
+    area: '3,800 sq.ft',
+    system: 'Bank Locker RCC Vault Construction · High-Security Civil Works',
+    category: 'Commercial',
+    projectType: 'renovation',
+    status: 'Completed',
+    hero: '/renovation/Strong Room & Civil renovation @ Thippasandra, Bengaluru. D - Civil work and building a strong room for a bank locker facility @ Thippasandra,/1.jpeg',
+    thumb: '/renovation/Strong Room & Civil renovation @ Thippasandra, Bengaluru. D - Civil work and building a strong room for a bank locker facility @ Thippasandra,/1.jpeg',
+    gallery: [
+      '/renovation/Strong Room & Civil renovation @ Thippasandra, Bengaluru. D - Civil work and building a strong room for a bank locker facility @ Thippasandra,/1.jpeg',
+      '/renovation/Strong Room & Civil renovation @ Thippasandra, Bengaluru. D - Civil work and building a strong room for a bank locker facility @ Thippasandra,/WhatsApp Image 2026-08-09 at 11.52.16 AM.jpeg',
+      '/renovation/Strong Room & Civil renovation @ Thippasandra, Bengaluru. D - Civil work and building a strong room for a bank locker facility @ Thippasandra,/WhatsApp Image 2026-08-09 at 11.52.17 AM.jpeg',
+    ],
+    problem:
+      'Bank facility requiring RBI-standard RCC reinforced strong room construction within existing commercial layout.',
+    solution:
+      'Cast heavy-duty reinforced RCC vault walls with steel armor mesh integration and specialized security door casing.',
+    outcome:
+      'Successfully handed over certified bank locker strong room facility built strictly to institutional security norms.',
+    summary:
+      'Civil work and building a strong room for a bank locker facility @ Thippasandra.',
+  },
+  {
+    slug: 'swimming-pool-installation-sadahalli',
+    name: 'Swimming Pool Installation & Civil Work @ Sadahalli, Bengaluru',
+    location: 'Sadahalli, Bengaluru',
+    year: '2026',
+    area: '6,200 sq.ft',
+    system: 'RCC Swimming Pool Construction · Site Boundary Green Fencing',
+    category: 'Residential',
+    projectType: 'renovation',
+    status: 'Completed',
+    hero: '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/1.jpeg',
+    thumb: '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/1.jpeg',
+    gallery: [
+      '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/1.jpeg',
+      '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/WhatsApp Image 2026-08-09 at 11.55.16 AM.jpeg',
+      '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/WhatsApp Image 2026-08-09 at 11.55.17 AM (1).jpeg',
+      '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/WhatsApp Image 2026-08-09 at 11.55.17 AM.jpeg',
+      '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/WhatsApp Image 2026-08-09 at 11.55.18 AM (1).jpeg',
+      '/renovation/Swimming pool installation and civil work @ Sadahalli, Bengaluru .  D- New swimming pool installation with associated civil work with the site boundary green fencing/WhatsApp Image 2026-08-09 at 11.55.19 AM.jpeg',
+    ],
+    problem:
+      'Private property requiring custom in-ground RCC swimming pool construction, pool filtration decking, and perimeter security fencing.',
+    solution:
+      'Excavated and cast monolithic RCC pool shell with dual-stage waterproofing, balance tank, and eco-friendly perimeter green fencing.',
+    outcome:
+      'Completed resort-grade swimming pool facility with full filtration deck and landscape boundary integration.',
+    summary:
+      'New swimming pool installation with associated civil work with the site boundary green fencing.',
   },
 ];
 

@@ -45,7 +45,7 @@ export default function ConstructionProjectsPage() {
                 data-reveal
                 data-reveal-delay="160"
               >
-                Turnkey residential villas, multi-story commercial towers, structural foundations, and RCC frame buildings. Built with uncompromised engineering discipline.
+                Turnkey residential villas and apartment buildings, multi-story commercial towers, structural foundations, and RCC frame buildings. Built with uncompromised engineering discipline.
               </p>
             </div>
 
@@ -74,7 +74,7 @@ export default function ConstructionProjectsPage() {
               All Construction Division Projects ({constructionProjects.length})
             </h2>
             <span className="text-xs text-steel font-mono font-medium hidden sm:inline">
-              Click any project card to view full case study
+              Click any project card to view full project
             </span>
           </div>
 
@@ -90,6 +90,7 @@ export default function ConstructionProjectsPage() {
                     src={p.thumb}
                     alt={p.name}
                     fill
+                    priority={i < 6}
                     sizes="(min-width:1024px) 32vw, (min-width:640px) 48vw, 100vw"
                     className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-106 opacity-55"
                   />
@@ -118,7 +119,7 @@ export default function ConstructionProjectsPage() {
                       {p.summary}
                     </p>
                     <div className="mt-5 inline-flex items-center gap-2 text-[11px] uppercase tracking-wider bg-white text-ink font-extrabold px-4 py-2 rounded-full shadow-lg group-hover:bg-gold group-hover:translate-x-1 transition-all duration-300">
-                      <span>View Case Study</span>
+                      <span>View Project</span>
                       <span className="text-xs">→</span>
                     </div>
                   </div>

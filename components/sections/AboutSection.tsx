@@ -67,7 +67,7 @@ export function AboutSection() {
     {
       targetValue: 10,
       suffix: '+',
-      title: 'Projects Delivered On-Time',
+      title: 'Construction Projects Delivered On-Time',
       subtitle: 'RESIDENTIAL & COMMERCIAL',
       icon: (
         <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">

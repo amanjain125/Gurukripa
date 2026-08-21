@@ -13,3 +13,8 @@ tsconfig.tsbuildinfo
 # Local-only tools (don't commit the 51MB tunnel binary)
 cloudflared.exe
 *.pdf
+
+# Verification and temporary test artifacts
+*_check.png
+take_screenshot*.js
+newgrurukripa/

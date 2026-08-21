@@ -8,7 +8,8 @@ export const COMPANY = {
   },
   city: 'Bengaluru',
   phones: ['+91 98860 96523', '+91 95909 82854'],
-  email: 'gurukripaconstructions3@gmail.com',
+  email: 'team@gurukripaconstruction.in',
+  emails: ['team@gurukripaconstruction.in'],
   address: {
     line1: 'D7A, 3rd Floor, Sampurna Chambers',
     line2: 'Vasavi Temple St, Vishweshwarapura',

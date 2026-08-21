@@ -58,7 +58,7 @@ export function FeaturedProjects() {
                 </span>
               </div>
               <p className="mt-3 text-white/90 text-[14px] leading-relaxed max-w-lg font-normal">
-                Turnkey residential villas, commercial towers, structural foundations, and RCC frames built with engineering precision.
+                Turnkey residential villas and apartment buildings, multi-story commercial towers, structural foundations, and RCC frame buildings. Built with uncompromised engineering discipline.
               </p>
               <div className="mt-6 inline-flex items-center gap-2.5 text-[12px] uppercase tracking-wider bg-white text-ink font-bold px-5 py-2.5 rounded-full shadow-lg group-hover:bg-gold group-hover:translate-x-1 transition-all duration-300">
                 <span>Open Construction Section</span>

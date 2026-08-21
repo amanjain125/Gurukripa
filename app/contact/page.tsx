@@ -235,7 +235,7 @@ export default function ContactPage() {
                       {
                         num: 3,
                         title: 'Explore the right path',
-                        desc: 'Discuss packages, Cost-Plus contracts, architecture and feasibility.',
+                        desc: 'Discuss packages, design feasibility and technical details.',
                       },
                       {
                         num: 4,
@@ -300,8 +300,8 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-7">
                   {[
                     'B.E. Civil & M.Tech Structural Leadership',
-                    '120+ homes & projects delivered',
-                    'Cost-Plus & Lump-Sum guidance',
+                    '40+ homes & projects delivered',
+                    'Uncompromised quality and engineering',
                     'Dedicated engineer supervision',
                   ].map((feature) => (
                     <div key={feature} className="glass rounded-2xl p-4 flex items-center gap-3.5 border border-white/70 hover:border-brand-red/40 transition-colors">
@@ -378,12 +378,14 @@ export default function ContactPage() {
                       {secondaryPhone}
                     </a>
                   </div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-ink/10">
-                    <span className="text-ink/65 font-medium">Email:</span>
-                    <a href={`mailto:${COMPANY.email}`} className="font-extrabold text-ink hover:text-brand-red truncate max-w-full">
-                      {COMPANY.email}
-                    </a>
-                  </div>
+                  {COMPANY.emails.map((email, idx) => (
+                    <div key={email} className={`flex flex-wrap items-center justify-between gap-2 ${idx === 0 ? 'pt-1.5 border-t border-ink/10' : 'pt-1'}`}>
+                      <span className="text-ink/65 font-medium">{idx === 0 ? 'Primary Email:' : 'Alternate Email:'}</span>
+                      <a href={`mailto:${email}`} className="font-extrabold text-ink hover:text-brand-red truncate max-w-full">
+                        {email}
+                      </a>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Useful Tip Box */}

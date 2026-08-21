@@ -36,7 +36,7 @@ const CONSTRUCTION_DIVISION: DivisionData = {
   badge: 'Turnkey New Build Scope',
   image: '/construction/Channsandra/render%201.png',
   overview:
-    'End-to-end structural engineering and turnkey building construction across Bengaluru. Guided by Founder Anuj Jain (B.E. Civil, M.Tech Structural), every villa, commercial tower, and RCC frame is built with STAAD/ETABS load modeling and zero-compromise engineering.',
+    'End-to-end engineering and turnkey building construction across Bengaluru. Every villa, commercial tower, and RCC frame is built with ETABS load modeling and zero-compromise engineering.',
   disciplines: [
     {
       id: 'residential-construction',
@@ -50,7 +50,7 @@ const CONSTRUCTION_DIVISION: DivisionData = {
         'Independent villas (G+1 to G+3)',
         'Row-house and small-cluster developments',
         'Apartment and duplex buildings',
-        'Vaastu-aligned planning, on request',
+        'Vaastu-aligned planning',
       ],
       specs: ['Independent Villas', 'Row Houses', 'Apartment Buildings'],
     },
@@ -65,7 +65,7 @@ const CONSTRUCTION_DIVISION: DivisionData = {
       bullets: [
         'Warehouse buildings',
         'Retail and showroom fit-outs',
-        'Mixed-use towers',
+        'Mixed-use towers up to G+8',
         'BMS and façade coordination',
       ],
       specs: ['Warehouse Buildings', 'Retail Fit-Outs', 'Mixed-Use Towers'],
@@ -95,7 +95,7 @@ const RENOVATION_DIVISION: DivisionData = {
   badge: 'Retrofit & Modernization Scope',
   image: '/renovation/mrs%20-%20Shoma%20Nandi%20Hills/IMG20240320123631.jpg',
   overview:
-    'Diagnosing and strengthening existing buildings with structural wrapping, steel jacketing, load-bearing wall removals, and floor extensions. We extend building lifecycles by 20+ years while maintaining structural integrity.',
+    'Diagnosing and strengthening existing buildings with structural wrapping, steel jacketing, load-bearing wall removals, and floor extensions. We extend building lifecycles by 10-20 years while maintaining structural integrity.',
   disciplines: [
     {
       id: 'renovation-retrofitting',
@@ -143,7 +143,7 @@ const RENOVATION_DIVISION: DivisionData = {
     'Structural Audit & Load Assessment Certificate',
     'Wrapping & Steel Strengthening Warranty',
     'Complete Architectural & Facade Upgrade',
-    'Extended 20+ Year Building Lifecycle Guarantee',
+    'Extended 10-20 Year Building Lifecycle Guarantee',
   ],
 };
 
@@ -177,7 +177,7 @@ const CONSULTING_DIVISION: DivisionData = {
   ],
   process: [
     '01. Soil Data Review & Architectural Layout Analysis',
-    '02. 3D STAAD.Pro / ETABS Structural Frame Modeling',
+    '02. 3D ETABS Structural Frame Modeling',
     '03. Load Combination & Seismic/Wind Force Simulation',
     '04. Rebar Schedule Optimization & Peer Review Audit',
     '05. GFC Drawing Release (Foundation, Columns, Beams & Slabs)',
@@ -185,7 +185,7 @@ const CONSULTING_DIVISION: DivisionData = {
   ],
   deliverables: [
     'Complete GFC Structural Drawing Sets',
-    'STAAD / ETABS Structural Load & Stability Report',
+    'ETABS Structural Load & Stability Report',
     'Statutory Structural Stability Certificate',
     'Value-Engineered Rebar & Quantity Schedules',
   ],
@@ -264,7 +264,7 @@ export function ServicesSection() {
                 Construction Services
               </h3>
               <p className="text-white/90 text-sm mt-3 leading-relaxed font-normal">
-                Residential Villas, Multi-Story Commercial Towers, Warehouses.
+                Residential Villas & Apartments, Multi-Story Commercial Towers, Warehouses.
               </p>
             </div>
 
@@ -330,7 +330,7 @@ export function ServicesSection() {
                 Architectural & Structural Consulting
               </h3>
               <p className="text-white/90 text-sm mt-3 leading-relaxed font-normal">
-                STAAD.Pro Load Modeling, Seismic Certification, Foundation Engineering, Peer Review & Vaastu Planning.
+                ETABS Load Modeling, Seismic Certification, Foundation Engineering, Peer Review & Vaastu Planning.
               </p>
             </div>
 
@@ -477,7 +477,7 @@ export function ServicesSection() {
                   href="/contact"
                   className="bg-gold text-ink font-extrabold px-8 py-3.5 rounded-full text-sm hover:bg-white transition-colors shadow-xl"
                 >
-                  Schedule Technical Consultation with Founder Anuj Jain →
+                  Schedule Technical Consultation →
                 </Link>
               )}
               <button
