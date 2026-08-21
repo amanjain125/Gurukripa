@@ -93,7 +93,7 @@ const RENOVATION_DIVISION: DivisionData = {
   subtitle: 'Column Wrapping, Column Strengthening, Floor Additions & Villa Restorations, House Remodeling & Facade Overhaul.',
   divisionCode: 'DIVISION 02',
   badge: 'Retrofit & Modernization Scope',
-  image: '/renovation/mrs%20-%20Shoma%20Nandi%20Hills/IMG20240320123631.jpg',
+  image: '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20@%20Nandi%20Hills/1.jpg',
   overview:
     'Diagnosing and strengthening existing buildings with structural wrapping, steel jacketing, load-bearing wall removals, and floor extensions. We extend building lifecycles by 10-20 years while maintaining structural integrity.',
   disciplines: [

@@ -130,14 +130,29 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
               handleNext();
             }}
           >
-            <Image
-              src={images[selectedIndex]}
-              alt={`${projectName} enlarged photo ${selectedIndex + 1}`}
-              fill
-              priority
-              sizes="100vw"
-              className="object-contain pointer-events-none"
-            />
+            {images.map((src, idx) => {
+              const isActive = idx === selectedIndex;
+              const isAdjacent =
+                idx === (selectedIndex + 1) % images.length ||
+                idx === (selectedIndex - 1 + images.length) % images.length;
+
+              if (!isActive && !isAdjacent) return null;
+
+              return (
+                <Image
+                  key={src}
+                  src={src}
+                  alt={`${projectName} enlarged photo ${idx + 1}`}
+                  fill
+                  priority={isActive || isAdjacent}
+                  unoptimized={true}
+                  sizes="100vw"
+                  className={`object-contain pointer-events-none transition-opacity duration-300 ${
+                    isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
+                />
+              );
+            })}
           </div>
 
           {/* Next Arrow Button (Dark Button) */}

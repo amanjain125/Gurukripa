@@ -27,7 +27,7 @@ export function VideoHero() {
           <div className="w-12 md:w-16 h-1 bg-brand-red mb-6 md:mb-8" />
 
           {/* Heading */}
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-bold leading-[1.38] tracking-tight text-white mb-6">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-bold leading-normal tracking-tight text-white mb-6">
             We engineer <em className="font-display-italic text-brand-red italic font-normal">trust</em>, one quiet, precision-built structure at a time.
           </h1>
 
