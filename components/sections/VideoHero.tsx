@@ -8,7 +8,7 @@ export function VideoHero() {
       {/* Cinematic Video Background on the Right */}
       <div className="absolute right-0 top-0 bottom-0 w-full md:w-[65%] lg:w-[70%] xl:w-[76%] h-full overflow-hidden z-0">
         <video
-          src="/finalvideo.mp4"
+          src="/day-night-reveal.mp4"
           autoPlay
           loop
           muted
