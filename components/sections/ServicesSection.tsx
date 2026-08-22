@@ -34,7 +34,7 @@ const CONSTRUCTION_DIVISION: DivisionData = {
   subtitle: 'Structural Engineering, Residential Villas & Commercial Complexes',
   divisionCode: 'DIVISION 01',
   badge: 'Turnkey New Build Scope',
-  image: '/construction/Channsandra/render%201.png',
+  image: '/construction/Channsandra/render 1.png',
   overview:
     'End-to-end engineering and turnkey building construction across Bengaluru. Every villa, commercial tower, and RCC frame is built with ETABS load modeling and zero-compromise engineering.',
   disciplines: [
@@ -93,7 +93,7 @@ const RENOVATION_DIVISION: DivisionData = {
   subtitle: 'Column Wrapping, Column Strengthening, Floor Additions & Villa Restorations, House Remodeling & Facade Overhaul.',
   divisionCode: 'DIVISION 02',
   badge: 'Retrofit & Modernization Scope',
-  image: '/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20@%20Nandi%20Hills/1.jpg',
+  image: '/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg',
   overview:
     'Diagnosing and strengthening existing buildings with structural wrapping, steel jacketing, load-bearing wall removals, and floor extensions. We extend building lifecycles by 10-20 years while maintaining structural integrity.',
   disciplines: [
@@ -153,7 +153,7 @@ const CONSULTING_DIVISION: DivisionData = {
   subtitle: 'Analysis, modelling, peer review.',
   divisionCode: 'DIVISION 03',
   badge: 'Design & Structural Scope',
-  image: '/construction/Hennur/Anuj%2003.jpg',
+  image: '/construction/Hennur/Anuj 03.jpg',
   overview:
     'We take a quiet, evidence-led approach to structural design. Every member is sized to a load case we can defend on a board. We work in ETABS and SAFE.',
   disciplines: [
@@ -472,14 +472,12 @@ export function ServicesSection() {
 
             {/* Bottom Actions */}
             <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-white/15">
-              {activeModal.id !== 'renovation' && (
-                <Link
-                  href="/contact"
-                  className="bg-gold text-ink font-extrabold px-8 py-3.5 rounded-full text-sm hover:bg-white transition-colors shadow-xl"
-                >
-                  Schedule Technical Consultation →
-                </Link>
-              )}
+              <Link
+                href="/contact"
+                className="bg-gold text-ink font-extrabold px-8 py-3.5 rounded-full text-sm hover:bg-white transition-colors shadow-xl"
+              >
+                Schedule Technical Consultation →
+              </Link>
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}

@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   const smtpPort = Number(process.env.SMTP_PORT) || 465;
   const smtpUser = process.env.SMTP_USER || 'team@gurukripaconstruction.in';
   const smtpPass = process.env.SMTP_PASS;
-  const recipientEmail = process.env.TO_EMAIL || 'gurukripaconstuctions3@gmail.com';
+  const recipientEmail = process.env.TO_EMAIL || 'gurukripaconstructions3@gmail.com';
 
   if (!smtpPass) {
     console.error('[contact-api] Missing SMTP_PASS environment variable');

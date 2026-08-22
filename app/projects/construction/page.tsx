@@ -128,24 +128,7 @@ export default function ConstructionProjectsPage() {
             ))}
           </div>
 
-          {/* Banner Callout */}
-          <div className="mt-20 bg-ink border border-white/15 rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto shadow-2xl text-bone">
-            <span className="eyebrow text-gold mb-3 block font-bold">Custom Construction Portfolio</span>
-            <h3 className="font-display text-2xl md:text-3xl text-white font-semibold">
-              Have construction projects to showcase here?
-            </h3>
-            <p className="text-white/80 text-[14px] mt-3 max-w-xl mx-auto leading-relaxed">
-              We can update this section with your exact construction project details, photos, location, and structural highlights.
-            </p>
-            <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
-              <Link href="/contact" className="btn btn-primary !rounded-full !px-7 !py-3 text-[14px] font-bold shadow-lg">
-                Consult With Founder
-              </Link>
-              <Link href="/projects/renovation" className="btn btn-secondary !rounded-full !px-7 !py-3 text-[14px] font-bold">
-                Explore Renovation Projects
-              </Link>
-            </div>
-          </div>
+
         </div>
       </section>
     </>

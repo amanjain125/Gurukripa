@@ -35,7 +35,7 @@ export function ProjectsGrid() {
             className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 flex flex-col justify-between aspect-[16/9] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
           >
             <Image
-              src="/construction/Channsandra/render%201.png"
+              src="/construction/Channsandra/render 1.png"
               alt="Construction Projects"
               fill
               sizes="(min-width:768px) 50vw, 100vw"
@@ -72,7 +72,7 @@ export function ProjectsGrid() {
             className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 flex flex-col justify-between aspect-[16/9] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
           >
             <Image
-              src="/renovation/Mrs%20Shoma%20-%20Mangalore%20tile%20roof%20@%20Nandi%20Hills/1.jpg"
+              src="/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg"
               alt="Renovation Projects"
               fill
               sizes="(min-width:768px) 50vw, 100vw"

@@ -190,12 +190,13 @@ export function ContactForm() {
       {/* Plot Size */}
       <div>
         <label className="block text-[15px] font-semibold text-ink/90 mb-2" htmlFor="plotSize">
-          Plot Size / Dimensions <span className="text-ink/40">(Optional)</span>
+          Plot Size / Dimensions <span className="text-brand-red">*</span>
         </label>
         <input
           id="plotSize"
           name="plotSize"
           type="text"
+          required
           placeholder="e.g. 30x40 ft, 1200 sq ft, 40x60 ft"
           className="w-full bg-white/90 border border-ink/15 rounded-xl px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/40 outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition"
         />
