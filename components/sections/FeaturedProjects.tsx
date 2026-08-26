@@ -28,7 +28,7 @@ export function FeaturedProjects() {
           {/* Construction Projects Dark Card */}
           <Link
             href="/projects/construction"
-            className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 md:p-10 flex flex-col justify-between aspect-[16/11] sm:aspect-[16/10] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
+            className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 md:p-10 flex flex-col justify-between min-h-[420px] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
           >
             <Image
               src={encodeURI('/construction/Channsandra/render 1.png')}
@@ -70,7 +70,7 @@ export function FeaturedProjects() {
           {/* Renovation Projects Dark Card */}
           <Link
             href="/projects/renovation"
-            className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 md:p-10 flex flex-col justify-between aspect-[16/11] sm:aspect-[16/10] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
+            className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 md:p-10 flex flex-col justify-between min-h-[420px] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
           >
             <Image
               src={encodeURI('/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg')}
