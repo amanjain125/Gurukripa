@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
       'Delivered turnkey including premium joinery and facade illumination.',
     summary:
       'High-end urban apartment building in Koramangala featuring spacious open-plan living and custom architectural elevation.',
-    floorCount: 'G+3 floors',
+    floorCount: 'G+2 floors',
     commencementYear: '2020',
     completionYear: '2021',
   },
@@ -90,8 +90,8 @@ export const PROJECTS: Project[] = [
     outcome:
       'Handed over on time with complete structural clearance and custom interior finishes.',
     summary:
-      'Multi story sports showroom and warehouse building in the heart of bengaluru',
-    floorCount: 'G+4 floors + Terrace',
+      'Multi storey sports showroom and warehouse building in the heart of Bengaluru',
+    floorCount: 'Stilt + 4 floors + Terrace',
     commencementYear: '2020',
     completionYear: '2021',
   },
@@ -150,7 +150,7 @@ export const PROJECTS: Project[] = [
       'Completed structure handed over with full structural clearance and premium finishes.',
     summary:
       'Contemporary residential tower in Channsandra.',
-    floorCount: 'G+3 floors',
+    floorCount: 'G+2 floors',
     commencementYear: '2022',
     completionYear: '2024',
   },
@@ -252,7 +252,7 @@ export const PROJECTS: Project[] = [
     location: 'Hoskote, Bengaluru',
     year: '2025',
     area: '6,911 sq.ft',
-    system: 'RCC frame structure; wide cut red brick masonry',
+    system: 'RCC frame structure; wire cut red brick masonry',
     category: 'Residential',
     projectType: 'construction',
     status: 'Completed',
@@ -267,14 +267,14 @@ export const PROJECTS: Project[] = [
       '/construction/Hoskote/IMG20250607101527.jpg',
     ],
     problem:
-      'Constructing a spacious multi-story residential building in Hoskote utilizing high-quality wide cut red brick masonry.',
+      'Constructing a spacious multi-story residential building in Hoskote utilizing high-quality wire cut red brick masonry.',
     solution:
-      'Engineered a robust RCC framed skeleton integrated with precision wide cut red brick masonry for enhanced thermal performance and visual elevation.',
+      'Engineered a robust RCC framed skeleton integrated with precision wire cut red brick masonry for enhanced thermal performance and visual elevation.',
     outcome:
       'Successfully delivered turnkey residential structure with exposed red brick aesthetic and full structural clearance.',
     summary:
-      'Residential building @ Hoskote built with wide cut red brick masonry.',
-    floorCount: 'G+3 floors',
+      'Residential building @ Hoskote built with wire cut red brick masonry.',
+    floorCount: 'G+2 floors',
     commencementYear: '2023',
     completionYear: '2025',
   },
@@ -301,8 +301,8 @@ export const PROJECTS: Project[] = [
     outcome:
       'Completed zero-damage infill structure with 100% compliance with local heritage guidelines.',
     summary:
-      '4 storey residential building construction in the heart of VV Puram, Basavanagudi.',
-    floorCount: 'G+4 floors + Terrace',
+      '4 storey residential building construction in the heart of VV Puram, Basavanagudi, comprising of two independent duplex units.',
+    floorCount: 'Stilt + 4 floors + Terrace',
     commencementYear: '2025',
     completionYear: 'Ongoing',
   },
@@ -328,13 +328,42 @@ export const PROJECTS: Project[] = [
     outcome:
       'Foundation stage completed, currently progressing with upper-floor RCC structure.',
     summary:
-      'Modern residential apartment project underway in VV Puram, featuring optimized urban floorplans.',
-    floorCount: 'G+5 floors',
+      'Modern residential apartment project underway in VV Puram, featuring optimized urban floorplans, with one 3BHK unit in each floor.',
+    floorCount: 'Stilt + 5 floors',
     commencementYear: '2026',
     completionYear: 'Ongoing',
   },
 
   // REAL RENOVATION & RETROFIT PROJECTS FROM /renovation DIRECTORY
+  {
+    slug: 'puff-sheet-roof-and-blinds-electronics-city',
+    name: 'PUFF Sheet Roof and Blinds @ Electronics City',
+    location: 'Electronic City, Bengaluru',
+    year: '2022',
+    area: '3,400 sq.ft',
+    system: 'Interior Refurbishment · Damp Proof Membrane Installation',
+    category: 'Residential',
+    projectType: 'renovation',
+    status: 'Completed',
+    hero: '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
+    thumb: '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
+    gallery: [
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20220908-WA0030.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20220909-WA0010.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0047.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0048.jpg',
+      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0049.jpg',
+    ],
+    problem:
+      'Ground water dampness seepage on ground floor walls and outdated room partitions.',
+    solution:
+      'Applied chemical damp-proof membrane and installed moisture-resistant interior wall panels.',
+    outcome:
+      'Eliminated seepage completely with certified 10-year waterproofing warranty.',
+    summary:
+      'Fabrication of PUFF sheet and terrace remodelling for a penthouse apartment @ Electronic City.',
+  },
   {
     slug: '3bhk-eta-apartments',
     name: '3BHK @ ETA Apartments',
@@ -389,7 +418,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Extended building lifecycle by 35+ years without disturbing core structure.',
     summary:
-      'Full home renovation and remodelling in Chamrajpet.',
+      '3BHK renovation and remodelling in Chamrajpet.',
   },
   {
     slug: 'vani-vilas-road-3bhk-civil-renovation',
@@ -419,7 +448,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Handed over with structural safety certification and contemporary glass elevation.',
     summary:
-      'Executive apartment renovation along Vani Vilas Road.',
+      'Executive 3BHK apartment renovation along Vani Vilas Road , VV Puram',
   },
   {
     slug: 'railway-parallel-road-seshadripuram-3bhk-and-terrace-renovation',
@@ -450,35 +479,6 @@ export const PROJECTS: Project[] = [
       'Delivered ahead of schedule with full interior and electrical rewiring completed.',
     summary:
       'Modern home renovation and terrace uplift project @ Railway Parallel Road, Seshadripuram.',
-  },
-  {
-    slug: 'puff-sheet-roof-and-blinds-electronics-city',
-    name: 'PUFF Sheet Roof and Blinds @ Electronics City',
-    location: 'Electronic City, Bengaluru',
-    year: '2022',
-    area: '3,400 sq.ft',
-    system: 'Interior Refurbishment · Damp Proof Membrane Installation',
-    category: 'Residential',
-    projectType: 'renovation',
-    status: 'Completed',
-    hero: '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
-    thumb: '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
-    gallery: [
-      '/renovation/PUFF sheet roof and blinds @ Electronics city/1.jpeg',
-      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20220908-WA0030.jpg',
-      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20220909-WA0010.jpg',
-      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0047.jpg',
-      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0048.jpg',
-      '/renovation/PUFF sheet roof and blinds @ Electronics city/IMG-20221015-WA0049.jpg',
-    ],
-    problem:
-      'Ground water dampness seepage on ground floor walls and outdated room partitions.',
-    solution:
-      'Applied chemical damp-proof membrane and installed moisture-resistant interior wall panels.',
-    outcome:
-      'Eliminated seepage completely with certified 10-year waterproofing warranty.',
-    summary:
-      'Fabrication of PUFF sheet for a penthouse apartment @ Electronic City.',
   },
   {
     slug: 'mrs-shoma-mangalore-tile-roof-nandi-hills',
@@ -532,34 +532,7 @@ export const PROJECTS: Project[] = [
     outcome:
       'Delivered leak-proof, high-end modern bathroom upgrade certified with complete waterproofing warranty.',
     summary:
-      'Complete bathroom renovation along with civil and waterproofing work.',
-  },
-  {
-    slug: 'industrial-property-renovation-kiadb-doddaballapur',
-    name: 'Industrial Property Renovation @ KIADB, Doddaballapur',
-    location: 'KIADB, Doddaballapur, Bengaluru',
-    year: '2026',
-    area: '12,500 sq.ft',
-    system: 'Industrial Structural Retrofit · Heavy Flooring & Roof Refurbishment',
-    category: 'Commercial',
-    projectType: 'renovation',
-    status: 'Completed',
-    hero: '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
-    thumb: '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
-    gallery: [
-      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
-      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/2.jpeg',
-      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/3.jpeg',
-      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/4.jpeg',
-    ],
-    problem:
-      'Aging industrial shed requiring floor load strengthening, structural roof repairs, and wall refurbishment.',
-    solution:
-      'Reinforced concrete floor slab for heavy equipment loads and restored industrial roof cladding and wall masonry.',
-    outcome:
-      'Fully modernized industrial plant space meeting factory safety compliance and heavy-duty operational standards.',
-    summary:
-      'Complete industrial property renovation at an industrial property.',
+      'Complete bathroom renovation along with civil plumbing and waterproofing work.',
   },
   {
     slug: 'strong-room-civil-renovation-thippasandra',
@@ -614,7 +587,34 @@ export const PROJECTS: Project[] = [
     outcome:
       'Completed resort-grade swimming pool facility with full filtration deck and landscape boundary integration.',
     summary:
-      'New swimming pool installation with associated civil work with the site boundary green fencing.',
+      'New swimming pool installation with associated civil work and site boundary green fencing.',
+  },
+  {
+    slug: 'industrial-property-renovation-kiadb-doddaballapur',
+    name: 'Industrial Property Renovation @ KIADB, Doddaballapur',
+    location: 'KIADB, Doddaballapur, Bengaluru',
+    year: '2026',
+    area: '12,500 sq.ft',
+    system: 'Industrial Structural Retrofit · Heavy Flooring & Roof Refurbishment',
+    category: 'Commercial',
+    projectType: 'renovation',
+    status: 'Completed',
+    hero: '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
+    thumb: '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
+    gallery: [
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/1.jpeg',
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/2.jpeg',
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/3.jpeg',
+      '/renovation/Industrial Property Renovation @ KIADB, Doddaballapur.  D-Complete industrial property renovation at a Industrial property/4.jpeg',
+    ],
+    problem:
+      'Aging industrial shed requiring floor load strengthening, structural roof repairs, and wall refurbishment.',
+    solution:
+      'Reinforced concrete floor slab for heavy equipment loads and restored industrial roof cladding and wall masonry.',
+    outcome:
+      'Fully modernized industrial plant space meeting factory safety compliance and heavy-duty operational standards.',
+    summary:
+      'Complete industrial property renovation @ KIADB , Doddaballapur',
   },
 ];
 

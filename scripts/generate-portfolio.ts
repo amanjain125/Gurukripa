@@ -65,7 +65,7 @@ async function getOptimizedImageUrl(relativePath: string): Promise<string> {
 
     if (!fs.existsSync(cachedPath)) {
       await sharp(fullPath)
-        .resize(800, 600, { fit: 'cover', withoutEnlargement: true })
+        .resize({ width: 800, withoutEnlargement: true })
         .jpeg({ quality: 80 })
         .toFile(cachedPath);
     }
@@ -115,7 +115,7 @@ async function generatePDF() {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       color: #0F172A;
       background-color: #323639;
-      font-size: 9.5pt;
+      font-size: 11pt;
       line-height: 1.4;
       display: flex;
       flex-direction: column;
@@ -228,36 +228,100 @@ async function generatePDF() {
       margin: 0 auto;
     }
 
-    .cover-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    .cover-stats-container {
+      display: flex;
+      flex-direction: column;
       gap: 16px;
-      background: #F8FAFC;
+      width: 100%;
+      align-items: center;
+    }
+
+    .cover-stats-row {
+      display: flex;
+      background: #FFFFFF;
       border: 1px solid #E2E8F0;
       border-radius: 14px;
-      padding: 28px 24px;
-      width: 100%;
+      padding: 24px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      justify-content: center;
+    }
+
+    .cover-stats-top {
+      width: 100%;
+    }
+
+    .cover-stats-bottom {
+      width: 70%;
     }
 
     .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 16px;
+      border-right: 1px solid #E2E8F0;
+      flex: 1 1 0%;
+      min-width: 0;
+      justify-content: center;
+    }
+    
+    .stat-card:last-child {
+      border-right: none;
+    }
+
+    .stat-icon-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(192, 50, 43, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C0322B;
+      background: rgba(192, 50, 43, 0.05);
+      flex-shrink: 0;
+    }
+
+    .stat-icon-wrapper svg {
+      width: 22px;
+      height: 22px;
+    }
+    
+    .stat-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
 
     .stat-number {
       font-size: 26pt;
       font-weight: 800;
-      color: #C0322B;
+      color: #0F172A;
       line-height: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    .stat-suffix {
+      color: #C0322B;
     }
 
-    .stat-label {
-      font-size: 8.5pt;
-      color: #475569;
+    .stat-title {
+      font-size: 10pt;
+      color: #0F172A;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
+      line-height: 1.2;
       margin-top: 6px;
+    }
+    
+    .stat-subtitle {
+      font-size: 7pt;
+      color: #C0322B;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
     }
 
     .cover-founder-box {
@@ -327,14 +391,14 @@ async function generatePDF() {
     }
 
     .page-header-title {
-      font-size: 13pt;
+      font-size: 16pt;
       font-weight: 800;
       color: #0F172A;
       letter-spacing: -0.3px;
     }
 
     .page-header-subtitle {
-      font-size: 8pt;
+      font-size: 10pt;
       color: #C0322B;
       font-weight: 800;
       text-transform: uppercase;
@@ -367,7 +431,7 @@ async function generatePDF() {
     }
 
     .section-heading {
-      font-size: 11pt;
+      font-size: 18pt;
       font-weight: 800;
       color: #0F172A;
       margin-bottom: 8px;
@@ -376,10 +440,10 @@ async function generatePDF() {
     }
 
     .text-body {
-      font-size: 9pt;
+      font-size: 11.5pt;
       line-height: 1.55;
       color: #334155;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .pillar-card {
@@ -392,13 +456,13 @@ async function generatePDF() {
 
     .pillar-title {
       font-weight: 700;
-      font-size: 9pt;
+      font-size: 11.5pt;
       color: #0F172A;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .pillar-desc {
-      font-size: 8pt;
+      font-size: 10pt;
       color: #475569;
       line-height: 1.4;
     }
@@ -458,68 +522,68 @@ async function generatePDF() {
     }
 
     .division-title {
-      font-size: 10.5pt;
+      font-size: 14pt;
       font-weight: 800;
       color: #0F172A;
     }
 
     .division-badge {
-      font-size: 7pt;
+      font-size: 9pt;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       background: #FEF2F2;
       color: #C0322B;
       border: 1px solid #FECACA;
-      padding: 2px 8px;
+      padding: 4px 10px;
       border-radius: 12px;
     }
 
     .division-desc {
-      font-size: 7.8pt;
+      font-size: 11.5pt;
       color: #475569;
       line-height: 1.35;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .subservices-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 8px;
-      margin-top: 6px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
     }
 
     .subservice-box {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
       border-radius: 6px;
-      padding: 8px 10px;
+      padding: 12px 14px;
     }
 
     .subservice-title {
-      font-size: 8.5pt;
+      font-size: 11pt;
       font-weight: 800;
       color: #0F172A;
       margin-bottom: 2px;
     }
 
     .subservice-caption {
-      font-size: 7.2pt;
+      font-size: 9pt;
       font-weight: 700;
       color: #C0322B;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .subservice-desc {
-      font-size: 7.5pt;
+      font-size: 10pt;
       color: #475569;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     .subservice-bullets {
-      margin: 4px 0 0 0;
-      padding-left: 12px;
-      font-size: 7.2pt;
+      margin: 6px 0 0 0;
+      padding-left: 16px;
+      font-size: 10pt;
       color: #334155;
     }
 
@@ -531,7 +595,7 @@ async function generatePDF() {
     .process-timeline {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
       margin-top: 6px;
     }
 
@@ -541,27 +605,27 @@ async function generatePDF() {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
       border-radius: 8px;
-      padding: 10px 14px;
+      padding: 10px 16px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.02);
     }
 
     .step-num {
-      font-size: 18pt;
+      font-size: 20pt;
       font-weight: 900;
       color: #C0322B;
       line-height: 1;
-      width: 35px;
+      width: 38px;
     }
 
     .step-title {
-      font-size: 10pt;
+      font-size: 13pt;
       font-weight: 800;
       color: #0F172A;
       margin-bottom: 2px;
     }
 
     .step-body {
-      font-size: 8.5pt;
+      font-size: 10.5pt;
       color: #475569;
     }
 
@@ -587,27 +651,28 @@ async function generatePDF() {
     }
 
     .project-name {
-      font-size: 10.5pt;
+      font-size: 13pt;
       font-weight: 800;
       color: #0F172A;
       line-height: 1.15;
     }
 
     .project-location {
-      font-size: 7.5pt;
+      font-size: 9pt;
       color: #64748B;
       font-weight: 600;
+      margin-top: 2px;
     }
 
     .project-badges {
       display: flex;
-      gap: 4px;
+      gap: 6px;
     }
 
     .badge {
-      font-size: 6.5pt;
+      font-size: 7.5pt;
       font-weight: 800;
-      padding: 2px 5px;
+      padding: 3px 6px;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.4px;
@@ -631,27 +696,29 @@ async function generatePDF() {
     .project-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .project-details {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       height: 50mm;
       overflow: hidden;
     }
 
     .project-meta-table {
       width: 100%;
-      font-size: 7pt;
+      font-size: 9pt;
       border-collapse: collapse;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       background: #F8FAFC;
       border-radius: 4px;
       overflow: hidden;
     }
 
     .project-meta-table td {
-      padding: 2px 5px;
+      padding: 4px 6px;
       border-bottom: 1px solid #E2E8F0;
     }
 
@@ -668,8 +735,8 @@ async function generatePDF() {
     }
 
     .case-box {
-      font-size: 7.5pt;
-      line-height: 1.38;
+      font-size: 11.5pt;
+      line-height: 1.4;
       color: #334155;
     }
 
@@ -792,13 +859,39 @@ async function generatePDF() {
         </p>
       </div>
 
-      <div class="cover-stats-grid">
-        ${STATS.map(s => `
-          <div class="stat-card">
-            <div class="stat-number">${s.value}${s.suffix}</div>
-            <div class="stat-label">${s.label}</div>
-          </div>
-        `).join('')}
+      <div class="cover-stats-container">
+        <div class="cover-stats-row cover-stats-top">
+          ${STATS.slice(0, 3).map(s => `
+            <div class="stat-card">
+              <div class="stat-icon-wrapper">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="${s.iconPath}" />
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number">${s.value}<span class="stat-suffix">${s.suffix}</span></div>
+                <div class="stat-title">${s.title}</div>
+                <div class="stat-subtitle">${s.subtitle}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="cover-stats-row cover-stats-bottom">
+          ${STATS.slice(3, 5).map(s => `
+            <div class="stat-card">
+              <div class="stat-icon-wrapper">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="${s.iconPath}" />
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number">${s.value}<span class="stat-suffix">${s.suffix}</span></div>
+                <div class="stat-title">${s.title}</div>
+                <div class="stat-subtitle">${s.subtitle}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
       </div>
 
       <div class="cover-founder-box">
@@ -828,58 +921,41 @@ async function generatePDF() {
     </div>
 
     <div class="page-content">
-      <div class="about-grid">
-        <div>
-          <div class="section-heading">Evidence-Led Structural Engineering</div>
-          <p class="text-body">
-            Gurukripa Constructions is a premier Bengaluru-based structural design and turnkey construction firm led by Er. Anuj Jain (B.E. Civil, M.Tech Structural). Established in 2019, we take a quiet, evidence-led approach to structural design. Every structural member is sized to a rigorous load case modeled in ETABS, and SAFE, and put on site.
-          </p>
-          <p class="text-body">
-            Over 7+ years of engineering excellence, we have delivered over 10+ major turnkey construction projects, 30+ renovation & retrofitting projects, 30+ architectural & structural design projects, comprising of 92,000+ square feet across Bengaluru.
-          </p>
+      <div style="margin-bottom: 32px;">
+        <div class="section-heading">Evidence-Led Structural Engineering</div>
+        <p class="text-body">
+          Gurukripa Constructions is a premier Bengaluru-based structural design and turnkey construction firm led by Er. Anuj Jain (B.E. Civil, M.Tech Structural). Established in 2019, we take a quiet, evidence-led approach to structural design. Every structural member is sized to a rigorous load case modeled in ETABS, and SAFE, and put on site.
+        </p>
+        <p class="text-body">
+          Over 7+ years of engineering excellence, we have delivered over 10+ major turnkey construction projects comprising of 92,000+ square feet across Bengaluru, 30+ renovation & retrofitting projects, 30+ architectural & structural design projects.
+        </p>
 
-          <div class="section-heading" style="margin-top:15px;">Founder's Guarantee</div>
-          <p class="text-body">
-            <em>"Buildings are built to endure for generations. Our responsibility as structural engineers and builders is to ensure every foundation, beam, and slab is executed with complete technical clarity, zero guesswork, and absolute schedule integrity."</em>
-          </p>
-          <div style="font-weight:800; font-size:9.5pt; color:#0F172A;">
-            — Er. Anuj Jain <span style="font-weight:500; color:#64748B;">(B.E. Civil, M.Tech Structural)</span>
-          </div>
+        <div class="section-heading" style="margin-top:15px;">Founder's Guarantee</div>
+        <p class="text-body">
+          <em>"Buildings are built to endure for generations. Our responsibility as structural engineers and builders is to ensure every foundation, beam, and slab is executed with complete technical clarity, zero guesswork, and absolute structural integrity."</em>
+        </p>
+        <div style="font-weight:800; font-size:9.5pt; color:#0F172A;">
+          — Er. Anuj Jain <span style="font-weight:500; color:#64748B;">(B.E. Civil, M.Tech Structural)</span>
         </div>
+      </div>
 
-        <div>
-          <div class="section-heading">Our Core Operating Pillars</div>
-
-          <div class="pillar-card">
-            <div class="pillar-title">1. Comprehensive Structural Design</div>
-            <div class="pillar-desc">Every structural calculation is personally verified prior to site execution.</div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-title">2. Transparent BOQ Pricing</div>
-            <div class="pillar-desc">Detailed line-item quantities priced at market rates with zero soft numbers.</div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-title">3. Weekly Progress Reports</div>
-            <div class="pillar-desc">Friday site reports with variance tracking delivered directly to client boards.</div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-title">4. Certified QA/QC Lab Checks</div>
-            <div class="pillar-desc">Cube strength and independent steel ultrasonic testing at every concrete pour.</div>
-          </div>
-
-          <div class="toc-box">
-            <div style="font-weight:800; font-size:9pt; color:#0F172A; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Portfolio Index</div>
-            <div class="toc-item"><span class="toc-label">Executive Overview & Profile</span><span class="toc-page">Page 2</span></div>
-            <div class="toc-item"><span class="toc-label">Core Specialized Services (3 Divisions)</span><span class="toc-page">Page 3</span></div>
-            <div class="toc-item"><span class="toc-label">5-Step Project Execution Framework</span><span class="toc-page">Page 4</span></div>
-            <div class="toc-item"><span class="toc-label">Turnkey Construction Showcase</span><span class="toc-page">Pages 5–8</span></div>
-            <div class="toc-item"><span class="toc-label">Renovation & Retrofitting Showcase</span><span class="toc-page">Pages 9–10</span></div>
-            <div class="toc-item"><span class="toc-label">Client Endorsements & Google Reviews</span><span class="toc-page">Page 11</span></div>
-            <div class="toc-item"><span class="toc-label">Corporate Contact Directory</span><span class="toc-page">Page 12</span></div>
-          </div>
+      <div>
+        <div class="section-heading">Our Core Operating Pillars</div>
+        <div class="pillar-card">
+          <div class="pillar-title">1. Comprehensive Structural Design</div>
+          <div class="pillar-desc">Every structural calculation is personally verified prior to site execution.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-title">2. Transparent BOQ Pricing</div>
+          <div class="pillar-desc">Detailed line-item quantities priced at market rates with zero soft numbers.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-title">3. Weekly Progress Reports</div>
+          <div class="pillar-desc">Friday site reports with variance tracking delivered directly to client boards.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-title">4. Certified QA/QC Lab Checks</div>
+          <div class="pillar-desc">Cube strength and independent steel ultrasonic testing at every concrete pour.</div>
         </div>
       </div>
     </div>
@@ -902,7 +978,7 @@ async function generatePDF() {
 
     <div class="page-content">
       <div class="division-stack">
-        ${SERVICES.map(s => `
+        ${SERVICES.slice(0, 2).map(s => `
           <div class="division-card">
             <div class="division-header">
               <div class="division-title">${s.title}</div>
@@ -933,17 +1009,45 @@ async function generatePDF() {
     </div>
   </div>
 
-  <!-- PAGE 4: PROCESS & METHODOLOGY -->
   <div class="page inner-page">
     <div class="page-header">
       <div>
-        <div class="page-header-subtitle">Execution Framework</div>
-        <div class="page-header-title">Our 5-Step Engineering Process</div>
+        <div class="page-header-subtitle">Capabilities & 3 Key Divisions</div>
+        <div class="page-header-title">Core Specialized Services (Cont'd)</div>
       </div>
       ${logoDark ? `<img src="${logoDark}" style="height:32px;" />` : ''}
     </div>
 
     <div class="page-content">
+      <div class="division-stack">
+        ${SERVICES.slice(2, 3).map(s => `
+          <div class="division-card">
+            <div class="division-header">
+              <div class="division-title">${s.title}</div>
+              <div class="division-badge">${s.divisionCode}</div>
+            </div>
+            <div class="division-desc">${s.description}</div>
+
+            <div class="subservices-grid">
+              ${s.items.map(item => `
+                <div class="subservice-box">
+                  <div class="subservice-title">${item.title}</div>
+                  <div class="subservice-caption">${item.caption}</div>
+                  <div class="subservice-desc">${item.description}</div>
+                  <ul class="subservice-bullets">
+                    ${item.bullets.map(b => `<li>${b}</li>`).join('')}
+                  </ul>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="section-heading" style="margin-top: 24px; margin-bottom: 12px;">Our 5-Step Engineering Process</div>
+
+    <div class="page-content" style="padding-top: 0;">
       <div class="process-timeline">
         ${PROCESS_STEPS.map(step => `
           <div class="process-step">
@@ -956,9 +1060,9 @@ async function generatePDF() {
         `).join('')}
       </div>
 
-      <div style="margin-top: 16px; background:#F8FAFC; border:1px solid #E2E8F0; border-left:4px solid #C0322B; padding:16px; border-radius:0 8px 8px 0; display:flex; gap:16px; align-items:center;">
-        <div style="font-size:22pt; color:#C0322B; font-weight:900;">100%</div>
-        <div style="font-size:8.5pt; color:#334155; line-height:1.45;">
+      <div style="margin-top: 14px; background:#F8FAFC; border:1px solid #E2E8F0; border-left:4px solid #C0322B; padding:14px 16px; border-radius:0 8px 8px 0; display:flex; gap:16px; align-items:center;">
+        <div style="font-size:24pt; color:#C0322B; font-weight:900;">100%</div>
+        <div style="font-size:10pt; color:#334155; line-height:1.45;">
           <strong style="color:#0F172A;">Structural Warranty & Handover Quality Pack:</strong> Every project delivered comes with an official handover pack containing concrete cube test reports, steel mill certificates, as-built CAD drawings, and a formal structural warranty.
         </div>
       </div>
@@ -990,7 +1094,7 @@ async function generatePDF() {
       <div style="background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%); border: 1px solid #BFDBFE; border-left: 4px solid #C0322B; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
         <div>
           <div style="font-size: 10.5pt; font-weight: 800; color: #0F172A;">5.0 ★★★★★ Verified Client Satisfaction Track Record</div>
-          <div style="font-size: 7.8pt; color: #475569; margin-top: 2px;">Over 35+ verified Google reviews across residential villas, commercial complexes & structural retrofits</div>
+          <div style="font-size: 7.8pt; color: #475569; margin-top: 2px;">Over 130+ verified Google reviews across residential villas, commercial complexes & structural retrofits</div>
         </div>
         <div style="text-align: right;">
           <div style="font-size: 13pt; font-weight: 900; color: #C0322B;">100%</div>
@@ -1000,17 +1104,17 @@ async function generatePDF() {
 
       <div class="testimonials-grid">
         ${[
-          TESTIMONIALS[0], // Afrin Subi Abdul Hameed (long)
-          TESTIMONIALS[2], // Vishal Omloti (long)
-          TESTIMONIALS[1], // Kunal Mehta
-          TESTIMONIALS[3], // Nikhilesh A
-          TESTIMONIALS[5], // Shashank Ramamurthy
-          TESTIMONIALS[4], // Yogesh Chowdhary
-          TESTIMONIALS[6], // Smriti Jain
-          TESTIMONIALS[9], // Shree Munisuvrat Wires
-          TESTIMONIALS[13], // Saurabh Agarwal
-          TESTIMONIALS[14], // Mazhar Khan
-        ].map(t => `
+      TESTIMONIALS[0], // Afrin Subi Abdul Hameed (long)
+      TESTIMONIALS[2], // Vishal Omloti (long)
+      TESTIMONIALS[1], // Kunal Mehta
+      TESTIMONIALS[3], // Nikhilesh A
+      TESTIMONIALS[5], // Shashank Ramamurthy
+      TESTIMONIALS[4], // Yogesh Chowdhary
+      TESTIMONIALS[6], // Smriti Jain
+      TESTIMONIALS[9], // Shree Munisuvrat Wires
+      TESTIMONIALS[13], // Saurabh Agarwal
+      TESTIMONIALS[14], // Mazhar Khan
+    ].map(t => `
           <div class="testimonial-card">
             <div>
               <div class="stars">★★★★★</div>
@@ -1268,7 +1372,7 @@ async function renderProjectCard(p: Project): Promise<string> {
               </table>
 
               <div class="case-box">
-                <div class="case-text" style="font-size: 8pt; line-height: 1.4; color: #334155;">
+                <div class="case-text">
                   ${p.summary}
                 </div>
               </div>

@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
           'Independent villas (G+1 to G+3)',
           'Row-house and small-cluster developments',
           'Apartment and duplex buildings',
-          'Vaastu-aligned planning, on request',
+          'Vaastu-aligned planning',
         ],
       },
       {

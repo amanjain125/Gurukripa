@@ -56,7 +56,7 @@ export function Footer() {
                 Ready to build something <em className="font-display-italic text-brand-red font-normal">extraordinary?</em>
               </h2>
               <p className="mt-1 text-bone/70 text-[13px] max-w-xl leading-relaxed">
-                Speak directly with Anuj Jain (M.Tech Structural) for construction packages, architecture, &amp; cost-plus contracts.
+                Speak directly with Anuj Jain
               </p>
             </div>
 
@@ -76,7 +76,7 @@ export function Footer() {
                 href="/contact"
                 className="w-full sm:w-auto bg-brand-red hover:bg-brand-red-deep text-white font-bold px-4 py-2.5 rounded-lg text-[13px] shadow-sm hover:shadow transition-all text-center"
               >
-                Get Free Quote &rarr;
+                Get Quote
               </Link>
               <a
                 href={whatsappUrl}
