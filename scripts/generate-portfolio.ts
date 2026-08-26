@@ -82,7 +82,7 @@ async function generatePDF() {
 
   // Convert key assets to file URLs
   const logoDark = getFileUrl('/logo.svg') || getFileUrl('/logo.png');
-  const founderImg = getFileUrl('/founder_anuj_jain.png');
+  const founderImg = getFileUrl('/anuj.png');
 
   // Separate Construction and Renovation Projects
   const constructionProjects = PROJECTS.filter(p => p.projectType === 'construction');
@@ -344,6 +344,7 @@ async function generatePDF() {
       height: 64px;
       border-radius: 50%;
       object-fit: cover;
+      object-position: top;
       border: 2.5px solid #C0322B;
     }
 

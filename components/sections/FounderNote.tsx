@@ -10,11 +10,11 @@ export function FounderNote() {
         <div className="md:col-span-5" data-reveal>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden glass-strong">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
+              src="/anuj.png"
               alt="Anuj Jain — Founder & Principal Consultant"
               fill
               sizes="(min-width:768px) 40vw, 90vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 glass-pill rounded-2xl px-4 py-3">

@@ -249,7 +249,7 @@ export function AboutSection() {
             {/* Portrait Image */}
             <div className="relative w-36 h-48 sm:w-40 sm:h-52 mx-auto sm:mx-0 shrink-0 rounded-2xl overflow-hidden bg-gradient-to-b from-[#EAE6DF] to-[#FAF8F5] flex items-end">
               <img
-                src="/founder_anuj_jain.png"
+                src="/anuj.png"
                 alt="Anuj Jain - Founder"
                 className="w-full h-full object-cover object-top"
               />
