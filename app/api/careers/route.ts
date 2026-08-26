@@ -72,11 +72,11 @@ export async function POST(req: Request) {
     `;
 
     await transporter.sendMail({
-      from: \`"Gurukripa Careers" <\${smtpUser}>\`,
+      from: `"Gurukripa Careers" <${smtpUser}>`,
       to: recipientEmail,
       replyTo: email || undefined,
-      subject: \`New Job Application: \${name} - \${jobRole}\`,
-      text: \`Name: \${name}\\nPhone: \${phone}\\nEmail: \${email}\\nPosition: \${jobRole}\`,
+      subject: `New Job Application: ${name} - ${jobRole}`,
+      text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nPosition: ${jobRole}`,
       html: htmlContent,
       attachments,
     });
