@@ -14,11 +14,31 @@ export function CareersForm() {
     setStatus('loading');
     setError(null);
 
-    // Mocking an API call
-    setTimeout(() => {
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch('/api/careers', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!res.ok) {
+        let errorMsg = 'Failed to submit application.';
+        try {
+          const errData = await res.json();
+          errorMsg = errData.error || errorMsg;
+        } catch {
+          // fallback
+        }
+        throw new Error(errorMsg);
+      }
+
       setStatus('success');
       form.reset();
-    }, 1500);
+    } catch (err) {
+      setStatus('error');
+      setError(err instanceof Error ? err.message : 'Something went wrong.');
+    }
   }
 
   return (
