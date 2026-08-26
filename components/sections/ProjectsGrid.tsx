@@ -35,7 +35,7 @@ export function ProjectsGrid() {
             className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 flex flex-col justify-between aspect-[16/9] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
           >
             <Image
-              src="/construction/Channsandra/render 1.png"
+              src={encodeURI('/construction/Channsandra/render 1.png')}
               alt="Construction Projects"
               fill
               sizes="(min-width:768px) 50vw, 100vw"
@@ -72,7 +72,7 @@ export function ProjectsGrid() {
             className="group relative overflow-hidden rounded-3xl cursor-pointer bg-ink border border-white/20 shadow-2xl transition-all duration-500 p-8 flex flex-col justify-between aspect-[16/9] hover:scale-[1.015] hover:border-gold hover:shadow-gold/20"
           >
             <Image
-              src="/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg"
+              src={encodeURI('/renovation/Mrs Shoma - Mangalore tile roof @ Nandi Hills/1.jpg')}
               alt="Renovation Projects"
               fill
               sizes="(min-width:768px) 50vw, 100vw"
@@ -147,7 +147,7 @@ function ProjectCard({ p, mt }: { p: Project; mt: number }) {
     >
       <div className="relative aspect-[4/5] overflow-hidden rounded-2xl glass">
         <Image
-          src={p.thumb}
+          src={encodeURI(p.thumb)}
           alt={p.name}
           fill
           sizes="(min-width:1024px) 32vw, (min-width:640px) 48vw, 100vw"

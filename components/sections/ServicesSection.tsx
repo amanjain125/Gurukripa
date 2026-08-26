@@ -396,7 +396,7 @@ export function ServicesSection() {
 
               <div className="lg:col-span-5 relative aspect-[16/10] lg:aspect-square rounded-2xl overflow-hidden border border-white/15 shadow-xl">
                 <Image
-                  src={activeModal.image}
+                  src={encodeURI(activeModal.image)}
                   alt={activeModal.title}
                   fill
                   className="object-cover"

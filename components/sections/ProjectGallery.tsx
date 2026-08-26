@@ -71,7 +71,7 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
               data-reveal-delay={`${(i % 6) * 60}`}
             >
               <Image
-                src={src}
+                src={encodeURI(src)}
                 alt={`${projectName} photo ${i + 1}`}
                 fill
                 loading={i < 6 ? 'eager' : 'lazy'}
@@ -141,7 +141,7 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
               return (
                 <Image
                   key={src}
-                  src={src}
+                  src={encodeURI(src)}
                   alt={`${projectName} enlarged photo ${idx + 1}`}
                   fill
                   priority={isActive || isAdjacent}
