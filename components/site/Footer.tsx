@@ -184,7 +184,7 @@ export function Footer() {
               {COMPANY.emails.map((email) => (
                 <div key={email}>
                   <a
-                    href={`mailto:${email}`}
+                    href="mailto:gurukripaconstructions3@gmail.com"
                     className="text-bone/80 hover:text-gold transition-colors block truncate"
                   >
                     {email}

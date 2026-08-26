@@ -140,7 +140,7 @@ export default function ContactPage() {
 
             {/* Card 3: Email */}
             <a
-              href={`mailto:${COMPANY.email}`}
+              href="mailto:gurukripaconstructions3@gmail.com"
               className="group bg-white/90 backdrop-blur-md rounded-3xl p-7 border border-white/90 hover:border-brand-red hover:shadow-[0_16px_32px_rgba(192,50,43,0.15)] hover:-translate-y-1 transition-all duration-300 block overflow-hidden"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -381,7 +381,7 @@ export default function ContactPage() {
                   {COMPANY.emails.map((email, idx) => (
                     <div key={email} className={`flex flex-wrap items-center justify-between gap-2 ${idx === 0 ? 'pt-1.5 border-t border-ink/10' : 'pt-1'}`}>
                       <span className="text-ink/65 font-medium">{idx === 0 ? 'Primary Email:' : 'Alternate Email:'}</span>
-                      <a href={`mailto:${email}`} className="font-extrabold text-ink hover:text-brand-red truncate max-w-full">
+                      <a href="mailto:gurukripaconstructions3@gmail.com" className="font-extrabold text-ink hover:text-brand-red truncate max-w-full">
                         {email}
                       </a>
                     </div>
